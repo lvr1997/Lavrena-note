@@ -7,7 +7,7 @@ hero:
     src: /logo.svg
   actions:
     - theme: brand
-      text: 👉查看
+      text: 👉文章目录
       link: /article
     - theme: alt
       text: View on GitHub

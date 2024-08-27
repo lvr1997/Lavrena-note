@@ -1,3 +1,4 @@
 node_modules
 .vitepress/cache
 posts/.obsidian
+.vscode

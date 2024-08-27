@@ -1,6 +1,13 @@
-# vue3+vite封装axios和全局loading
-
-# vue3+vite封装axios和全局loading
+---
+title: vue3+vite封装axios和全局loading
+titleTemplate: Vue
+publish: true
+date: 2022-10-21
+tags:
+  - vue
+  - vite
+  - axios
+---
 
 ## axios
 

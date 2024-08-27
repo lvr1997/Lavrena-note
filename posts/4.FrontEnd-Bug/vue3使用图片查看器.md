@@ -1,6 +1,13 @@
-# vue3使用图片查看器
+---
+title: vue3使用图片查看器
+titleTemplate: Vue
+publish: true
+date: 2022-09-20
+tags:
+  - vue
+  - viewerjs
+---
 
-# vue3使用图片查看器
 
 ## 需求
 
@@ -18,7 +25,7 @@
 
 1. 安装viewer.js`npm install viewerjs`
 
-```
+```vue
 <template>
     <div class="container">
         左侧列表

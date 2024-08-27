@@ -1,6 +1,5 @@
 @import './tailwind.css';
 @import './blur.css';
-@import './custom-block.css';
 @import './vp-code-group.css';
 /**
  * Customize default theme styling by overriding CSS variables:

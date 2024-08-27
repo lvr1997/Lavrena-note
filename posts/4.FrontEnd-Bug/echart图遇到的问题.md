@@ -1,4 +1,12 @@
-# echart图遇到的问题
+---
+title: echart图遇到的问题
+titleTemplate: Vue
+publish: true
+date: 2022-10-21
+tags:
+  - vue
+  - echarts
+---
 
 ## 动态改变echarts柱状图颜色
 

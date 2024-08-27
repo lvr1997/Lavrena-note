@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { sidebar } from './configs';
+import { sidebar, nav } from './configs';
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -15,11 +15,7 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.svg',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '归档', link: '/article'},
-      { text: '关于作者', link: '/about' }
-    ],
+    nav,
     sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lvr1997' }

@@ -1,16 +1,24 @@
-# Nuxt3实现哔哩哔哩移动端实战
-
-# Nuxt3 - 仿哔哩哔哩移动端项目实战
+---
+title: Nuxt3实现哔哩哔哩移动端实战
+titleTemplate: Vue
+publish: true
+date: 2024-06-12
+tags:
+  - vue
+  - Nuxt3
+---
 
 > 项目学习视频：黑马前端Nuxt3原理到实战视频教程，nuxt构建B站哔哩哔哩移动端项目_哔哩哔哩_bilibili
-> 
 
 ## ①页面搭建
 
 按照Nuxt的目录结构新建目录
-`pages/index.vue` 首页
-`<header/>` 封装到 `components/AppHeader.vue<van-tab></van-tab>` 导航组件 封装到 `components/AppTabs.vue<div></div>` 视频列表
-`pages/vadio/index.vue` 视频页
+首页：`pages/index.vue` 
+`<header/>` 封装到 `components/AppHeader.vue` 
+
+导航组件`<van-tab></van-tab>` 封装到 `components/AppTabs.vue` 
+视频列表`pages/vadio/index.vue` 视频页
+
 在`app.vue`中使用`<NuxtPage/>`渲染页面
 
 ## ②安装vant组件库
@@ -27,22 +35,35 @@ npm i @vant/nuxt
 
 - 添加配置
 
-`ts {4} // nuxt.config.ts export default defineNuxtConfig({   // 调试工具   devtools: { enabled: true },   // 应用模块   modules: ['@vant/nuxt'], })`
+::: code-group 
+```ts {4} [nuxt.config.ts]
+export default defineNuxtConfig({   
+	// 调试工具   
+	devtools: { enabled: true },  
+	// 应用模块   
+	modules: ['@vant/nuxt'], 
+})
+```
+:::
 
 - 使用
 
-```
+::: code-group
+```vue
 <van-button type="primary">主要按钮</van-button>
 <van-button type="info">信息按钮</van-button>
 ```
+:::
 
-PS： 在 Nuxt 项目中，vant 组件会自动按需导入（需重启服务）。
+
+> [!TIP] PS
+> 在 Nuxt 项目中，vant 组件会自动按需导入（需重启服务）。
 
 ### 修改主题色
 
-在 app.vue 的样式全局生效。
+在 `app.vue` 的样式全局生效。
 
-```
+```vue
 <style lang="scss">
 /* vant-ui 主题定制 */
 :root {
@@ -69,17 +90,17 @@ defineEventHandler定义接口
 `server/api/vadio/index.get.ts`
 
 > [!TIP] 拓展
-ts类型处理，通过后端返回值json，转换成ts类型声明文件（json2Ts）
-在 src/types 目录创建 vadio.ts 类型声明文件
-import type { VadioItem } from "@/types/vadio"
-请求接口获取列表时 const list = ref<VadioItem[]>([])
-> 
+> ts类型处理，通过后端返回值json，转换成ts类型声明文件（json2Ts）
+> 在 src/types 目录创建 vadio.ts 类型声明文件
+> import type { VadioItem } from "@/types/vadio"
+> 请求接口获取列表时 
+> const list = ref<VadioItem[]>([])
 
 ## SEO 优化
 
 通过设置网页 title 和 description 等 SEO 优化信息，由服务端渲染，可提高网页在搜索引擎结果页面中的排名和可见性 。
 
-```
+```vue
 <script setup lang="ts">
 // SEO 优化信息
 useSeoMeta({
@@ -108,7 +129,21 @@ npm i postcss-px-to-viewport -D
 
 **添加配置**
 
-`ts {6-12} // nuxt.config.ts export default defineNuxtConfig({   // ...省略   // 移动端适配   postcss: {     plugins: {       'postcss-px-to-viewport': {         viewportWidth: 375,       },     },   }, })`
+::: code-group  
+```ts {4-10} [nuxt.config.ts]
+export default defineNuxtConfig({   
+	// ...省略   
+	// 移动端适配   
+	postcss: {     
+		plugins: {       
+			'postcss-px-to-viewport': {         
+				viewportWidth: 375,       
+			},     
+		},   
+	}, 
+})
+```
+:::
 
 ### 组件封装
 
@@ -119,7 +154,7 @@ npm i postcss-px-to-viewport -D
 
 抽离到 `components` 目录的组件可自动导入，在首页、视频详情页中直接使用即可，页面也变得更简洁。
 
-```
+```vue
 <template>
   <!-- 公共头部 -->
   <AppHeader />
@@ -155,12 +190,13 @@ Nuxt 支持在 `server` 目录写服务器接口，用于数据请求。
 **Nuxt 基于文件生成接口**，在 `server` 目录下的 `/api/channel.get.ts`，会自动生成接口 `/api/channel`，请求方式为 `get`。
 
 ```tsx
-import chnnel from '@/database/chnnel'export default defineEventHandler(() => {
+import chnnel from '@/database/chnnel'
+export default defineEventHandler(() => {
   return chnnel
 })
 ```
 
-可通过 http://localhost:3000/api/channel 访问以上频道接口， 文件名的后缀可以是 `.get`, `.post`, `.put`, `.delete` 等，以匹配请求的 HTTP 方法 。
+可通过 `http://localhost:3000/api/channel` 访问以上频道接口， 文件名的后缀可以是 `.get`, `.post`, `.put`, `.delete` 等，以匹配请求的 HTTP 方法 。
 
 参考资料：
 
@@ -172,17 +208,20 @@ import chnnel from '@/database/chnnel'export default defineEventHandler(() => {
 
 获取频道列表数据
 
-`index/index.vue`
-
-```jsx
-// 获取频道列表const { data: channelList } = await useFetch('/api/channel')
+::: code-group 
+```jsx [index/index.vue]
+// 获取频道列表
+const { data: channelList } = await useFetch('/api/channel')
 ```
 
-渲染数据
-
-```diff
-<!-- 频道列表 --><van-tabs>-    <van-tab v-for="item in 10" :key="item" title="频道" />+    <van-tab v-for="item in channelList" :key="item.id" :title="item.name" /></van-tabs>
+```vue [渲染列表]
+<!-- 频道列表 -->
+<van-tabs>
+	<van-tab v-for="item in 10" :key="item" title="频道" />   
+	<van-tab v-for="item in channelList" :key="item.id" :title="item.name" /></van-tabs>
 ```
+:::
+
 
 ### 视频列表接口
 
@@ -190,12 +229,9 @@ import chnnel from '@/database/chnnel'export default defineEventHandler(() => {
 
 `database/video.ts`
 
-```
 **视频列表接口**
-
-`server/api/video/index.get.ts`
-
-```ts
+::: code-group
+```ts [server/api/video/index.get.ts]
 // get  /api/video
 import video from '@/database/video'
 
@@ -203,39 +239,47 @@ export default defineEventHandler(() => {
   return video
 })
 ```
-
+:::
 ### 动态渲染视频
 
 获取视频列表数据
 
-`index/index.vue`
-
-```tsx
-// 获取视频列表数据const { data: videoList } = await useFetch('/api/video')
+::: code-group
+```tsx [index/index.vue]
+// 获取视频列表数据
+const { data: videoList } = await useFetch('/api/video')
 ```
-
+:::
 v-for 循环展示
-
-```diff
-<!-- 视频列表 --><div class="video-list">  <NuxtLink
-    class="v-card"
-+    v-for="item in videoList"+    :key="item.aid"    :to="`/video`"
+::: code-group 
+```vue 
+<!-- 视频列表 -->
+<div class="video-list">  
+	<NuxtLink class="v-card"
+	    v-for="item in videoList" // [!code ++]
+	    :key="item.aid" // [!code ++]
+	    :to="`/video`"  // [!code ++]
   >
     <div class="card">
       <div class="card-img">
-+        <img class="pic" :src="item.pic" :alt="item.title" />      </div>
+        <img class="pic" :src="item.pic" :alt="item.title" /> // [!code ++]    
+	  </div>
       <div class="count">
         <span>
           <i class="iconfont icon_shipin_bofangshu"></i>
-+          {{ item.stat.view }}        </span>
+          {{ item.stat.view }}   // [!code ++]     
+		</span>
         <span>
           <i class="iconfont icon_shipin_danmushu"></i>
-+          {{ item.stat.danmaku }}        </span>
+          {{ item.stat.danmaku }} // [!code ++]     
+		</span>
       </div>
     </div>
-+    <p class="title">{{ item.title }}</p>  </NuxtLink>
+	<p class="title">{{ item.title }}</p> // [!code ++]
+	</NuxtLink>
 </div>
 ```
+:::
 
 参考链接：
 
@@ -247,28 +291,49 @@ v-for 循环展示
 
 通过 [vant-list 列表](https://vant-contrib.gitee.io/vant/#/zh-CN/list) 实现滚动触底，加载分页数据。
 
-```diff
-  <!-- 视频列表 -->
-+  <van-list+    v-model:loading="loading"+    :finished="finished"+    finished-text="去 bilibili App 看更多"+    @load="onLoad"+  >    <div class="video-list">
+```vue
+<!-- 视频列表 -->
+<van-list    
+	v-model:loading="loading"    
+	:finished="finished"    
+	finished-text="去 bilibili App 看更多"    
+	@load="onLoad">    
+	<div class="video-list">
       ...省略
     </div>
-+  </van-list>
+</van-list>
 ```
 
 滚动触底，触发 onLoad 事件，加载完成，处理 finished 结束。
 
-```jsx
-// 显示的列表const list = ref<any[]>([])
-// 加载状态const loading = ref(false)
-// 是否加载完成const finished = ref(false)
-// 页码 和 页容量let page = 1let pageSize = 20// 滚动触底触发const onLoad = () => {
-  // 表示正在加载  loading.value = false  // 根据当前页码提取数据  const data = videoList.value?.slice(
-    (page - 1) * pageSize,    page * pageSize,  ) as any[]
-  // 追加到用于渲染的数组中  list.value.push(...data)
-  // 页码累加  page++  // 加载结束  if (videoList.value?.length === list.value.length) {
-    finished.value = true  }
+```ts
+// 显示的列表
+const list = ref<any[]>([])
+// 加载状态
+const loading = ref(false)
+// 是否加载完成
+const finished = ref(false)
+// 页码 和 页容量
+let page = 1let pageSize = 20
+// 滚动触底触发
+const onLoad = () => {
+  // 表示正在加载  
+  loading.value = false  
+  // 根据当前页码提取数据  
+  const data = videoList.value?.slice(
+    (page - 1) * pageSize,    
+    page * pageSize,  ) as any[]
+  // 追加到用于渲染的数组中  
+  list.value.push(...data)
+  // 页码累加  
+  page++  
+  // 加载结束  
+  if (videoList.value?.length === list.value.length) {
+    finished.value = true  
+    }
 }
-// 初始化加载 - 主动请求前 20 条数据，用于服务端首屏渲染，方便 SEO 抓取到数据onLoad()
+// 初始化加载 - 主动请求前 20 条数据，用于服务端首屏渲染，方便 SEO 抓取到数据
+onLoad()
 ```
 
 ### 类型处理
@@ -277,39 +342,69 @@ v-for 循环展示
 
 **类型声明文件**
 
-`types/video.d.ts`
-
-```tsx
+::: code-group 
+```ts [types/video.d.ts]
 export interface Author {
-  mid: number  name: string  face: string}
+  mid: number  
+  name: string  
+  face: string
+}
 export interface Stat {
-  aid: number  view: number  danmaku: number  reply: number  favorite: number  coin: number  share: number  now_rank: number  his_rank: number  like: number  dislike: number  vt: number  vv: number}
+  aid: number  
+  view: number  
+  danmaku: number  
+  reply: number  
+  favorite: number  
+  coin: number  
+  share: number  
+  now_rank: number  
+  his_rank: number  
+  like: number  
+  dislike: number  
+  vt: number  
+  vv: number
+}
 export interface VideoItem {
-  aid: number  type_id: number  tname: string  pic: string  title: string  pubdate: number  ctime: number  tags: any[]
-  duration: number  author: Author
+  aid: number  
+  type_id: number  
+  tname: string  
+  pic: string  
+  title: string  
+  pubdate: number  
+  ctime: number  
+  tags: any[]
+  duration: number  
+  author: Author
   stat: Stat
-  hot_desc: string  corner_mark: number  bvid: string  enable_vt: number}
+  hot_desc: string  
+  corner_mark: number  
+  bvid: string  
+  enable_vt: number
+}
 ```
-
+:::
 **类型升级**
 
-```diff
+```ts
 // 导入类型
-+  import type { VideoItem } from '@/types/video'// 显示的列表 - 指定类型
--  const list = ref<any[]>([])+  const list = ref<VideoItem[]>([])// 滚动触底触发
+// 显示的列表 - 指定类型
+import type { VideoItem } from '@/types/video'  // [!code ++]
+const list = ref<any[]>([])+  const list = ref<VideoItem[]>([])// 滚动触底触发 // [!code --]
 const onLoad = () => {
   // 根据当前页码提取数据
--  const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as any[]+  const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as VideoItem[]}
+const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as any[] // [!code --]
+const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as VideoItem[]} // [!code ++]
 ```
 
 ## 视频详情-动态路由传参
 
 ### 跳转路由传参
 
-修改面经详情的目录结构
+修改详情的目录结构
 
 ```jsx
-pages/video/index.vue  =>   pages/video/[id].vue其中 [id].vue  表示动态路由
+pages/video/index.vue => pages/video/[id].vue
+//其中 [id].vue  表示动态路由
 ```
 
 点击跳转 `video/index.vue`
@@ -326,7 +421,7 @@ pages/video/index.vue  =>   pages/video/[id].vue其中 [id].vue  表示动态路
 
 页面中获取参数
 
-```
+```vue
 <script setup lang="ts">
 const { params } = useRoute()
 
@@ -339,21 +434,22 @@ console.log('动态路由id', params.id)
 ```
 
 ### 视频详情接口
-
-`server/api/video/[id].get.ts`
-
-```tsx
-// get /api/video/idimport video from '@/database/video'export default defineEventHandler((event) => {
-  // 获取路由参数  const { id } = event.context.params || {}
-  // 根据 id 查找视频  return video.find((v) => v.bvid === id)
+::: code-group
+```tsx [server/api/video/[id].get.ts]
+// get /api/video/id
+import video from '@/database/video'
+export default defineEventHandler((event) => {
+  // 获取路由参数  
+  const { id } = event.context.params || {}
+  // 根据 id 查找视频  
+  return video.find((v) => v.bvid === id)
 })
 ```
-
+:::
 ### 代码实现
 
-`pages/video/[id].vue`
-
-```
+::: code-group 
+```vue [pages/video/[id].vue]
 <script setup lang="ts">
 import type { BarrageInstance } from 'vant'
 
@@ -430,12 +526,12 @@ useSeoMeta({
 </template>
 
 ```
-
+:::
 ## 页面缓存
 
 没有做页面缓存的话，切换页面时会重新发送请求，用户体验不友好，开启 keepalive 优化体验。
 
-```
+```vue
 <template>
   <!-- keepalive 设置页面缓存 -->
   <NuxtPage :keepalive="{ max: 10 }" />
@@ -464,8 +560,10 @@ nuxt 脚手架只是开发过程中，协助开发的工具，当真正开发完
 nuxt 脚手架工具已经提供了打包命令，直接使用即可。
 
 ```bash
-# 生成用于服务器端运行的优化代码pnpm build
-# 生成静态网站，将应用程序预渲染成静态 HTML 文件，无需服务器端渲染pnpm generate
+# 生成用于服务器端运行的优化代码
+pnpm build
+# 生成静态网站，将应用程序预渲染成静态 HTML 文件，无需服务器端渲染
+pnpm generate
 ```
 
 ### 部署上线
@@ -478,21 +576,17 @@ nuxt 脚手架工具已经提供了打包命令，直接使用即可。
 ### Q1: 初始化项目失败怎么办？
 
 > 解决方案一：修改 host 文件
-由于国内访问受限，通过命令行下载可能会失败。
-> 
-> 
+> 由于国内访问受限，通过命令行下载可能会失败。
 > 映射关系为访问 `raw.githubusercontent.com` 映射到 IP 地址 `185.199.108.133`。
-> 
-> ```bash
-> # Windows 系统 C:\Windows\System32\drivers\etc 增加以下代码185.199.108.133 raw.githubusercontent.com
-> ```
-> 
-> 解决方案参考： [Windows 修改 hosts](https://zhuanlan.zhihu.com/p/563171304) [Mac 修改 hosts](https://zhuanlan.zhihu.com/p/461884595)
-> 
 
-> 解决方案二：
-去GitHub手动下载初始化项目模板 nuxt/starter at v3 (github.com)
-> 
+```bash
+# Windows 系统 C:\Windows\System32\drivers\etc 增加以下代码
+185.199.108.133 raw.githubusercontent.com
+```
+
+解决方案参考： [Windows 修改 hosts](https://zhuanlan.zhihu.com/p/563171304) [Mac 修改 hosts](https://zhuanlan.zhihu.com/p/461884595)
+
+> 解决方案二：去GitHub手动下载初始化项目模板 nuxt/starter at v3 (github.com)
 
 ## 总结&收获
 

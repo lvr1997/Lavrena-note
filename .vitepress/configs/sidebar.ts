@@ -1,19 +1,24 @@
 import type { DefaultTheme } from "vitepress";
 
 // #region 
-const sidebarHome = () => {
+const sidebarFrontEndBug = () => {
   return [
     {
-      text: "主页",
+      text: "前端经验总结&踩坑",
       collapsed: true,
       items: [
-        { text: "目录", link: "/home/introduction" },
-        { text: "vitepress 折腾记（一）", link: "/home/vitepress-1" },
-        { text: "本地文档搜索", link: "/home/local-search" },
-        { text: "giscus 评论系统", link: "/home/giscus" },
-        { text: "部署到 github pages", link: "/home/github-pages" },
-        { text: "天气图标", link: "/home/weather-icon" },
-        { text: "Emoji 表情", link: "/home/emoji" },
+        { text: "如何在vue中使用svg图标", link: "/posts/4.FrontEnd-Bug/如何在vue中使用svg图标" },
+        { text: "项目自适应方案", link: "/posts/4.FrontEnd-Bug/项目自适应方案" },
+        { text: "echart图遇到的问题", link: "/posts/4.FrontEnd-Bug/echart图遇到的问题" },
+        { text: "Nuxt3实现哔哩哔哩移动端实战", link: "/posts/4.FrontEnd-Bug/Nuxt3实现哔哩哔哩移动端实战" },
+        { text: "vue+elementui表格的增删改，行的上移下移，指定位置添加行", link: "/posts/4.FrontEnd-Bug/vue+elementui表格的增删改，行的上移下移，指定位置添加行" },
+        { text: "vue+input文件上传", link: "/posts/4.FrontEnd-Bug/vue+input文件上传" },
+        { text: "vue3+vite封装axios和全局loading", link: "/posts/4.FrontEnd-Bug/vue3+vite封装axios和全局loading" },
+        { text: "vue3+vite项目按需引入AntDesign", link: "/posts/4.FrontEnd-Bug/vue3+vite项目按需引入AntDesign" },
+        { text: "vue3按需引入echarts", link: "/posts/4.FrontEnd-Bug/vue3按需引入echarts" },
+        { text: "vue3使用图片查看器", link: "/posts/4.FrontEnd-Bug/vue3使用图片查看器" },
+        { text: "vue3子组件监听不到props值的变化", link: "/posts/4.FrontEnd-Bug/vue3子组件监听不到props值的变化" },
+        { text: "vue表单自动保存（页面缓存）", link: "/posts/4.FrontEnd-Bug/vue表单自动保存（页面缓存）" },
       ],
     },
   ];
@@ -149,7 +154,7 @@ const sidebarBookHttp = () => {
 // #endregion
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
-    "/home/": sidebarHome(),
+    "/posts/4.FrontEnd-Bug": sidebarFrontEndBug(),
     "/interview/": sidebarInterview(),
     "/network/": sidebarNetwork(),
     "/typescript/": sidebarTypeScript(),

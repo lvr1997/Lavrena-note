@@ -20,7 +20,7 @@ declare const data: Post[];
 export { data, type Post };
 
 export default createContentLoader("posts/*/*.md", {// 扫描文件的目录
-  excerpt: true, //解析包含摘录
+  // excerpt: true, //解析包含摘录
   transform(raw): Post[] {
     // console.log("Raw data:", raw); // 输出原始数据
     return raw

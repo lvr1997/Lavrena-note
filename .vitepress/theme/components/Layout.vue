@@ -26,6 +26,7 @@ if(page.value.relativePath.indexOf('index') !== -1) {
       </p>
     </template>
     <template #doc-before>
+      <h1 class="text-3xl font-bold my-2">{{ frontmatter.title }}</h1>
       <ArticleMetadata/>
     </template>
   </Layout>

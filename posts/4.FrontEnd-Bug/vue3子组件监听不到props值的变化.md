@@ -1,7 +1,13 @@
 ---
+title: vue3子组件监听不到props值的变化
+titleTemplate: Vue
+publish: true
+date: 2024-07-20
 tags:
-  - 踩坑
+  - vue
 ---
+
+> 项目使用版本：`vue3.2`
 
 子组件监听父组件通过props传过来的值，接收到的不是响应式的
 要通过toRefs转为响应式对象才可以被watch监听到

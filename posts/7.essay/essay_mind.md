@@ -1,8 +1,7 @@
 ---
 title: 来自一个程序媛的内心独白
 titleTemplate: 随笔
-layout: doc
-sidebar: false
+publish: true
 date: 2021-08-02
 tags:
   - 随笔

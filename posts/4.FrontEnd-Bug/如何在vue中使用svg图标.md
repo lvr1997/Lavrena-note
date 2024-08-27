@@ -1,3 +1,12 @@
+---
+title: 如何在vue中使用svg图标
+titleTemplate: Vue
+publish: true
+date: 2022-09-10
+tags:
+  - vue
+  - svg
+---
 
 > 本篇文章引用自 如何在vue项目中使用svg图标 - 小方块的世界 - 博客园
 
@@ -20,7 +29,8 @@ npm install --save-dev svg-sprite-loader
 ### 配置
 
 ```jsx
-// Vue2.x 在 webpack.base.conf.js 中配置如下：// 注意svg图标的路径 src/assets/icon 要写正确 
+// Vue2.x 在 webpack.base.conf.js 中配置如下：
+// 注意svg图标的路径 src/assets/icon 要写正确 
 module: {
     rules: [
       {
