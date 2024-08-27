@@ -33,9 +33,14 @@ _执行了ReactDOM.render(…,后发生了什么？_
 ```jsx
 class MyComponent extends React.Component {
   render(){
-    //render是放在哪里的？一MyComponent的原型对象上，供实例使用。    //render中的this是谁？一yComponent的实例对象<=>MyComponent组件实例对象。    console.log('render中的this:',this);    return <h2>我是用类定义的组件（适用于【复杂组件】的定义）</h2>  }
+    //render是放在哪里的？一MyComponent的原型对象上，供实例使用。    
+    //render中的this是谁？一yComponent的实例对象<=>MyComponent组件实例对象。    
+    console.log('render中的this:',this);    
+    return <h2>我是用类定义的组件（适用于【复杂组件】的定义）</h2>  
+  }
 }
-//2.渲染组件到页面//ReactDOM.render('组件名标签形式',document.getElementById('test')
+//2.渲染组件到页面
+ReactDOM.render('组件名标签形式',document.getElementById('test')
 ```
 
 _执行ReactDOM.render(……)后发生了什么？_
@@ -55,17 +60,30 @@ _执行ReactDOM.render(……)后发生了什么？_
 ```jsx
 class Weather extends React.Component {
   constructor(props) {
-    super(props);    this.changeWeather = this.changeWeather.bind(this);    this.state = {isHot:true}
+    super(props);    
+    this.changeWeather = this.changeWeather.bind(this);    
+    this.state = {isHot:true}
   }
   render() {
-    //读取状态    const { isHot } = this.state    return (
-      <div className="weather_container">        今天的天气是：{isHot? "☀️": "🌥️"}        <button onClick={this.changeWeather}>切换天气</button>      </div>    );  }
+    //读取状态    
+    const { isHot } = this.state    
+    return (
+      <div className="weather_container">        
+	      今天的天气是：{isHot? "☀️": "🌥️"}        
+	      <button onClick={this.changeWeather}>切换天气</button>      
+	  </div>    
+	);  
+  }
   changeWeather() {
-    this.setState({isHot:!this.state.isHot});  }
+    this.setState({isHot:!this.state.isHot});  
+  }
 }
-//渲染组件//ReactDOM.render(`<Weather/>`, document.getElementById("root"))
+//渲染组件
+ReactDOM.render(`<Weather/>`, document.getElementById("root"))
 ```
 
-<aside> 💡 案例总结 changeWeather方法放在了哪里？—— Weather的原型对象上，供实例使用 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用 类中的方法默认开启了局部的严格模式，所以changeWeather中的this是undefind
 
-</aside>
+> [!NOTE] 案例总结
+> changeWeather方法放在了哪里？—— Weather的原型对象上，供实例使用 
+> 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用 
+> 类中的方法默认开启了局部的严格模式，所以changeWeather中的this是undefind

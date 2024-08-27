@@ -1,5 +1,3 @@
-# 打开新世界的大门 - 初始Nuxt
-
 ## 为什么要学？
 
 一、提升技术面；二、😏
@@ -18,8 +16,11 @@ Nuxt 框架提供了一种基于 Node.js 的**服务端渲染方案 SSR（Server
 **开启或关闭服务端渲染** Nuxt 默认开启 SSR 服务端渲染，推荐开启，从而兼顾了 SSR 和 SPA 的优点，也利于 SEO 搜索引擎优化。
 
 ```tsx
-// nuxt.config.tsexport default defineNuxtConfig({
-  // 是否开启 ssr 服务端渲染  ssr: true,})
+// nuxt.config.ts
+export default defineNuxtConfig({
+  // 是否开启 ssr 服务端渲染  
+  ssr: true
+})
 ```
 
 ## 优点
@@ -95,8 +96,19 @@ Nuxt.js 自带基于文件的路由系统，无需安装 **vue-router**，无需
 ```
 
 **参考代码**
-
-`vue {3-4,6} <template> <!-- 路由链接 --> <NuxtLink to="/">首页</NuxtLink> <NuxtLink to="/video">视频页</NuxtLink> <!-- 页面路由 --> <NuxtPage /> </template>`
+```html {3-4,6}
+<template> 
+	<!-- 路由链接 --> 
+	<NuxtLink to="/">首页</NuxtLink> 
+	<NuxtLink to="/video">视频页</NuxtLink> 
+	<!-- 页面路由 --> 
+	<NuxtPage /> 
+</template>
+```
 
 - 页面路由 `<NuxtPage>` 相当于 `<RouterView>`
 - 页面跳转 `<NuxtLink>` 相当于 `<RouterLink>`
+
+## Nuxt实战
+
+[[Nuxt3实现哔哩哔哩移动端实战]]

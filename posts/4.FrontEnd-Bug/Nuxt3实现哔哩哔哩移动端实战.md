@@ -10,6 +10,8 @@ tags:
 
 > 项目学习视频：黑马前端Nuxt3原理到实战视频教程，nuxt构建B站哔哩哔哩移动端项目_哔哩哔哩_bilibili
 
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=620070911&bvid=BV1u84y1R7d1&cid=1308448621&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## ①页面搭建
 
 按照Nuxt的目录结构新建目录
@@ -49,7 +51,7 @@ export default defineNuxtConfig({
 - 使用
 
 ::: code-group
-```vue
+```html
 <van-button type="primary">主要按钮</van-button>
 <van-button type="info">信息按钮</van-button>
 ```
@@ -63,7 +65,7 @@ export default defineNuxtConfig({
 
 在 `app.vue` 的样式全局生效。
 
-```vue
+```html
 <style lang="scss">
 /* vant-ui 主题定制 */
 :root {
@@ -100,7 +102,7 @@ defineEventHandler定义接口
 
 通过设置网页 title 和 description 等 SEO 优化信息，由服务端渲染，可提高网页在搜索引擎结果页面中的排名和可见性 。
 
-```vue
+```html
 <script setup lang="ts">
 // SEO 优化信息
 useSeoMeta({
@@ -154,7 +156,7 @@ export default defineNuxtConfig({
 
 抽离到 `components` 目录的组件可自动导入，在首页、视频详情页中直接使用即可，页面也变得更简洁。
 
-```vue
+```html
 <template>
   <!-- 公共头部 -->
   <AppHeader />
@@ -214,7 +216,7 @@ export default defineEventHandler(() => {
 const { data: channelList } = await useFetch('/api/channel')
 ```
 
-```vue [渲染列表]
+```html [渲染列表]
 <!-- 频道列表 -->
 <van-tabs>
 	<van-tab v-for="item in 10" :key="item" title="频道" />   
@@ -252,7 +254,7 @@ const { data: videoList } = await useFetch('/api/video')
 :::
 v-for 循环展示
 ::: code-group 
-```vue 
+```html 
 <!-- 视频列表 -->
 <div class="video-list">  
 	<NuxtLink class="v-card"
@@ -449,7 +451,7 @@ export default defineEventHandler((event) => {
 ### 代码实现
 
 ::: code-group 
-```vue [pages/video/[id].vue]
+```html [pages/video/[id].vue]
 <script setup lang="ts">
 import type { BarrageInstance } from 'vant'
 
@@ -531,7 +533,7 @@ useSeoMeta({
 
 没有做页面缓存的话，切换页面时会重新发送请求，用户体验不友好，开启 keepalive 优化体验。
 
-```vue
+```html
 <template>
   <!-- keepalive 设置页面缓存 -->
   <NuxtPage :keepalive="{ max: 10 }" />
