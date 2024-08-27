@@ -10,10 +10,14 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   lastUpdated: true,
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     logo: '/logo.svg',
     nav: [
       { text: '首页', link: '/' },
+      { text: '归档', link: '/article'},
       { text: '关于作者', link: '/about' }
     ],
     sidebar,
@@ -49,7 +53,7 @@ export default defineConfig({
       },
     },
     footer: {
-      message: '<a href="https://wjk.usst.edu.cn/2024/0821/c16753a325268/page.htm">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn">冀ICP备2024067902号</a>',
+      message: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn">冀ICP备2024067902号</a>',
       copyright: 'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/">VitePress</a>'
     }
   },

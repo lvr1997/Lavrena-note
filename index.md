@@ -7,8 +7,8 @@ hero:
     src: /logo.svg
   actions:
     - theme: brand
-      text: 👉开始阅读
-      link: /guide/what-is-vitepress
+      text: 👉查看
+      link: /article
     - theme: alt
       text: View on GitHub
       link: https://github.com/lvr1997/Lavrena-Blog

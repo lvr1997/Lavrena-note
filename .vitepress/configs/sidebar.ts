@@ -1,6 +1,6 @@
 import type { DefaultTheme } from "vitepress";
 
-//#region 
+// #region 
 const sidebarHome = () => {
   return [
     {
@@ -146,7 +146,7 @@ const sidebarBookHttp = () => {
   ];
 };
 
-// #end region
+// #endregion
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
     "/home/": sidebarHome(),

@@ -6,7 +6,7 @@ import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import DefaultTheme from 'vitepress/theme'
 import Layout from "./components/Layout.vue";
 import HomeUnderline from "./components/HomeUnderline.vue";
-import update from "./components/update.vue"
+import Article from "./components/Article.vue";
 import './style/index.css'
 
 export default {
@@ -14,7 +14,7 @@ export default {
   Layout,
   enhanceApp({app}) {
     app.component('HomeUnderline', HomeUnderline)
-    app.component('update' , update)
+    app.component('Article', Article)
   },
   setup() {
     const { frontmatter } = toRefs(useData());

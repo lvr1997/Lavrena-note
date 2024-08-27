@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { data as posts } from '../posts.data'
-import { useData } from 'vitepress'
 
-const { frontmatter } = useData()
 </script>
 
 <template>
+  <!-- 归档列表 -->
   <div class="divide-y divide-gray-200 dark:divide-slate-200/5">
     <ul class="divide-y divide-gray-200 dark:divide-slate-200/5 max-w-2xl mx-auto">
-      <li class="py-12" v-for="{ title, url, date, excerpt } of posts">
+      <li class="py-12" v-for="{ title, url, date, excerpt, tags } of posts">
         <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
           <div class="space-y-5 xl:col-span-3">
             <div class="space-y-6">
@@ -23,6 +22,10 @@ const { frontmatter } = useData()
             </div>
             <div class="text-base leading-6 font-medium">
               <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300">{{ date.string }}</span>
+              <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300 ml-2">
+                标签：
+              </span>
+              <span v-for="tag in tags">{{ tag }}</span>
             </div>
           </div>
         </article>

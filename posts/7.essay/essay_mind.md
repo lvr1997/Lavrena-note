@@ -2,6 +2,7 @@
 title: 来自一个程序媛的内心独白
 titleTemplate: 随笔
 layout: doc
+sidebar: false
 date: 2021-08-02
 tags:
   - 随笔
@@ -18,12 +19,6 @@ tags:
 凭借着最初纯粹的兴趣，就这样开始学习了`Java`基础知识。
 
 从`JDK`的安装到第一个`HelloWorld`程序，不得不说当自己敲出来的`HelloWorld`程序运行成功时，那种成就感，是语言无法描述的...😎
-
-::: code-group
-```java [java]
-System.out.println("Hello World!")
-```
-:::
 
     ——或许你们想不到，这就是我花了半个学期的时间的成果😮。半学期过后，我渐渐意识到，自己对`Java`的学习的动力性不强。
 

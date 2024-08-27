@@ -29,15 +29,12 @@ export default createContentLoader("posts/*/*.md", {// 扫描文件的目录
           // console.warn(`No frontmatter found for ${url}`); 
           return null; // 忽略没有 frontmatter 的文件  
         }
-
         const { title, date } = frontmatter;
 
         if (!title || !date) {
           // console.warn(`Incomplete frontmatter in ${url}:`, frontmatter);
           return null; // 忽略缺少必要字段的文件
         }
-
-        // console.log("frontmatter:", frontmatter); // 输出 frontmatter 的值
         return {
           title,
           url,
