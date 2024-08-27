@@ -1,4 +1,3 @@
-# kd-shop项目日记
 
 > 不一定什么时候能全做完，反正每天都学一点做一点，最重要的是积累和坚持✊
 
@@ -20,13 +19,16 @@ kd-shop项目对我而言，我想实现在我职业技术生涯中的一项新�
 
 ## 🧠项目脑图
 
-![https://bunalien.oss-cn-beijing.aliyuncs.com/images/kd-shop.png](https://bunalien.oss-cn-beijing.aliyuncs.com/images/kd-shop.png)
+![kd-shop.png](./assets/kd-shop.png)
 
 ## ✊进度
 
-- [ ]  擦亮宝贝
+- [x] [[需求#首页|首页]]
+	- [x] 发布闲置
+	- [x] [[需求#买闲置|买闲置]]
+- [ ] 擦亮宝贝
 - [x]  登录
-- [x]  发布闲置
+
 - [x]  根据商品id查询该商品详细信息
 - [ ]  购买商品
 - [x]  获取个人信息
@@ -46,5 +48,3 @@ kd-shop项目对我而言，我想实现在我职业技术生涯中的一项新�
 ## 🐞项目Bug与踩坑
 
 1. 前端在配置axios请求代理时一定要加上请求前缀baseUrl，否则当前端路由地址刚好与后端接口地址一样时，你会发现惊喜🙃
-
-[需求](需求.md)

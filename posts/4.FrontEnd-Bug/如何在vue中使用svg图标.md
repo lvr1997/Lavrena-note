@@ -10,26 +10,28 @@ tags:
 
 > 本篇文章引用自 如何在vue项目中使用svg图标 - 小方块的世界 - 博客园
 
-### svg图标优点
+## svg图标优点
 
 svg与iconfont之类的字体图标在网页中的使用差别不大，可以修改大小，颜色等而且不失真。
 
-### 安装插件
+## 安装插件
 
 ```bash
 npm install --save-dev svg-sprite-loader
 ```
 
-### 建立文件夹目录 （xxx.svg 注意：这里的 xxx 不要使用中文）
+## 建立文件夹目录 （xxx.svg 注意：这里的 xxx 不要使用中文）
 
 ```diff
 - assets-- icon--- svg--- index.js
 ```
 
-### 配置
+## 配置
 
-```jsx
-// Vue2.x 在 webpack.base.conf.js 中配置如下：
+> 注意：不同的`vue-cli`脚手架版本，这里的配置会有差异
+
+::: code-group 
+```jsx [Vue2.x webpack.base.conf.js]
 // 注意svg图标的路径 src/assets/icon 要写正确 
 module: {
     rules: [
@@ -54,7 +56,7 @@ module: {
   }
 ```
 
-```jsx
+```jsx [Vue3.x vue.config.js]
 // Vue3.x 在根目录新建 vue.config.js 中配置如下：
 module.exports = {
   chainWebpack: config => {
@@ -66,21 +68,27 @@ module.exports = {
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
-        symbolId: 'icon-[name]',      })
-    // 修改images loader 添加svg处理    const imagesRule = config.module.rule('images')
+        symbolId: 'icon-[name]',      
+    })
+    // 修改images loader 添加svg处理    
+    const imagesRule = config.module.rule('images')
     imagesRule.exclude.add(resolve('src/assets/icon'))
-    config.module      .rule('images')
+    config.module      
+      .rule('images')
       .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
   }
 }
 ```
 
-```jsx
-// Vue4.x 在根目录新建 vue.config.js 中配置如下：const path = require('path')
+```jsx [VueCli4.x vue.config.js]
+// VueCli4.x 在根目录新建 vue.config.js 中配置如下：
+const path = require('path')
 module.exports = {
-  // 使用svg-sprite-loader编译svg，若使用file-loader时排除src/icon下的svg矢量图标  chainWebpack: (config) => {
+  // 使用svg-sprite-loader编译svg，若使用file-loader时排除src/icon下的svg矢量图标  
+  chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
-    // 清除已有的所有 loader 否则接下来的 loader 会附加在该规则现有的 loader 之后    svgRule.uses.clear()
+    // 清除已有的所有 loader 否则接下来的 loader 会附加在该规则现有的 loader 之后 
+    svgRule.uses.clear()
     svgRule
       .test(/\.svg$/)
       .include.add(path.resolve(__dirname, './src/icon'))
@@ -99,10 +107,11 @@ module.exports = {
       .loader('file-loader')
   },}
 ```
-
+:::
+## 使用
 ### 在components目录下增加一个`SvgIcon`组件
-
-```vue
+::: code-group
+```vue [SvgIcon.vue]
 <template>
   <div
     v-if="isExternal"
@@ -173,11 +182,13 @@ export default {
     }
 </style>
 ```
-
+:::
 ### 在`icon`文件夹下`index.js`中导入所有svg文件，并将SvgIcon注册到全局
 
 ```jsx
-import Vue from 'vue'import SvgIcon from '@/components/SvgIcon'// 全局注册Vue.component('svg-icon', SvgIcon)
+import Vue from 'vue'import SvgIcon from '@/components/SvgIcon'
+// 全局注册
+Vue.component('svg-icon', SvgIcon)
 const req = require.context('./svg', false, /\.svg$/)
 const requireAll = requireContext => requireContext.keys().map(requireContext)
 requireAll(req)

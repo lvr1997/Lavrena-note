@@ -19,12 +19,16 @@ tags:
 
 ## 效果图
 
-![https://bunalien.oss-cn-beijing.aliyuncs.com/images/viewer.gif](https://bunalien.oss-cn-beijing.aliyuncs.com/images/viewer.gif)
+![viewer.gif](./assets/viewer.gif)
 
 ## 代码
 
-1. 安装viewer.js`npm install viewerjs`
+1. 安装viewer.js
+```bash
+npm install viewerjs
+```
 
+2. 具体实现
 ```vue
 <template>
     <div class="container">
@@ -102,53 +106,53 @@ tags:
     })
 </script>
 <style scoped>
-    .container {
-        width: 800px;
-        height: 600px;
-        background-color: #42B983;
-        display: flex;
-        justify-content: space-around;
-    }
+.container {
+	width: 800px;
+	height: 600px;
+	background-color: #42B983;
+	display: flex;
+	justify-content: space-around;
+}
 
-    .view {
-        width: 150px;
-        height: 100%;
-        overflow-y: auto;
-    }
+.view {
+	width: 150px;
+	height: 100%;
+	overflow-y: auto;
+}
 
-    .view_item {
-        width: 120px;
-        height: 120px;
-    }
+.view_item {
+	width: 120px;
+	height: 120px;
+}
 
-    .view_item img {
-        width: 100%;
+.view_item img {
+	width: 100%;
 
-    }
+}
 
-    .photo {
-        width: 500px;
-        height: 450px;
-        padding: 20px;
-        position: relative;
-        margin-top: 20px;
-    }
+.photo {
+	width: 500px;
+	height: 450px;
+	padding: 20px;
+	position: relative;
+	margin-top: 20px;
+}
 
-    .view_image {
-        width: 100%;
-        height: 100%;
-    }
-    .view_image img {
-        opacity: 0;
-    }
+.view_image {
+	width: 100%;
+	height: 100%;
+}
+.view_image img {
+	opacity: 0;
+}
 
-    .line {
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        top: 0;
-        left: 0;
-    }
+.line {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	top: 0;
+	left: 0;
+}
 </style>
 
 ```

@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"c1e5ba1eda0805a9","type":"text","text":"Projects\n- [ ] [[Threejs基础知识学习]]\n- [ ] ","x":-560,"y":-300,"width":255,"height":280,"color":"1"},
-		{"id":"82ea9d65949ab483","type":"text","text":"Areas","x":-260,"y":-300,"width":260,"height":280,"color":"4"},
-		{"id":"30190625f1a2a017","type":"text","text":"Resources\n","x":40,"y":-300,"width":255,"height":280,"color":"3"},
-		{"id":"73f23f11fde970ec","type":"text","text":"Articles\n\n","x":320,"y":-300,"width":260,"height":280,"color":"5"}
-	],
-	"edges":[]
-}
