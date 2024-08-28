@@ -1932,7 +1932,7 @@ export const useTalkStore = defineStore('talk',()=>{
   - 事件对象`$event`: 是包含事件相关信息的对象（`pageX`、`pageY`、`target`、`keyCode`）
 - 自定义事件：
   - 事件名是任意名称
-  - <strong style="color:red">事件对象`$event`: 是调用`emit`时所提供的数据，可以是任意类型！！！</strong >
+  - **事件对象`$event`: 是调用`emit`时所提供的数据，可以是任意类型！！！**
 
 3. 示例：
 
@@ -2127,7 +2127,7 @@ function sendToy(){
     <h3>父组件</h3>
 	<Child :a="a" :b="b" :c="c" :d="d" v-bind="{x:100,y:200}" :updateA="updateA"/>
   </div>
-</templat  e>
+</template>
 
 <script setup lang="ts" name="Father">
 	import Child from './Child.vue'
