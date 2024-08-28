@@ -1,7 +1,7 @@
 ---
 title: Nuxt3实现哔哩哔哩移动端实战
 titleTemplate: Vue
-publish: true
+isOriginal: true
 date: 2024-06-12
 tags:
   - vue
@@ -155,8 +155,8 @@ export default defineNuxtConfig({
 - **视频组件** `components/AppVideo.vue`
 
 抽离到 `components` 目录的组件可自动导入，在首页、视频详情页中直接使用即可，页面也变得更简洁。
-
-```html
+::: code-group
+```html [App.vue]
 <template>
   <!-- 公共头部 -->
   <AppHeader />
@@ -170,7 +170,7 @@ export default defineNuxtConfig({
   </div>
 </template>
 ```
-
+:::
 **参考链接**
 
 - [components 目录](https://nuxt.com/docs/guide/directory-structure/components)
@@ -258,26 +258,26 @@ v-for 循环展示
 <!-- 视频列表 -->
 <div class="video-list">  
 	<NuxtLink class="v-card"
-	    v-for="item in videoList" // [!code ++]
-	    :key="item.aid" // [!code ++]
-	    :to="`/video`"  // [!code ++]
+	    v-for="item in videoList" // [!code focus]
+	    :key="item.aid" // [!code focus]
+	    :to="`/video`"  // [!code focus]
   >
     <div class="card">
       <div class="card-img">
-        <img class="pic" :src="item.pic" :alt="item.title" /> // [!code ++]    
+        <img class="pic" :src="item.pic" :alt="item.title" />  
 	  </div>
       <div class="count">
         <span>
           <i class="iconfont icon_shipin_bofangshu"></i>
-          {{ item.stat.view }}   // [!code ++]     
+          {{ item.stat.view }}      
 		</span>
         <span>
           <i class="iconfont icon_shipin_danmushu"></i>
-          {{ item.stat.danmaku }} // [!code ++]     
+          {{ item.stat.danmaku }} 
 		</span>
       </div>
     </div>
-	<p class="title">{{ item.title }}</p> // [!code ++]
+	<p class="title">{{ item.title }}</p>
 	</NuxtLink>
 </div>
 ```
@@ -390,12 +390,10 @@ export interface VideoItem {
 ```ts
 // 导入类型
 // 显示的列表 - 指定类型
-import type { VideoItem } from '@/types/video'  // [!code ++]
-const list = ref<any[]>([])+  const list = ref<VideoItem[]>([])// 滚动触底触发 // [!code --]
+import type { VideoItem } from '@/types/video'  // [!code focus]
 const onLoad = () => {
-  // 根据当前页码提取数据
-const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as any[] // [!code --]
-const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as VideoItem[]} // [!code ++]
+// 根据当前页码提取数据
+const data = videoList.value?.slice((page - 1) * pageSize,page * pageSize) as VideoItem[]} // [!code focus]
 ```
 
 ## 视频详情-动态路由传参
@@ -411,19 +409,18 @@ pages/video/index.vue => pages/video/[id].vue
 
 点击跳转 `video/index.vue`
 
-```diff
+```html
   <NuxtLink
     class="v-card"
     v-for="item in list"
     :key="item.aid"
--    :to="`/video`"+    :to="`/video/${item.bvid}`"  >
-        ...
+    :to="`/video/${item.bvid}`"> // [!code focus]
   </NuxtLink>
 ```
 
 页面中获取参数
 
-```vue
+```html
 <script setup lang="ts">
 const { params } = useRoute()
 

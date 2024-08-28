@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { data as posts } from '../posts.data'
+import { formatDate } from "../utils/common";
 
 </script>
 
@@ -21,11 +22,11 @@ import { data as posts } from '../posts.data'
               ></div>
             </div>
             <div class="text-base leading-6 font-medium">
-              <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300">{{ date.string }}</span>
+              <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300">🕛{{ formatDate(date.string) }}</span>
               <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300 ml-2">
-                标签：
+                🏷️
               </span>
-              <span v-for="tag in tags">{{ tag }}，</span>
+              <span class="whitespace-nowrap rounded-md bg-orange-50 px-2 py-1 mr-1 text-xs text-orange-400" v-for="tag in tags">{{ tag }}</span>
             </div>
           </div>
         </article>

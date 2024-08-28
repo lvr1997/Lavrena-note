@@ -1,7 +1,7 @@
 ---
 title: vue表单自动保存（页面缓存）
 titleTemplate: Vue
-publish: true
+isOriginal: false
 date: 2024-01-12
 tags:
   - vue

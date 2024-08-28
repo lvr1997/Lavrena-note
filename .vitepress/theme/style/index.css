@@ -94,20 +94,16 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  /* --vp-c-brand-1: #fedc34;
-  --vp-c-brand-2: #41d1ff; 鼠标悬浮
-  --vp-c-brand-3: #f5d844; */
+  --vp-c-brand-1: #FF9767;
+  --vp-c-brand-2: #FFD1BC; /*鼠标悬浮 */
+  --vp-c-brand-3: #FF9767;
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #fedc34 30%,
-    #41d1ff
+    135deg, #FFBEA2 , #FFD87B
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #fedc34 25%,
-    #47caff 75%
+    135deg, #FFBEA2 , #FFD87B
   );
   --vp-home-hero-image-filter: blur(12px);
 }

@@ -35,6 +35,9 @@ https://themusecatcher.github.io/vue-amazing-ui/guide/components/segmented.html
 
 [炫酷的UI组件库，适用于个人网站](http://uiverse.io)
 
+使用`tailwindcss`的组件库
+[Radix Vue | Unstyled, accessible components for building high‑quality design systems and web apps in Vue (radix-vue.com)](https://www.radix-vue.com/)
+
 ## 其他
 [Quicker软件 您的指尖工具箱 - Quicker (getquicker.net)](https://getquicker.net/)
 

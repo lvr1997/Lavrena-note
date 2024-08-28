@@ -1,7 +1,7 @@
 ---
 title: vue3子组件监听不到props值的变化
 titleTemplate: Vue
-publish: true
+isOriginal: true
 date: 2024-07-20
 tags:
   - vue

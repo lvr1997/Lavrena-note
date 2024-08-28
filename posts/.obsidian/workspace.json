@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "7954b06778b1a025",
+    "type": "split",
+    "children": [
+      {
+        "id": "3458b690bf8b8e9e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "468750a5f3821e9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "links.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "31da3b4b7c71a12a",
+    "type": "split",
+    "children": [
+      {
+        "id": "195246fedb4f3a9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e36cafd22e5fc2f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8b18defa5a5bf1b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "publish",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cf94c0595961d55a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 295.5
+  },
+  "right": {
+    "id": "caa59564413be3b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6033a4023be73b38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a9c1e0555b1ced0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "links.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "15de880923e4fbf1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "links.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fcef67b8bcc0f981",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cd8b6c5b1e2cf9a8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "links.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 255.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false
+    }
+  },
+  "active": "468750a5f3821e9f",
+  "lastOpenFiles": [
+    "4.FrontEnd-Bug/Nuxt3实现哔哩哔哩移动端实战.md",
+    "4.FrontEnd-Bug/antdesign-vue4 postcss-pxtorem，dev下ant组件单位没转rem.md",
+    "4.FrontEnd-Bug/柱状图数据太多时，如何动态给echarts容器指定高度.md",
+    "index.md",
+    "4.FrontEnd-Bug/动态改变echarts柱状图颜色.md",
+    "4.FrontEnd-Bug/处理减少series数组长度时，图表不发生变化的问题.md",
+    "4.FrontEnd-Bug/vue+elementui表格的增删改，行的上移下移，指定位置添加行.md",
+    "4.FrontEnd-Bug/vue3+vite封装axios和全局loading.md",
+    "4.FrontEnd-Bug/vue3+vite项目按需引入AntDesign.md",
+    "4.FrontEnd-Bug/vue3按需引入echarts.md",
+    "4.FrontEnd-Bug/vue3搭建通用后台管理系统.md",
+    "4.FrontEnd-Bug/vue3使用图片查看器.md",
+    "4.FrontEnd-Bug/vue3子组件监听不到props值的变化.md",
+    "4.FrontEnd-Bug/vue使用原生input实现文件上传.md",
+    "4.FrontEnd-Bug/vue表单自动保存（页面缓存）.md",
+    "4.FrontEnd-Bug/项目自适应方案.md",
+    "4.FrontEnd-Bug/使用easy-mock模拟接口数据.md",
+    "4.FrontEnd-Bug/如何在vue中使用svg图标.md",
+    "4.FrontEnd-Bug/动态路由加载.md",
+    "2.FrontEnd-Base/Nuxt.md",
+    "3.前端工程化/pnpm.md",
+    "2.FrontEnd-Base/React.md",
+    "HOME.canvas",
+    "6.kd-shop/kd-shop项目日记.md",
+    "6.kd-shop/需求.md",
+    "6.kd-shop/assets/kd-shop.png",
+    "6.kd-shop/assets",
+    "4.FrontEnd-Bug/assets/viewer.gif",
+    "4.FrontEnd-Bug/assets",
+    "links.md",
+    "7.essay/essay_mind.md",
+    "2.FrontEnd-Base/assets/动态路由加载.drawio.png",
+    "未命名.canvas",
+    "4.Articles/2024-08-19存档/Program Develop/经验总结&踩坑/未命名",
+    "4.Articles/2024-08-19存档/Program Develop/Inerview Q&A d3526f7ec4f044dfb9f4c98ed5bc763a",
+    "4.Articles/2024-08-21存档",
+    "1.Projects/2024-08Threejs学习",
+    "4.Articles/2024-08-19存档",
+    "4-Articles/新建文件夹",
+    "2.FrontEnd-Base/assets",
+    "6.kd-shop",
+    "2.FrontEnd-Base/vue/assets/Pasted image 20240819110555.png",
+    "2.FrontEnd-Base/vue/images/自动补充value.png",
+    "2.FrontEnd-Base/vue/images/volar.png",
+    "2.FrontEnd-Base/vue/images/image-20231218085906380.png",
+    "2.FrontEnd-Base/vue/images/pinia_example.gif",
+    "2.FrontEnd-Base/vue/images/image-20231119185900990.png",
+    "2.FrontEnd-Base/vue/images/image-20231018144351536.png"
+  ]
+}

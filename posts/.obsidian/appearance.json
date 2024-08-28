@@ -1,0 +1,15 @@
+{
+  "interfaceFontFamily": "苹方",
+  "textFontFamily": "霞鹜文楷 GB 屏幕阅读版 R",
+  "monospaceFontFamily": "JetBrains Mono",
+  "baseFontSize": 17,
+  "cssTheme": "Things",
+  "theme": "system",
+  "accentColor": "",
+  "showViewHeader": true,
+  "baseFontSizeAction": false,
+  "enabledCssSnippets": [
+    "codeblock",
+    "callout-cite"
+  ]
+}

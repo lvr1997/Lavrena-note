@@ -1,32 +1,91 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { data as postData } from "../posts.data";
+import { getQueryParam,formatDate } from "../utils/common";
+
 const tagColor = ['gray', 'red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'] //0-7
-const selectTag = ref('')
+const selectTag = ref<string>('')
+const tags = computed(() => initTags(postData));
+const toggleTag = (tagTitle) => {
+  if (selectTag.value && selectTag.value == tagTitle) {
+      selectTag.value = '';
+    } else {
+      selectTag.value = tagTitle;
+    }
+}
 
-const toggleTag = (tagTitle: string) => {
+/**
+ * 初始化标签
+ */
+const initTags = (postData) => {
+  const tags: any = {};
+    for (let i = 0; i < postData.length; i++) {
+      const article = postData[i];
+      const articleTags = article.tags;
+      if (Array.isArray(articleTags)) {
+        articleTags.forEach((articleTag) => {
+          if (!tags[articleTag]) {
+            tags[articleTag] = [];
+          }
+          tags[articleTag].push(article);
+          // 文章按发布时间降序排序
+          tags[articleTag].sort((a, b) => b.date.time - a.date.time);
+        });
+      }
+    }
+    
+    return tags;
+}
 
+// 如果URL路径有tag参数, 默认选中指定Tag, 例如: /tags?tag=Git
+let tag = getQueryParam('tag');
+if (tag && tag.trim() != '') {
+  toggleTag(tag);
 }
 
 // Math. floor(Math.random()*8)
 </script>
 <template>
-  <section class="container mx-auto xl:px-10">
+  <section class="container mx-auto px-5 xl:px-80">
     <!-- 头部 -->
-    <section class="py-6 mb-6">
-        <span class="inline-block w-8 h-8 rounded-full border-solid border border-gray-400 align-middle text-center relative">
-            <svg class="fill-gray-400 absolute left-1/2 top-1/2 -ml-2 -mt-2" role="img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" style="width: 16px; min-width: 16px; height: 16px;"><defs></defs><path d="M527.744 32c20.8 0.192 40.32 8.32 55.04 23.04l386.112 386.24c14.912 14.848 23.104 34.56 23.104 55.68 0 20.992-8.192 40.704-23.04 55.552l-416.512 416.512c-14.784 14.784-34.624 22.976-55.68 22.976a78.08 78.08 0 0 1-55.616-23.04L55.104 582.784A78.272 78.272 0 0 1 32 527.552V110.72C32 67.2 67.2 32 110.72 32h417.024zM267.136 267.136a128.064 128.064 0 1 0 181.184 181.12 128.064 128.064 0 0 0-181.184-181.12z"></path></svg>
-        </span>
-        <span class="text-base ml-3">我的标签</span>
+    <section class="py-6 mb-3">
+        <span class="text-2xl font-bold">标签</span>
     </section>
     <!-- 内容 -->
     <section>
         <!-- 标签列表 -->
         <section>
-            <span class="inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ring-1 ring-inset cursor-pointer
-                        bg-green-50 text-green-600 ring-green-500/10"
-                  >
-                {{'Badge'}}
+            <span class="inline-flex items-center rounded-md px-2 py-1 mr-2 mb-2 text-gray-600 text-xs font-medium cursor-pointer border border-gray-400 dark:text-white"
+                  :class="{'text-orange-400 border-orange-400 bg-orange-50' : selectTag === tagTitle}" @click="toggleTag(tagTitle)"
+                  v-for="(tag, tagTitle, index) in tags" :key="index">
+                {{  tagTitle }} <sup>{{ tag.length }}</sup>
             </span>
+        </section>
+        <!-- 文章列表 -->
+        <section>
+          <ul v-if="selectTag" role="list" class="divide-y divide-gray-100">
+            <li v-for="(article, index) in tags[selectTag]" :key="index" class="flex justify-between gap-x-6 py-5">
+              <div class="flex min-w-0 gap-x-4">
+                <!-- <img class="h-12 w-12 flex-none rounded-full bg-gray-50" :src="person.imageUrl" alt="" /> -->
+                <div class="min-w-0 flex-auto">
+                  <p class="text-sm font-semibold leading-6 text-gray-900 dark:text-orange-50">
+                    <a class="hover:text-orange-500" :href="article.url">{{ article.title }}</a>
+                  </p>
+                  <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                    <span class="mr-1">🕛{{ formatDate(article.date.string) }}</span>
+                    <span>🏷️
+                      <span class="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 mr-1 text-xs text-orange-400 border-orange-400 cursor-pointer"
+                            v-for="tag in article.tags">{{  tag }}</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div v-else class="text-center">
+            <svg class="mx-auto my-20 h-24 w-24" fill="none" viewBox="0 0 180 141" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M156.96 0.381836C159.703 0.684628 162.453 0.940059 165.189 1.29938C174.067 2.46897 178.4 7.35699 178.83 16.3608C179.613 32.7597 178.758 49.1215 178.153 65.5031C177.744 76.5557 178.271 87.6408 178.214 98.7102C178.178 105.346 178.177 112.016 177.538 118.61C176.171 132.687 168.11 140.015 153.925 140.475C149.274 140.626 144.611 140.461 139.954 140.44C127.761 140.383 115.569 140.324 103.376 140.264C83.8624 140.146 64.348 140.078 44.8358 139.814C41.0693 139.681 37.3232 139.199 33.6457 138.373C28.0149 137.228 23.9946 133.594 20.9075 128.976C17.6148 124.05 15.6283 118.483 14.1677 112.804C10.9202 100.179 7.82017 87.516 4.86753 74.8163C3.40959 68.5785 2.18252 62.2722 1.17079 55.9454C0.133106 49.4211 3.001 45.5278 9.50725 44.2984C13.3032 43.5837 17.1601 43.174 21.1513 42.6035C21.2648 42.0051 21.39 41.3765 21.5028 40.7456C22.1851 36.9353 24.3403 34.0877 27.9384 32.9337C32.3296 31.451 36.8466 30.3729 41.4335 29.7128C61.6267 27.1436 81.9388 27.6772 102.229 27.8143C103.225 27.8214 104.222 27.7963 105.216 27.7496C105.41 27.7405 105.595 27.5612 105.858 27.4215C105.858 24.9465 105.8 22.4288 105.874 19.9149C105.955 17.1508 106.03 14.3763 106.333 11.631C107.006 5.53678 109.317 2.90655 115.492 2.12682C121.308 1.39258 127.2 1.24432 133.063 0.886297C136.59 0.670573 140.122 0.546877 143.652 0.381836H156.96ZM10.2674 52.2879C10.3446 53.949 10.5047 55.6056 10.7473 57.2506C13.778 71.7253 16.7503 86.2139 19.9567 100.649C21.8535 109.52 25.16 118.029 29.7498 125.85C31.8122 129.313 34.756 131.057 38.7115 131.113C42.7974 131.172 46.8878 131.123 50.9762 131.118C71.7066 131.094 92.4368 131.073 113.167 131.053C121.591 131.053 130.015 131.151 138.439 131.21C144.204 131.249 149.968 131.34 155.732 131.323C158.527 131.388 161.266 130.53 163.527 128.884C166.608 126.577 167.134 124.006 165.3 120.622C164.646 119.468 164.054 118.281 163.524 117.066C158.466 104.815 153.224 92.6342 148.478 80.2646C145.684 72.8072 142.032 65.7006 137.597 59.0896C134.018 53.8316 129.267 50.2105 122.818 49.3392C119.097 48.7513 115.34 48.4317 111.575 48.3823C100.823 48.4882 90.0742 48.8599 79.3244 49.1374C60.4853 49.6227 41.6436 50.0409 22.8103 50.6647C18.7705 50.7986 14.7566 51.6856 10.2674 52.2879ZM167.659 102.702L168.317 102.673C168.317 101.353 168.391 100.029 168.306 98.7148C167.194 81.3341 167.86 63.9767 168.596 46.5979C169.002 36.9924 168.498 27.3419 168.227 17.7168C168.105 13.3543 167.458 12.893 163.104 12.4908C161.779 12.3686 160.449 12.2312 159.122 12.2312C146.483 12.2412 133.844 12.2729 121.206 12.3271C119.681 12.3349 118.158 12.6002 116.594 12.7497C116.594 16.6197 116.554 20.2431 116.609 23.8649C116.643 26.0741 116.966 28.2893 116.907 30.4927C116.803 34.3725 115.415 36.1186 111.6 36.9809C109.14 37.5954 106.619 37.9318 104.084 37.9841C92.1113 37.9334 80.1325 37.3991 68.1687 37.6401C58.2141 37.8429 48.2692 38.7973 38.3353 39.6186C35.7087 39.8357 32.9096 40.1554 30.3582 42.4855C30.8961 42.6011 31.4409 42.6817 31.9893 42.7266C47.6167 42.4377 63.244 42.1391 78.8711 41.8306C92.0555 41.5493 105.239 40.991 118.424 40.9442C128.434 40.9085 137.272 44.4093 143.452 52.5106C147.577 57.8452 151.15 63.585 154.118 69.6428C158.225 78.1912 161.451 87.1625 165.036 95.9585C165.946 98.195 166.787 100.454 167.659 102.702Z" fill="black"/></g><defs><clipPath id="clip0"><rect fill="white" height="141" transform="translate(0.777344)" width="179"/></clipPath></defs></svg>
+            <p class="mb-5">点击上方标签，查看标签下的所有文章</p>
+          </div>
         </section>
     </section>
   </section>

@@ -1,7 +1,7 @@
 ---
-title: vue+input文件上传
+title: vue使用原生input实现文件上传
 titleTemplate: Vue
-publish: true
+isOriginal: false
 date: 2023-01-11
 tags:
   - vue

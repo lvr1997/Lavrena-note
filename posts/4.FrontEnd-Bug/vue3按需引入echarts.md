@@ -1,7 +1,7 @@
 ---
 title: vue3按需引入echarts
 titleTemplate: Vue
-publish: true
+isOriginal: true
 date: 2022-10-19
 tags:
   - vue
@@ -25,7 +25,9 @@ import { LabelLayout, UniversalTransition } from "echarts/features";
 import { CanvasRenderer } from "echarts/renderers";
 // 注册必须的组件
 echarts.use([
-  TitleComponent,  TooltipComponent,  GridComponent,  DatasetComponent,  TransformComponent,  BarChart,  LabelLayout,  UniversalTransition,  CanvasRenderer,  LineChart,]);// 导出export default echarts;
+  TitleComponent,  TooltipComponent,  GridComponent,  DatasetComponent,  TransformComponent,  BarChart,  LabelLayout,  UniversalTransition,  CanvasRenderer,  LineChart,]);
+  // 导出
+  export default echarts;
 ```
 
 ### main.js中引入

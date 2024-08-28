@@ -46,11 +46,11 @@
 问题: 封装完SvgIcon组件后， 使用color=“blue” 不生效
 
 ```html
-<SvgIcon name="plus" color="blue" width="50px" height="50px"/> name="plus" color="blue" width="50px" height="50px"/>
+<SvgIcon name="plus" color="blue" width="50px" height="50px"/>
 ```
 
-原因：你导入的 icons/plus.svg 图标中存在fill属性 这个属性中设置的颜色会覆盖掉你设置的颜色
-解决办法： icons/plus.svg 去掉 fill属性
+原因：你导入的 `icons/plus.svg` 图标中存在fill属性 这个属性中设置的颜色会覆盖掉你设置的颜色
+解决办法：`icons/plus.svg` 去掉 fill属性
 
 首页搭建
 要使用收缩与展开，el-aside必须设置width=“collapse”，否则收缩展开会出现收缩后，el-aside宽度不变窄
@@ -61,7 +61,8 @@
 ```tsx
 const isCollapse = inject('isCollapse', ref(false))
 const handleOpen = (key, keyPath) => {
-isCollapse.value = false;
+	isCollapse.value = false;
+}
 ```
 
 el-menu-item中的菜单项必须放在template中，且solt为title否则，展开收缩的会不包含菜单文字

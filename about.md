@@ -2,8 +2,7 @@
 layout: page
 ---
 
-<Author/>
-<!-- <script setup>
+<script setup>
 import {
   VPTeamPage,
   VPTeamPageTitle,
@@ -38,4 +37,4 @@ const members = [
     size="medium"
     :members="members"
   />
-</VPTeamPage> -->
+</VPTeamPage>

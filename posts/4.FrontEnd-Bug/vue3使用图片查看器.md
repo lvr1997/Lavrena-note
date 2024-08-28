@@ -1,7 +1,7 @@
 ---
 title: vue3使用图片查看器
 titleTemplate: Vue
-publish: true
+isOriginal: true
 date: 2022-09-20
 tags:
   - vue

@@ -1,0 +1,12 @@
+{
+  "showInlineTitle": true,
+  "attachmentFolderPath": "./assets",
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "livePreview": false,
+  "defaultViewMode": "preview",
+  "showRibbon": true,
+  "showLineNumber": false,
+  "readableLineLength": false,
+  "propertiesInDocument": "source"
+}

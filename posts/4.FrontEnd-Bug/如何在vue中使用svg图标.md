@@ -1,7 +1,7 @@
 ---
 title: 如何在vue中使用svg图标
 titleTemplate: Vue
-publish: true
+isOriginal: false
 date: 2022-09-10
 tags:
   - vue

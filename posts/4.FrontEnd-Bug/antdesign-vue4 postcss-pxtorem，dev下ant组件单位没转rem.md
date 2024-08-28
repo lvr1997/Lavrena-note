@@ -11,7 +11,7 @@
 
 解决：`ant-design-vue`的开发同学加了个`px2remTransformer`，用上就行了。在App.vue里，加上`a-style-provider`（我是`ant-design-vue 4.0.6`）：
 
-```
+```html
 <template>
   <a-style-provider :transformers="[px2rem]">
       <div class="app">

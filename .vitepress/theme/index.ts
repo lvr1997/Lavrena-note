@@ -7,7 +7,6 @@ import DefaultTheme from 'vitepress/theme'
 import Layout from "./components/Layout.vue";
 import Article from "./components/Article.vue";
 import Tag from "./components/Tag.vue";
-import Author from "./components/Author.vue";
 import './style/index.css'
 
 export default {
@@ -16,7 +15,6 @@ export default {
   enhanceApp({app}) {
     app.component('Article', Article)
     app.component('Tag', Tag)
-    app.component('Author', Author)
   },
   setup() {
     const { frontmatter } = toRefs(useData());
