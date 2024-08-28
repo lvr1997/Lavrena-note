@@ -22,8 +22,7 @@
    - `setup`
    - `ref`与`reactive`
    - `computed`与`watch`
-   - [[【vue3】Tree-Shaking]]
-   
+   - tree-Shaking
      ......
    
 2. 新的内置组件：
