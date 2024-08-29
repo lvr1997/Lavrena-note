@@ -33,7 +33,7 @@ const readTime = computed(() => {
 
 function analyze() {
     document.querySelectorAll('.meta-des').forEach(v => v.remove())
-    const docDomContainer = window.document.querySelector('#VPContent')
+    const docDomContainer = document.querySelector('#VPContent')
     const imgs = docDomContainer?.querySelectorAll<HTMLImageElement>(
         '.content-container .main img'
     )

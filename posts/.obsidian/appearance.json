@@ -9,7 +9,7 @@
   "showViewHeader": true,
   "baseFontSizeAction": false,
   "enabledCssSnippets": [
-    "codeblock",
-    "callout-cite"
+    "callout-cite",
+    "codeblock"
   ]
 }

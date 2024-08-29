@@ -3,10 +3,12 @@
   "attachmentFolderPath": "./assets",
   "newFileLocation": "current",
   "alwaysUpdateLinks": true,
-  "livePreview": false,
+  "livePreview": true,
   "defaultViewMode": "preview",
   "showRibbon": true,
-  "showLineNumber": false,
+  "showLineNumber": true,
   "readableLineLength": false,
-  "propertiesInDocument": "source"
+  "propertiesInDocument": "visible",
+  "trashOption": "local",
+  "strictLineBreaks": true
 }

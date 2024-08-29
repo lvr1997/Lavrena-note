@@ -1,7 +1,7 @@
 [[HTML+CSS]]
 [[JavaScript]]
 [[TypeScript]]
-[[Vue3快速上手|Vue]]
+[[Vue3_fast|Vue]]
 [[React]]
 [[Inerview Q&A]]
 [[React]]

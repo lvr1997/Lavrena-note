@@ -52,7 +52,7 @@ export default defineNuxtConfig({
 
 1. 进入项目目录，并安装项目依赖 `pnpm install`。
 2. 启动项目，`pnpm dev`。
-3. ✨ 浏览器访问 [](http://127.0.0.1:3000/)[http://localhost:3000](http://localhost:3000)
+3. ✨ 浏览器访问 `http://localhost:3000`
 
 ## Nuxt的路由系统
 

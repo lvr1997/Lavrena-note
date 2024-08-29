@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3458b690bf8b8e9e",
+        "id": "9680157d0506b220",
         "type": "tabs",
         "children": [
           {
-            "id": "468750a5f3821e9f",
+            "id": "54f56d70b0115de2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "links.md",
+                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               }
             }
           }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "publish",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "links.md",
+                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,20 +103,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "links.md",
+                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "fcef67b8bcc0f981",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           },
@@ -126,7 +115,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "links.md"
+                "file": "2.FrontEnd-Base/vue/Vue3_fast.md"
+              }
+            }
+          },
+          {
+            "id": "8cf2a29aff5c615e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
@@ -135,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,8 +148,19 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "468750a5f3821e9f",
+  "active": "7e36cafd22e5fc2f",
   "lastOpenFiles": [
+    "2.FrontEnd-Base/vue/Vue3_fast.md",
+    "2.FrontEnd-Base/HTML+CSS.md",
+    "2.FrontEnd-Base/vue/assets/自动补充value.png",
+    "2.FrontEnd-Base/vue/assets/volar.png",
+    "2.FrontEnd-Base/vue/assets/1683166212929-6cc8b8b6-2c4a-4927-8226-65d1f1f4f337.gif",
+    "2.FrontEnd-Base/vue/assets/1696662256560-7239b9f9-a770-43c1-9386-6cc12ef1e9c0.gif",
+    "2.FrontEnd-Base/vue/assets/1696662200734-1bad8249-d7a2-423e-a3c3-ab4c110628be.gif",
+    "2.FrontEnd-Base/vue/assets/1695089947298-161c1b47-eb86-42fb-b1f8-d6a4fcab8ee2.png",
+    "2.FrontEnd-Base/vue/assets/Pasted image 20240819110555.png",
+    "2.FrontEnd-Base/vue/【vue3】Tree-Shaking.md",
+    "links.md",
     "4.FrontEnd-Bug/Nuxt3实现哔哩哔哩移动端实战.md",
     "4.FrontEnd-Bug/antdesign-vue4 postcss-pxtorem，dev下ant组件单位没转rem.md",
     "4.FrontEnd-Bug/柱状图数据太多时，如何动态给echarts容器指定高度.md",
@@ -174,14 +184,10 @@
     "3.前端工程化/pnpm.md",
     "2.FrontEnd-Base/React.md",
     "HOME.canvas",
-    "6.kd-shop/kd-shop项目日记.md",
-    "6.kd-shop/需求.md",
     "6.kd-shop/assets/kd-shop.png",
     "6.kd-shop/assets",
     "4.FrontEnd-Bug/assets/viewer.gif",
     "4.FrontEnd-Bug/assets",
-    "links.md",
-    "7.essay/essay_mind.md",
     "2.FrontEnd-Base/assets/动态路由加载.drawio.png",
     "未命名.canvas",
     "4.Articles/2024-08-19存档/Program Develop/经验总结&踩坑/未命名",
@@ -191,13 +197,6 @@
     "4.Articles/2024-08-19存档",
     "4-Articles/新建文件夹",
     "2.FrontEnd-Base/assets",
-    "6.kd-shop",
-    "2.FrontEnd-Base/vue/assets/Pasted image 20240819110555.png",
-    "2.FrontEnd-Base/vue/images/自动补充value.png",
-    "2.FrontEnd-Base/vue/images/volar.png",
-    "2.FrontEnd-Base/vue/images/image-20231218085906380.png",
-    "2.FrontEnd-Base/vue/images/pinia_example.gif",
-    "2.FrontEnd-Base/vue/images/image-20231119185900990.png",
-    "2.FrontEnd-Base/vue/images/image-20231018144351536.png"
+    "6.kd-shop"
   ]
 }

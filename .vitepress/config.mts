@@ -13,6 +13,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true
   },
+  srcExclude: ['**/Vue3_fast.md'],
   themeConfig: {
     logo: '/logo.svg',
     nav,
