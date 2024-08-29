@@ -1,15 +1,6 @@
-
-
-# Vue3-CMS
-
-正在建设中…
-
-该项目主要想实现将`Vitepress`与CMS结合起来
-
 ## 技术选型
 
 前端：vue3.4 antdesignvue4 unocss(备选) 构建工具vite5.x TS
-后端：Egg.js + jwt + sqlite
 
 ## 前端配置
 
@@ -73,6 +64,7 @@ el-menu-item中的菜单项必须放在template中，且solt为title否则，展
 
 [[使用easy-mock模拟接口数据]]
 ## 项目的全局状态管理
+
 > 用户数据中有一个关键的数据叫做**token（用来标识当前用户是否登录）**，而Token**持续一段时间才会过期**
 
 而Pinia的存储是基于内存的，刷新就会丢失，为了**保持登录状态**，就要做到刷新不丢失，**需要配合持久化进行存储**
@@ -120,16 +112,13 @@ export const useUserStore = defineStore('user', () => {
 ### 6. 请求拦截器携带Token
 
 > 为什么要在请求拦截器携带Token？
-> 
-> 
 > Token作为用户标识，在很**多个接口中都需要携带Token**才可以正确获得数据，所以需要在接口调用时携带Token。另外，为了**统一控制**采取请求拦截器携带的方案
-> 
 
 如何配置？
 
 Axios请求拦截器可以在接口正式发起之前对请求参数做一些事情，通常Token数据会被注入到**请求header**中，格式按照**后端要求的格式进行拼接处理**
 
-在 src/utils/http.js 中配置
+在 `src/utils/http.js` 中配置
 
 ```tsx
 //axios 请求拦截器
@@ -151,8 +140,10 @@ httpInstance.interceptors.request.use(config => {
 
 ```jsx
 const confirm = () => {
-  // 退出登录业务逻辑实现  // 清除用户信息，触发action  userStore.clearUserInfo()
-  // 跳转到登录页面  router.push('/login')
+  // 退出登录业务逻辑实现  // 清除用户信息，触发action 
+  userStore.clearUserInfo()
+  // 跳转到登录页面  
+  router.push('/login')
 }
 ```
 
@@ -186,7 +177,6 @@ export const useUserStore = defineStore('user', () => {
 ### 8. Token失效401拦截
 
 > Token的有效性可以保持一定时间，如果用户一段时间不做任何处理，Token就会失效，使用失效的Token再去请求一些接口，接口会报401状态码错误，需要我们做额外处理
-> 
 
 解决方案：**在axios响应拦截器做统一处理**
 

@@ -3,13 +3,14 @@
   "textFontFamily": "霞鹜文楷 GB 屏幕阅读版 R",
   "monospaceFontFamily": "JetBrains Mono",
   "baseFontSize": 17,
-  "cssTheme": "Things",
+  "cssTheme": "",
   "theme": "system",
-  "accentColor": "",
+  "accentColor": "#32a454",
   "showViewHeader": true,
   "baseFontSizeAction": false,
   "enabledCssSnippets": [
     "callout-cite",
     "codeblock"
-  ]
+  ],
+  "nativeMenus": false
 }

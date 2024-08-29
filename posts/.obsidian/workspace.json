@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9680157d0506b220",
+        "id": "7c0dc59ead6099ae",
         "type": "tabs",
         "children": [
           {
-            "id": "54f56d70b0115de2",
+            "id": "64fa2b86c9c6cda4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2.FrontEnd-Base/vue/Vue3_fast.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,9 +107,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2.FrontEnd-Base/vue/Vue3_fast.md"
-              }
+              "state": {}
             }
           },
           {
@@ -148,8 +139,19 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "7e36cafd22e5fc2f",
+  "active": "64fa2b86c9c6cda4",
   "lastOpenFiles": [
+    "4.FrontEnd-Bug/vue3搭建通用后台管理系统.md",
+    "6.kd-shop/计划.md",
+    "6.kd-shop/5BB15840",
+    "6.kd-shop/初始化，使用vue快速构建项目.md",
+    "6.kd-shop/问题/整合WebSocket.md",
+    "6.kd-shop/问题/解决跨域问题.md",
+    "6.kd-shop/问题",
+    "6.kd-shop/需求.md",
+    "6.kd-shop/科大商铺-项目任务计划书.xls",
+    "6.kd-shop/assets/Pasted image 20240829110731.png",
+    "2.FrontEnd-Base/Nuxt.md",
     "2.FrontEnd-Base/vue/Vue3_fast.md",
     "2.FrontEnd-Base/HTML+CSS.md",
     "2.FrontEnd-Base/vue/assets/自动补充value.png",
@@ -171,32 +173,20 @@
     "4.FrontEnd-Bug/vue3+vite封装axios和全局loading.md",
     "4.FrontEnd-Bug/vue3+vite项目按需引入AntDesign.md",
     "4.FrontEnd-Bug/vue3按需引入echarts.md",
-    "4.FrontEnd-Bug/vue3搭建通用后台管理系统.md",
     "4.FrontEnd-Bug/vue3使用图片查看器.md",
     "4.FrontEnd-Bug/vue3子组件监听不到props值的变化.md",
     "4.FrontEnd-Bug/vue使用原生input实现文件上传.md",
     "4.FrontEnd-Bug/vue表单自动保存（页面缓存）.md",
-    "4.FrontEnd-Bug/项目自适应方案.md",
-    "4.FrontEnd-Bug/使用easy-mock模拟接口数据.md",
-    "4.FrontEnd-Bug/如何在vue中使用svg图标.md",
-    "4.FrontEnd-Bug/动态路由加载.md",
-    "2.FrontEnd-Base/Nuxt.md",
-    "3.前端工程化/pnpm.md",
-    "2.FrontEnd-Base/React.md",
     "HOME.canvas",
     "6.kd-shop/assets/kd-shop.png",
     "6.kd-shop/assets",
     "4.FrontEnd-Bug/assets/viewer.gif",
     "4.FrontEnd-Bug/assets",
-    "2.FrontEnd-Base/assets/动态路由加载.drawio.png",
     "未命名.canvas",
     "4.Articles/2024-08-19存档/Program Develop/经验总结&踩坑/未命名",
     "4.Articles/2024-08-19存档/Program Develop/Inerview Q&A d3526f7ec4f044dfb9f4c98ed5bc763a",
     "4.Articles/2024-08-21存档",
     "1.Projects/2024-08Threejs学习",
-    "4.Articles/2024-08-19存档",
-    "4-Articles/新建文件夹",
-    "2.FrontEnd-Base/assets",
-    "6.kd-shop"
+    "4.Articles/2024-08-19存档"
   ]
 }
