@@ -1,7 +1,3 @@
-# tsc项目编译
-
-# tsc项目编译
-
 使用`tsc`指令可以快速编译整个项目
 ## ts.config.json
 

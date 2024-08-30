@@ -6,9 +6,10 @@
   "livePreview": true,
   "defaultViewMode": "preview",
   "showRibbon": true,
-  "showLineNumber": true,
+  "showLineNumber": false,
   "readableLineLength": false,
   "propertiesInDocument": "visible",
   "trashOption": "local",
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "newLinkFormat": "relative"
 }

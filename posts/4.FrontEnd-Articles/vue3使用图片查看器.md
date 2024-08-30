@@ -19,7 +19,7 @@ tags:
 
 ## 效果图
 
-![viewer.gif](./assets/viewer.gif)
+![viewer.gif](viewer.gif)
 
 ## 代码
 

@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "7c0dc59ead6099ae",
+        "id": "4887394fbc800a8f",
         "type": "tabs",
         "children": [
           {
-            "id": "64fa2b86c9c6cda4",
+            "id": "6c0738217e77d919",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {}
             }
           }
@@ -29,26 +29,11 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7e36cafd22e5fc2f",
+            "id": "9535c83ecbe108d1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "8b18defa5a5bf1b3",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
@@ -60,12 +45,27 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "8b18defa5a5bf1b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#TASK",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 278.5
   },
   "right": {
     "id": "caa59564413be3b9",
@@ -75,33 +75,6 @@
         "id": "6033a4023be73b38",
         "type": "tabs",
         "children": [
-          {
-            "id": "6a9c1e0555b1ced0",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "15de880923e4fbf1",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
           {
             "id": "cd8b6c5b1e2cf9a8",
             "type": "leaf",
@@ -120,13 +93,53 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "0ba40ac9c770240c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "55cf81c77221207f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cc3b99eabccd4620",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 346.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -136,17 +149,32 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "workspaces:管理工作区布局": false
+      "workspaces:管理工作区布局": false,
+      "random-note:开始漫游笔记": false
     }
   },
-  "active": "64fa2b86c9c6cda4",
+  "active": "6c0738217e77d919",
   "lastOpenFiles": [
-    "4.FrontEnd-Bug/vue3搭建通用后台管理系统.md",
+    "2.FrontEnd-Base/TypeScript/未命名.md",
+    "Diary/2024-08-30.md",
+    "2.FrontEnd-Base/React/React.md",
+    "2.FrontEnd-Base/React/井字棋游戏.md",
+    "2.FrontEnd-Base/React/函数式组件.md",
+    "2.FrontEnd-Base/React/如何使用 React 构建用户界面.md",
+    "Diary",
+    "1.Projects/2024-08Threejs学习/Threejs基础知识学习.md",
+    "HOME.canvas",
+    "4.FrontEnd-Articles/Vitepress搭建博客.md",
+    "index.md",
+    "2.FrontEnd-Base/TypeScript/tsc项目编译.md",
+    "3.前端工程化/前端工程化.md",
+    "6.kd-shop/问题/解决跨域问题.md",
+    "2.FrontEnd-Base/React",
+    "4.FrontEnd-Articles/vue3搭建通用后台管理系统.md",
     "6.kd-shop/计划.md",
     "6.kd-shop/5BB15840",
     "6.kd-shop/初始化，使用vue快速构建项目.md",
     "6.kd-shop/问题/整合WebSocket.md",
-    "6.kd-shop/问题/解决跨域问题.md",
     "6.kd-shop/问题",
     "6.kd-shop/需求.md",
     "6.kd-shop/科大商铺-项目任务计划书.xls",
@@ -163,30 +191,16 @@
     "2.FrontEnd-Base/vue/assets/Pasted image 20240819110555.png",
     "2.FrontEnd-Base/vue/【vue3】Tree-Shaking.md",
     "links.md",
-    "4.FrontEnd-Bug/Nuxt3实现哔哩哔哩移动端实战.md",
-    "4.FrontEnd-Bug/antdesign-vue4 postcss-pxtorem，dev下ant组件单位没转rem.md",
-    "4.FrontEnd-Bug/柱状图数据太多时，如何动态给echarts容器指定高度.md",
-    "index.md",
-    "4.FrontEnd-Bug/动态改变echarts柱状图颜色.md",
-    "4.FrontEnd-Bug/处理减少series数组长度时，图表不发生变化的问题.md",
-    "4.FrontEnd-Bug/vue+elementui表格的增删改，行的上移下移，指定位置添加行.md",
-    "4.FrontEnd-Bug/vue3+vite封装axios和全局loading.md",
-    "4.FrontEnd-Bug/vue3+vite项目按需引入AntDesign.md",
-    "4.FrontEnd-Bug/vue3按需引入echarts.md",
-    "4.FrontEnd-Bug/vue3使用图片查看器.md",
-    "4.FrontEnd-Bug/vue3子组件监听不到props值的变化.md",
-    "4.FrontEnd-Bug/vue使用原生input实现文件上传.md",
-    "4.FrontEnd-Bug/vue表单自动保存（页面缓存）.md",
-    "HOME.canvas",
+    "4.FrontEnd-Articles/Nuxt3实现哔哩哔哩移动端实战.md",
+    "4.FrontEnd-Articles/antdesign-vue4 postcss-pxtorem，dev下ant组件单位没转rem.md",
+    "4.FrontEnd-Articles/柱状图数据太多时，如何动态给echarts容器指定高度.md",
+    "4.FrontEnd-Articles/动态改变echarts柱状图颜色.md",
     "6.kd-shop/assets/kd-shop.png",
     "6.kd-shop/assets",
-    "4.FrontEnd-Bug/assets/viewer.gif",
-    "4.FrontEnd-Bug/assets",
-    "未命名.canvas",
+    "4.FrontEnd-Articles/assets/viewer.gif",
+    "4.FrontEnd-Articles/assets",
     "4.Articles/2024-08-19存档/Program Develop/经验总结&踩坑/未命名",
     "4.Articles/2024-08-19存档/Program Develop/Inerview Q&A d3526f7ec4f044dfb9f4c98ed5bc763a",
-    "4.Articles/2024-08-21存档",
-    "1.Projects/2024-08Threejs学习",
-    "4.Articles/2024-08-19存档"
+    "4.Articles/2024-08-21存档"
   ]
 }

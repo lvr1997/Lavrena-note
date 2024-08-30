@@ -1,5 +1,4 @@
 [B站学习视频](https://www.bilibili.com/video/BV1wy4y1D7JT?p=17&spm_id_from=333.880.my_history.page.click&vd_source=0ac7746e9ece1179baaedba6f1b41114)
-
 ## jsx语法规则
 
 1. 创建虚以D0M时，不要写引号：
@@ -14,21 +13,21 @@
 
 - 若首字母小写，那么React.就会去寻找与之同名的htm1标签，若找见，直接转为html同名元素；若未找见，报错
 - 若首字母大写，那么React.就会去寻找与之同名的组件；若找见，那么就是用组件；若未找见，报错
-
 ## 组件
 
-### 函数式组件
+### 函数式组件 （最新）[[../../Diary/2024-08-30|2024-08-30]]
 
-通过定义函数的方式创建组件
+`React18`通过定义函数的方式创建组件
+- 基础语法
+- 入门案例 [[井字棋游戏]]
+- [[如何使用 React 构建用户界面]]
 
 _执行了ReactDOM.render(…,后发生了什么？_
-
 1. React解析组件标签，寻找Demo组件的定义位置
 2. React发现Demo组件是用函数定义的，随后React去直接调用Demo函数，将返回的虚拟DON渲染到页面
+### 类式组件 (旧写法)
 
-### 类式组件
-
-通过创建类的方式，定义组件（常用）
+`React17` 通过创建类的方式，定义组件
 
 ```jsx
 class MyComponent extends React.Component {
@@ -81,7 +80,6 @@ class Weather extends React.Component {
 //渲染组件
 ReactDOM.render(`<Weather/>`, document.getElementById("root"))
 ```
-
 
 > [!NOTE] 案例总结
 > changeWeather方法放在了哪里？—— Weather的原型对象上，供实例使用 
