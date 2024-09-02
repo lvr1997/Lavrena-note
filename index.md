@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 👉文章目录
-      link: /article
+      link: /posts/
     - theme: alt
       text: View on GitHub
       link: https://github.com/lvr1997/Lavrena-Blog
