@@ -11,5 +11,5 @@
   "propertiesInDocument": "visible",
   "trashOption": "local",
   "strictLineBreaks": true,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "shortest"
 }

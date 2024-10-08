@@ -1,7 +1,6 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
 import { useData } from "vitepress";
-import ArticleMetadata from './ArticleMetadata.vue';
+import DefaultTheme from 'vitepress/theme';
 
 const { Layout } = DefaultTheme
 const { page, frontmatter } = useData()
@@ -27,7 +26,6 @@ if(page.value.relativePath.indexOf('index') !== -1) {
     </template>
     <template #doc-before>
       <h1 class="text-3xl font-bold my-2">{{ frontmatter.title }}</h1>
-      <ArticleMetadata/>
     </template>
   </Layout>
 </template>

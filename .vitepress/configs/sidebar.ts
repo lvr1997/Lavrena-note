@@ -1,7 +1,31 @@
 import type { DefaultTheme } from "vitepress";
 
 // #region 
-const sidebarFrontEndBug = () => {
+const sidebarHome = () => {
+  return [
+    {
+      text: "前端",
+      items: [
+        { text: "HTML+CSS", link: "/posts/FrontEnd/HTML+CSS" },
+        { text: "JavaScript", link: "/posts/FrontEnd/JS" },
+        { text: "TypeScript", link: "/posts/FrontEnd/TypeScript" },
+        { text: "前端工程化", link: "/posts/FrontEnd/前端工程化" },
+        { text: "Vue", link: "/posts/FrontEnd/vue" },
+        { text: "React", link: "/posts/FrontEnd/React" },
+        { text: "Nuxt", link: "/posts/FrontEnd/Nuxt" },
+        { text: "Radix Vue", link: "/posts/FrontEnd/RadixVue" },
+        { text: "TypeScript", link: "/typescript" },
+      ]
+    },
+    {
+      text: "读书笔记",
+      items: [
+        { text: "图解 HTTP", link: "/book/http" },
+      ]
+    }
+  ]
+}
+const sidebarFrontEnd = () => {
   return [
     {
       text: "前端经验总结&踩坑",
@@ -153,8 +177,12 @@ const sidebarBookHttp = () => {
 
 // #endregion
 
+/**
+ * 侧边栏配置
+ */
 export const sidebar: DefaultTheme.Config["sidebar"] = {
-    "/posts/4.FrontEnd-Bug": sidebarFrontEndBug(),
+    "/": sidebarHome(),
+    "/posts/FrontEnd": sidebarFrontEnd(),
     "/interview/": sidebarInterview(),
     "/network/": sidebarNetwork(),
     "/typescript/": sidebarTypeScript(),

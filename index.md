@@ -7,15 +7,15 @@ hero:
     src: /logo.svg
   actions:
     - theme: brand
-      text: 👉文章目录
+      text: 👉从这里开始
       link: /posts/
     - theme: alt
       text: View on GitHub
       link: https://github.com/lvr1997/Lavrena-Blog
 features:
   - icon: ✍
-    title: 前端知识总结
-    details: 想写啥写啥系列...
+    title: 前端
+    details: 前端知识杂记...
   - icon:
       src: /vitepress-logo-large.webp
     title: 由VitePress驱动

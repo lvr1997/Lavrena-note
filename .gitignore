@@ -2,3 +2,4 @@ node_modules
 .vitepress/cache
 .vscode
 .vitepress/dist/
+posts/.obsidian/
