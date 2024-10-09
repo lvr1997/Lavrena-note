@@ -5,58 +5,69 @@ const sidebarHome = () => {
   return [
     {
       text: "前端",
+      collapsed: false,
       items: [
-        { text: "HTML+CSS", link: "/posts/FrontEnd/HTML+CSS" },
-        { text: "JavaScript", link: "/posts/FrontEnd/JS" },
-        { text: "TypeScript", link: "/posts/FrontEnd/TypeScript" },
+        { text: "HTML+CSS", items: [
+          { text: "HTML", link: "/posts/FrontEnd/HTML+CSS/HTML" },
+          { text: "CSS", link: "/posts/FrontEnd/HTML+CSS/CSS" },
+        ] },
+        { text: "JavaScript", items: [
+            { text: "JavaScript 基础", link: "/posts/FrontEnd/javascript/基础" },
+            { text: "JavaScript 高级", link: "/posts/FrontEnd/javascript/高级" },
+            { text: "JavaScript WedAPIs", link: "/posts/FrontEnd/javascript/WebAPIs" },
+          ] 
+        },
+        { text: "TypeScript", collapsed: true, items: [
+            { text: "TypeScript 介绍", link: "/posts/FrontEnd/typescript/intro" },
+            { text: "类", link: "/posts/FrontEnd/typescript/Class" },
+            { text: "接口", link: "/posts/FrontEnd/typescript/interface" },
+            { text: "泛型", link: "/posts/FrontEnd/typescript/Generic" },
+          ], },
         { text: "前端工程化", link: "/posts/FrontEnd/前端工程化" },
-        { text: "Vue", link: "/posts/FrontEnd/vue" },
+        { text: "Vue", link: "/posts/FrontEnd/vue/Vue3_fast" },
         { text: "React", link: "/posts/FrontEnd/React" },
-        { text: "Nuxt", link: "/posts/FrontEnd/Nuxt" },
+        { text: "Nuxt", items: [
+          { text: "初识Nuxt3", link: "/posts/FrontEnd/Nuxt3/Nuxt" },
+          { text: "实现仿bilibili移动端", link: "/posts/FrontEnd/Nuxt3/Nuxt3-bilibili" },
+        ] },
         { text: "Radix Vue", link: "/posts/FrontEnd/RadixVue" },
-        { text: "TypeScript", link: "/typescript" },
+        { text: "脚手架", items: sidebarScaffold() }
       ]
     },
     {
-      text: "读书笔记",
+      text: "后端",
+      collapsed: true,
       items: [
-        { text: "图解 HTTP", link: "/book/http" },
+        { text: "Java", link: "/posts/BackEnd/Java" },
+        { Text: "Nodejs", link: "/posts/BackEnd/Nodejs" }
+      ]
+    },
+    {
+      text: "项目",
+      collapsed: false,
+      items: [{ text: "kd-shop", link: "/posts/Project/kd-shop" }],
+    },
+    {
+      text: "面试",
+      collapsed: true,
+      items: [{ text: "Vue", link: "/interview/vue" }],
+    },
+  ]
+}
+
+const sidebarProjectKdShop = () => {
+  return [
+    {
+      text: "项目介绍",
+      collapsed: false,
+      items: [
+        { text: "项目介绍", link: "/posts/Project/kd-shop/intro" },
+        { text: "项目技术栈", link: "/posts/Project/kd-shop/tech" },
+        { text: "项目功能", link: "/posts/Project/kd-shop/function"},
       ]
     }
   ]
 }
-const sidebarFrontEnd = () => {
-  return [
-    {
-      text: "前端经验总结&踩坑",
-      collapsed: true,
-      items: [
-        { text: "如何在vue中使用svg图标", link: "/posts/4.FrontEnd-Bug/如何在vue中使用svg图标" },
-        { text: "项目自适应方案", link: "/posts/4.FrontEnd-Bug/项目自适应方案" },
-        { text: "echart图遇到的问题", link: "/posts/4.FrontEnd-Bug/echart图遇到的问题" },
-        { text: "Nuxt3实现哔哩哔哩移动端实战", link: "/posts/4.FrontEnd-Bug/Nuxt3实现哔哩哔哩移动端实战" },
-        { text: "vue+elementui表格的增删改，行的上移下移，指定位置添加行", link: "/posts/4.FrontEnd-Bug/vue+elementui表格的增删改，行的上移下移，指定位置添加行" },
-        { text: "vue+input文件上传", link: "/posts/4.FrontEnd-Bug/vue+input文件上传" },
-        { text: "vue3+vite封装axios和全局loading", link: "/posts/4.FrontEnd-Bug/vue3+vite封装axios和全局loading" },
-        { text: "vue3+vite项目按需引入AntDesign", link: "/posts/4.FrontEnd-Bug/vue3+vite项目按需引入AntDesign" },
-        { text: "vue3按需引入echarts", link: "/posts/4.FrontEnd-Bug/vue3按需引入echarts" },
-        { text: "vue3使用图片查看器", link: "/posts/4.FrontEnd-Bug/vue3使用图片查看器" },
-        { text: "vue3子组件监听不到props值的变化", link: "/posts/4.FrontEnd-Bug/vue3子组件监听不到props值的变化" },
-        { text: "vue表单自动保存（页面缓存）", link: "/posts/4.FrontEnd-Bug/vue表单自动保存（页面缓存）" },
-      ],
-    },
-  ];
-};
-
-const sidebarInterview = () => {
-  return [
-    {
-      text: "前端面试题",
-      collapsed: true,
-      items: [{ text: "Vue", link: "/interview/vue" }],
-    },
-  ];
-};
 
 const sidebarNetwork = () => {
   return [
@@ -71,22 +82,7 @@ const sidebarNetwork = () => {
   ];
 };
 
-const sidebarTypeScript = () => {
-  return [
-    {
-      text: "TypeScript",
-      collapsed: true,
-      items: [
-        { text: "TypeScript 介绍", link: "/typescript/intro" },
-        { text: "基础类型", link: "/typescript/basic-types" },
-        { text: "元组类型", link: "/typescript/tuple" },
-        { text: "枚举类型", link: "/typescript/enum" },
-        { text: "接口", link: "/typescript/interface" },
-        { text: "函数", link: "/typescript/function" },
-      ],
-    },
-  ];
-};
+
 /**
  * 代码片段
  * @returns
@@ -95,73 +91,48 @@ const sidebarCode = () => {
   return [
     {
       text: "简介",
-      collapsed: true,
+      collapsed: false,
       items: [
-        { text: "为什么要做这个？", link: "/codes/intro" },
-        { text: "如何使用？", link: "/codes/how-to-use" },
+        { text: "为什么要做这个？", link: "/posts/CodeSnippet/intro" },
+        { text: "如何使用？", link: "/posts/CodeSnippet/how-to-use" },
       ],
     },
     {
       text: "html 代码片段",
       collapsed: true,
       items: [
-        {
-          text: "按钮",
-          items: [
-            { text: "彩虹按钮", link: "/codes/front/button/rainbow-button" },
-            {
-              text: "新拟态风格按钮",
-              link: "/codes/front/button/neumorphism-button",
-            },
-          ],
-        },
+        { text: "按钮", link: "/posts/CodeSnippet/HtmlSnippet/button" },
       ],
     },
+    {
+      text: "经验总结&踩坑",
+      collapsed: true,
+      items: [
+        { text: "如何在vue中使用svg图标", link: "/posts/CodeSnippet/如何在vue中使用svg图标" },
+        { text: "项目自适应方案", link: "/posts/CodeSnippet/项目自适应方案" },
+        { text: "echart图遇到的问题", link: "/posts/CodeSnippet/echart图遇到的问题" },
+        { text: "Nuxt3实现哔哩哔哩移动端实战", link: "/posts/CodeSnippet/Nuxt3实现哔哩哔哩移动端实战" },
+        { text: "vue+elementui表格的增删改，行的上移下移，指定位置添加行", link: "/posts/CodeSnippet/vue+elementui表格的增删改，行的上移下移，指定位置添加行" },
+        { text: "vue+input文件上传", link: "/posts/CodeSnippet/vue+input文件上传" },
+        { text: "vue3+vite封装axios和全局loading", link: "/posts/CodeSnippet/vue3+vite封装axios和全局loading" },
+        { text: "vue3+vite项目按需引入AntDesign", link: "/posts/CodeSnippet/vue3+vite项目按需引入AntDesign" },
+        { text: "vue3按需引入echarts", link: "/posts/CodeSnippet/vue3按需引入echarts" },
+        { text: "vue3使用图片查看器", link: "/posts/CodeSnippet/vue3使用图片查看器" },
+        { text: "vue3子组件监听不到props值的变化", link: "/posts/CodeSnippet/vue3子组件监听不到props值的变化" },
+        { text: "vue表单自动保存（页面缓存）", link: "/posts/CodeSnippet/vue表单自动保存（页面缓存）" },
+      ],
+    }
   ];
 };
 
-const sidebarWebpack = () => {
-  return [
-    {
-      text: "webpack 4 基础",
-      collapsed: true,
-      items: [
-        { text: "Webpack 简介", link: "/webpack/webpack4-basic/chapter-1" },
-        { text: "Webpack 的初体验", link: "/webpack/webpack4-basic/chapter-2" },
-        {
-          text: "Webpack 开发环境的基本配置",
-          link: "/webpack/webpack4-basic/chapter-3",
-        },
-        {
-          text: "Webpack 生产环境的基本配置",
-          link: "/webpack/webpack4-basic/chapter-4",
-        },
-        { text: "Webpack 优化配置", link: "/webpack/webpack4-basic/chapter-5" },
-        { text: "Webpack 配置详情", link: "/webpack/webpack4-basic/chapter-6" },
-        { text: "拓展内容", link: "/webpack/webpack4-basic/chapter-7" },
-      ],
-    },
-    {
-      text: "webpack 4 进阶",
-      collapsed: true,
-      items: [],
-    },
-  ];
-};
 /**
  * 脚手架
  * @returns
  */
 const sidebarScaffold = () => {
   return [
-    {
-      text: "Vue3 开发模板",
-      collapsed: true,
-      items: [
-        { text: "Vue3 开发模板（一）", link: "/scaffold/chapter-1" },
-        { text: "Vue3 开发模板（二）", link: "/scaffold/chapter-2" },
-      ],
-    },
+    { text: "Vue3 开发模板（一）", link: "/scaffold/chapter-1" },
+    { text: "Vue2 开发模板（二）", link: "/posts/FrontEnd/scaffold/chapter-2" },
   ];
 };
 // #region 读书笔记
@@ -181,13 +152,7 @@ const sidebarBookHttp = () => {
  * 侧边栏配置
  */
 export const sidebar: DefaultTheme.Config["sidebar"] = {
-    "/": sidebarHome(),
-    "/posts/FrontEnd": sidebarFrontEnd(),
-    "/interview/": sidebarInterview(),
-    "/network/": sidebarNetwork(),
-    "/typescript/": sidebarTypeScript(),
-    "/codes": sidebarCode(),
-    "/webpack": sidebarWebpack(),
-    "/scaffold": sidebarScaffold(),
-    "/book/http": sidebarBookHttp(),
+    "/posts": sidebarHome(),
+    "/posts/CodeSnippet": sidebarCode(),
+    "/posts/Project/kd-shop": sidebarProjectKdShop(),
   };

@@ -1,7 +1,16 @@
-无样式组件库
-> 坑1：Unhandled error during execution of scheduler flush. This is likely a Vue internals bug
+# Radix Vue
 
-Radix-ui-vue对应的vue版本要在3.2以上
+Radix Vue是一个无样式组件库
+
+::: warning
+坑1：Unhandled error during execution of scheduler flush. This is likely a Vue internals bug
+
+**Radix-ui-vue对应的vue版本要在3.2以上**
+::: 
+
+## 使用shadcn-vue
+
+shadcn-vue是一个基于radix-ui-vue的UI库，可以参考[shadcn-vue](https://ui.shadcn.com/)
 
 ```js
 //tailwindcss.config.js
