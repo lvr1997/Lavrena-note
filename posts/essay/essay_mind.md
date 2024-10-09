@@ -1,12 +1,11 @@
 ---
 title: 来自一个程序媛的内心独白
 titleTemplate: 随笔
-publish: true
+sidebar: false
 date: 2021-08-02
 tags:
   - 随笔
 ---
-# 来自一个程序媛的内心独白
 
 > 我是一个学过java的程序媛，这是我的故事...
 

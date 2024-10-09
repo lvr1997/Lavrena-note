@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { data as posts } from '../posts.data'
+import { data as posts } from '../posts.data';
 import { formatDate } from "../utils/common";
 
 </script>
@@ -8,7 +8,7 @@ import { formatDate } from "../utils/common";
   <!-- 归档列表 -->
   <div class="divide-y divide-gray-200 dark:divide-slate-200/5">
     <ul class="divide-y divide-gray-200 dark:divide-slate-200/5 max-w-2xl mx-auto">
-      <li class="py-12" v-for="{ title, url, date, excerpt, tags } of posts">
+      <li class="py-6 border-gray-200 border-solid" v-for="{ title, url, date, excerpt, tags } of posts">
         <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
           <div class="space-y-5 xl:col-span-3">
             <div class="space-y-6">
@@ -23,9 +23,7 @@ import { formatDate } from "../utils/common";
             </div>
             <div class="text-base leading-6 font-medium">
               <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300">🕛{{ formatDate(date.string) }}</span>
-              <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300 ml-2">
-                🏷️
-              </span>
+              <span class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300 ml-2">🏷</span>
               <span class="whitespace-nowrap rounded-md bg-orange-50 px-2 py-1 mr-1 text-xs text-orange-400" v-for="tag in tags">{{ tag }}</span>
             </div>
           </div>
