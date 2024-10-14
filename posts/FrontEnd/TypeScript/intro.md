@@ -64,9 +64,7 @@ color = 'red';
 
 let fullName: string = `Bob Bobbington`;
 let age: number = 37;
-let sentence: string = `Hello, my name is ${fullName}.
-
-I'll be ${age + 1} years old next month.`;
+let sentence: string = `Hello, my name is ${fullName}.I'll be ${age + 1} years old next month.`;
 ```
 
 ### Boolean 布尔值
@@ -189,10 +187,10 @@ let strLength: number = (<string>someValue).length;
 [泛型（Generic）](./Generic.md)
 ## 编译选项
 
-- [[tsc项目编译|自动编译文件]]
+- 自动编译文件
     - 编译文件时，使用 -w 指令后，TS编译器会自动监视文件的变化，并在文件发生变化时对文件进行重新编译。
     - `tsc xxx.ts -w`
-- 自动编译整个项目
+- [自动编译整个项目](./tsc项目编译.md)
     - 如果直接使用tsc指令，则可以自动将当前项目下的所有ts文件编译为js文件。
-    - 💡 但是能直接使用tsc命令的前提时，要先在项目根目录下创建一个ts的配置文件 tsconfig.json
-    - tsconfig.json是一个JSON文件，添加配置文件后，只需只需 tsc 命令即可完成对整个项目的编译
+    - 💡 但是能直接使用tsc命令的前提时，要先在项目根目录下创建一个ts的配置文件 `tsconfig.json`
+    - `tsconfig.json`是一个JSON文件，添加配置文件后，只需只需 tsc 命令即可完成对整个项目的编译
