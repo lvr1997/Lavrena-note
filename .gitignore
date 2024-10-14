@@ -3,3 +3,4 @@ node_modules
 .vscode
 .vitepress/dist/
 posts/.obsidian/
+pnpm-lock.yaml
