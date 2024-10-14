@@ -17,6 +17,5 @@
 - [React 18](./React/index.md)
 - [Nuxt](./Nuxt3/Nuxt.md)
 - [Three.js](./Threejs/threejs-base.md)
-- Java
 - 面试篇
 :::

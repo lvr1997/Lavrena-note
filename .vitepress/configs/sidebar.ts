@@ -12,7 +12,7 @@ const sidebarFrontEnd = () => {
     { text: "JavaScript", items: [
         { text: "JavaScript 基础", link: "/posts/FrontEnd/javascript/base" },
         { text: "JavaScript 高级", link: "/posts/FrontEnd/javascript/高级" },
-        { text: "JavaScript WedAPIs", link: "/posts/FrontEnd/javascript/WebAPIs" },
+        { text: "JavaScript WebAPIs", link: "/posts/FrontEnd/javascript/WebAPIs" },
       ] 
     },
     { text: "TypeScript", items: [

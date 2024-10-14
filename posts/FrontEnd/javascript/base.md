@@ -4,7 +4,7 @@
 
 > **书籍：**ES6 入门教程 - ECMAScript 6入门 ([ruanyifeng.com](http://ruanyifeng.com))阮一峰著
 
-JavaScript包括ECMAScript（[基础](./基础.md)、[高级](./高级.md)）和[WebAPIs](./WebAPIs.md)
+JavaScript包括ECMAScript（基础、高级）和WebAPIs
 
 ## 简介
 js书写位置 
