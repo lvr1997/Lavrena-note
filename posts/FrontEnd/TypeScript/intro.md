@@ -1,8 +1,10 @@
 # 介绍
 > 系列笔记扩充自“尚硅谷”《TypeScript系列教学视频》在线笔记
+>
 > 学习视频： 尚硅谷TypeScript教程（李立超老师TS新课）_哔哩哔哩_bilibili
 > **最新：**[禹神：三小时快速上手TypeScript，TS速通教程](https://www.bilibili.com/video/BV1YS411w7Bf/?share_source=copy_web&vd_source=6582771ced8eee146aabc565f50f4ae7)
-> 书籍：TypeScript 教程 - 网道 (wangdoc.com) 阮一峰著
+>
+> 书籍：[TypeScript 教程 - 网道 阮一峰著](https://wangdoc.com/typescript/)
 
 TypeScript是JavaScript的超集。
 
@@ -180,11 +182,11 @@ let strLength: number = (<string>someValue).length;
 
 ## 引用类型
 
-[[类Class]]
+[类Class](./Class.md)
 
-[[接口interface]]
+[接口interface](./interface.md)
 
-[[泛型（Generic）]]
+[泛型（Generic）](./Generic.md)
 ## 编译选项
 
 - [[tsc项目编译|自动编译文件]]
