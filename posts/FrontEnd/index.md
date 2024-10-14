@@ -8,7 +8,7 @@
 
 ::: warning 程序媛进度条
 - [HTML5+CSS3](./HTML+CSS/HTML.md)
-- [JavaScript](./javascript/基础.md)
+- [JavaScript](./javascript/base.md)
 - [TypeScript](./typescript/intro.md)
 - Node.js
 - Git
@@ -16,7 +16,7 @@
 - [Vue 3.0](./vue/Vue3_fast.md)
 - [React 18](./React/index.md)
 - [Nuxt](./Nuxt3/Nuxt.md)
-- [Three.js](./Threejs/Threejs基础知识学习.md)
+- [Three.js](./Threejs/threejs-base.md)
 - Java
 - 面试篇
 :::
