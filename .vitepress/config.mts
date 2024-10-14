@@ -18,6 +18,8 @@ export default defineConfig({
     logo: '/logo.svg',
     nav,
     sidebar,
+    outline: [2, 3],
+    outlineTitle: 'ON THIS PAGE',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lvr1997' }
     ],
@@ -54,4 +56,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/">VitePress</a>'
     }
   },
+  sitemap: {
+    hostname: 'https://rgbyove.top'
+  }
 })

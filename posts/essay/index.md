@@ -3,5 +3,5 @@ layout: page
 ---
 
 <ClientOnly>
-    <Article/>
+    <Home/>
 </ClientOnly>

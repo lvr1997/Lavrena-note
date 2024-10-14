@@ -7,10 +7,10 @@ hero:
     src: /logo.svg
   actions:
     - theme: brand
-      text: 👉从这里开始
-      link: /posts/
+      text: 👉 前端笔记
+      link: /posts/FrontEnd
     - theme: alt
-      text: View on GitHub
+      text: My GitHub
       link: https://github.com/lvr1997/Lavrena-Blog
 features:
   - icon: ✍
