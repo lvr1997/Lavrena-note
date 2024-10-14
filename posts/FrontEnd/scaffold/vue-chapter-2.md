@@ -37,7 +37,10 @@ vite.config.js中配置代理
 server: {
     host: '0.0.0.0',    hmr: true,    strictPort: false,    proxy: {
       '/api': {
-        target: 'http://localhost:3000',        changeOrigin: true,        ws: false,        rewrite: (path) => path.replace(/^\/api/, "")
+        target: 'http://localhost:3000',        
+        changeOrigin: true,        
+        ws: false,        
+        rewrite: (path) => path.replace(/^\/api/, "")
       }
     }
   }

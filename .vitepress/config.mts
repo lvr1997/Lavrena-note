@@ -58,5 +58,6 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://rgbyove.top'
-  }
+  },
+  ignoreDeadLinks: true
 })
