@@ -21,8 +21,16 @@ const sidebarFrontEnd = () => {
         { text: "接口", link: "/posts/FrontEnd/typescript/interface" },
         { text: "泛型", link: "/posts/FrontEnd/typescript/Generic" },
       ], },
-    { text: "前端工程化", link: "/posts/FrontEnd/前端工程化" },
-    { text: "Vue", link: "/posts/FrontEnd/vue/Vue3_fast" },
+    { text: "前端工程化", items: [
+        { text: 'webpack', link: "/posts/FrontEnd/前端工程化/webpack" },
+        { text: 'pnpm包管理工具', link: "/posts/FrontEnd/前端工程化/pnpm" }
+      ] 
+    },
+    { text: "Vue", items: [
+        { text: '响应式原理', link: "/posts/FrontEnd/vue/vue-base" },
+        { text: 'Vue3', link: "/posts/FrontEnd/vue/Vue3_fast" }
+      ] 
+    },
     { text: "React", link: "/posts/FrontEnd/React" },
     { text: "Nuxt", items: [
       { text: "初识Nuxt3", link: "/posts/FrontEnd/Nuxt3/Nuxt" },
