@@ -52,8 +52,8 @@ export default defineConfig({
       },
     },
     footer: {
-      message: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn">冀ICP备2024067902号</a>',
-      copyright: 'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/">VitePress</a>'
+      message: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn" target="_blank">冀ICP备2024067902号</a>',
+      copyright: 'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>'
     }
   },
   sitemap: {
