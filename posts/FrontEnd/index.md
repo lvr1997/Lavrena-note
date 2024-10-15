@@ -9,7 +9,7 @@
 ::: warning 程序媛进度条
 - [HTML5+CSS3](./HTML+CSS/HTML.md)
 - [JavaScript](./javascript/base.md)
-- [TypeScript](./typescript/intro.md)
+- [TypeScript](./Typescript/intro.md)
 - Node.js
 - Git
 - [Webpack](./前端工程化/webpack.md)
