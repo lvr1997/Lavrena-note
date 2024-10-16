@@ -77,3 +77,9 @@
 [Discover and download free images - Pixabay素材图片](https://pixabay.com/images/search/?order=ec)
 
 [免费的图床工具 (imgtp.com)](https://www.imgtp.com/)
+
+## 幼儿教育资源
+
+[幼儿园|数学|可汗学院](https://zh.khanacademy.org/math/cc-kindergarten-math)
+
+[心喜阅童书点读包下载](https://www.lovereadingbooks.com/home)

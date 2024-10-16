@@ -16,10 +16,10 @@ const sidebarFrontEnd = () => {
       ] 
     },
     { text: "TypeScript", items: [
-        { text: "TypeScript 介绍", link: "/posts/FrontEnd/typescript/intro" },
-        { text: "类", link: "/posts/FrontEnd/typescript/Class" },
-        { text: "接口", link: "/posts/FrontEnd/typescript/interface" },
-        { text: "泛型", link: "/posts/FrontEnd/typescript/Generic" },
+        { text: "TypeScript 介绍", link: "/posts/FrontEnd/TypesSript/intro" },
+        { text: "类", link: "/posts/FrontEnd/TypesSript/Class" },
+        { text: "接口", link: "/posts/FrontEnd/TypesSript/interface" },
+        { text: "泛型", link: "/posts/FrontEnd/TypesSript/Generic" },
       ], },
     { text: "前端工程化", items: [
         { text: 'webpack', link: "/posts/FrontEnd/前端工程化/webpack" },
