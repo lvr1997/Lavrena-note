@@ -50,12 +50,10 @@
 
 <img style="display: inline-block" src="./assets/1683167204081-582dc237-72bc-499e-9589-2cdfd452e62f.png" alt="" width="340" />
 
-::: info 官方推荐的vscode插件
-
-**最新版本这两个插件已合并为一个`Vue-Official`插件**
-
-<img src="./assets/Pasted image 20240819110555.png" width="200" />
-:::
+> [!info] 官方推荐的vscode插件
+> **最新版本这两个插件已合并为一个`Vue-Official`插件**
+> 
+> <img src="./assets/Pasted image 20240819110555.png" width="200" />
 
 ## Vue3核心语法
 

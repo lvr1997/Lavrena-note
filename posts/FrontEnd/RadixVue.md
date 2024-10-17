@@ -2,11 +2,9 @@
 
 Radix Vue是一个无样式组件库
 
-::: warning
-坑1：Unhandled error during execution of scheduler flush. This is likely a Vue internals bug
-
-**Radix-ui-vue对应的vue版本要在3.2以上**
-::: 
+> [!warning] 坑1
+> Unhandled error during execution of scheduler flush. This is likely a Vue internals bug
+> **Radix-ui-vue对应的vue版本要在3.2以上**
 
 ## 使用shadcn-vue
 
