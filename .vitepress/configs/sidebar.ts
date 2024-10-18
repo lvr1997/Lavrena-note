@@ -16,10 +16,10 @@ const sidebarFrontEnd = () => {
       ] 
     },
     { text: "TypeScript", items: [
-        { text: "TypeScript 介绍", link: "/posts/FrontEnd/TypesSript/intro" },
-        { text: "类", link: "/posts/FrontEnd/TypesSript/Class" },
-        { text: "接口", link: "/posts/FrontEnd/TypesSript/interface" },
-        { text: "泛型", link: "/posts/FrontEnd/TypesSript/Generic" },
+        { text: "TypeScript 介绍", link: "/posts/FrontEnd/typesript/intro" },
+        { text: "类", link: "/posts/FrontEnd/typesript/Class" },
+        { text: "接口", link: "/posts/FrontEnd/typesript/interface" },
+        { text: "泛型", link: "/posts/FrontEnd/typesript/Generic" },
       ], },
     { text: "前端工程化", items: [
         { text: 'webpack', link: "/posts/FrontEnd/前端工程化/webpack" },
@@ -38,6 +38,7 @@ const sidebarFrontEnd = () => {
     ] },
     { text: "Radix Vue", link: "/posts/FrontEnd/RadixVue" },
     { text: "代码片段", items: sidebarCode() },
+    { text: "vitepress搭建", link: '/posts/FrontEnd/vitepress/vitepress_create' },
     {
       text: "经验总结&踩坑",
       collapsed: true,
@@ -45,7 +46,6 @@ const sidebarFrontEnd = () => {
         { text: "如何在vue中使用svg图标", link: "/posts/FrontEnd/bugs/如何在vue中使用svg图标" },
         { text: "项目自适应方案", link: "/posts/FrontEnd/bugs/项目自适应方案" },
         { text: "echart图遇到的问题", link: "/posts/FrontEnd/bugs/echart图遇到的问题" },
-        { text: "Nuxt3实现哔哩哔哩移动端实战", link: "/posts/FrontEnd/bugs/Nuxt3实现哔哩哔哩移动端实战" },
         { text: "vue+elementui表格的增删改，行的上移下移，指定位置添加行", link: "/posts/FrontEnd/bugs/vue+elementui表格的增删改，行的上移下移，指定位置添加行" },
         { text: "vue+input文件上传", link: "/posts/FrontEnd/bugs/vue+input文件上传" },
         { text: "vue3+vite封装axios和全局loading", link: "/posts/FrontEnd/bugs/vue3+vite封装axios和全局loading" },

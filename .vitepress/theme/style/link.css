@@ -1,0 +1,30 @@
+/**
+ * 链接图标
+ * 建议使用 32*32 的尺寸
+ */
+/* YouTube */
+.vp-doc a[href^="https://www.youtube.com/"]:before {
+    content: '';
+    background-image: url(/youtube.svg);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-size: cover;
+    margin-right: 4px;
+}
+
+/* 哔哩哔哩 */
+.vp-doc a[href^="https://www.bilibili.com/"]:before {
+    content: '';
+    background-image: url(/bilibili.svg);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-size: cover;
+    top: -2px;
+    margin-right: 4px;
+}

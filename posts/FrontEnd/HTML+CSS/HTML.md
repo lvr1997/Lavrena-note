@@ -4,9 +4,9 @@
 > 
 > 文档：[MDN Web Docs (mozilla.org)](https://developer.mozilla.org/zh-CN/)
 >
-> 学习视频：尚硅谷前端入门html+css零基础教程，零基础前端开发html5+css3视频_哔哩哔哩_bilibili
+> [尚硅谷前端入门html+css零基础教程，零基础前端开发html5+css3视频](https://www.bilibili.com/video/BV1p84y1P7Z5/?share_source=copy_web&vd_source=6582771ced8eee146aabc565f50f4ae7)
 
-超文本标记语言 W3C
+HTML是一个超文本标记语言，遵循了W3C规范
 
 ## 标签(HTML元素)
 
@@ -129,6 +129,40 @@ for=“input的ID名字”
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 ```
 
-## HTML5新特性
+## HTML5新玩具
 
 > 新增了布局标签、状态标签、列表标签、文本标签、表单控件标签、input新增type属性值、视频标签、音频标签 全局属性、兼容性处理
+
+### popover
+
+不同于`Dialog`，这个弹出后页面没有遮罩，类似`tooltip`那种效果
+
+> 消息提示框，使用方法类似dialog
+
+```html
+<popover id="myPopover">
+    <p>content....</p>
+</popover>
+```
+
+### dialog
+
+> 原生HTML也有弹框啦，哈哈哈~~~~，不想用组件库的弹窗可以用这个
+
+```html
+<button onclick="openDialog">打开Dialog</button>
+<dialog id="loginDialoog">
+    <p>content....</p>
+</dialog>
+```
+
+```js
+//打开弹窗
+function openDialog(){
+    document.getElementById("loginDialog").showModal();
+}
+//关闭弹窗
+function closeDialog(){
+    document.getElementById("loginDialog").close();
+}
+```

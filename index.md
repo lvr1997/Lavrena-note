@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: Lavrena's Blog
+  name: Lavrena's Notes
   text: 知识积累、记录和总结
   image:
     src: /logo.svg
@@ -10,8 +10,8 @@ hero:
       text: 👉 前端笔记
       link: /posts/FrontEnd
     - theme: alt
-      text: My GitHub
-      link: https://github.com/lvr1997/Lavrena-Blog
+      text: Leave me a message on GitHub
+      link: https://github.com/lvr1997/Lavrena-blog/discussions/1
 features:
   - icon: ✍
     title: 前端

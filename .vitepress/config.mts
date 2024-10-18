@@ -1,63 +1,40 @@
-import { defineConfig } from 'vitepress';
-import { nav, sidebar } from './configs';
+import { defineConfig } from "vitepress";
+import { localSearchOptions, nav, sidebar } from "./configs";
 
 export default defineConfig({
-  lang: 'zh-CN',
-  title: "Lavrena's Blog",
-  description: "A VitePress Site",
+  lang: "zh-CN",
+  title: "Lavrena's Notes",
+  description: "知识积累、记录和总结",
+  // appearance: "dark",
   cleanUrls: true,
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   lastUpdated: true,
-  markdown: {
-    lineNumbers: true
-  },
-  // srcExclude: ['**/Vue3_fast.md'],
+  // markdown: {
+  //   lineNumbers: true,
+  // },
   themeConfig: {
-    logo: '/logo.svg',
+    logo: "/logo.svg",
     nav,
     sidebar,
     outline: [2, 3],
-    outlineTitle: 'ON THIS PAGE',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/lvr1997' }
-    ],
+    outlineTitle: "ON THIS PAGE",
+    socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
     editLink: {
-      pattern: 'https://github.com/lvr1997/Lavrena-blog/edit/main/docs/:path'
+      pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/docs/:path",
     },
     search: {
-      provider: 'local',
-      options: {
-        locales: {
-          root: {
-            translations: {
-              button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档',
-              },
-              modal: {
-                noResultsText: '无法找到相关结果',
-                displayDetails: '显示详情',
-                resetButtonTitle: '清除查询条件',
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
-                  closeText: '关闭',
-                },
-              },
-            },
-          },
-        },
-      },
+      provider: "local",
+      options: localSearchOptions
     },
     footer: {
-      message: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn" target="_blank">冀ICP备2024067902号</a>',
-      copyright: 'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>'
-    }
+      message:
+        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn" target="_blank">冀ICP备2024067902号</a>',
+      copyright:
+        'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
+    },
   },
   sitemap: {
-    hostname: 'https://rgbyove.top'
+    hostname: "https://rgbyove.top",
   },
-  ignoreDeadLinks: true
-})
+  ignoreDeadLinks: true,
+});
