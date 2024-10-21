@@ -28,26 +28,26 @@ export const NAV_DATA = {
         { icon: 'https://tool.lu/favicon.ico', title: '在线工具', desc: '在线工具箱', link: 'https://tool.lu/' }
     ],
     C: [
-        { icon: '', title: 'VSCode Snippets', desc: '（VSCode代码片段）一个案例学会 VSCode Snippets，极大提高开发效率 - 知乎', link: 'https://zhuanlan.zhihu.com/p/457062272' },
-        { icon: '', title: 'Easy Mock使用', desc: '[Easy Mock全解及使用_easymock使用方法-CSDN博客', link: 'https://blog.csdn.net/w1418899532/article/details/91951603' },
-        { icon: '', title: 'nginx配置反向代理', desc: 'nginx配置反向代理 proxy_pass URL末尾加与不加/(斜杠)的区别_nginx代理后加url后半部分-CSDN博客', link: 'https://blog.csdn.net/willingtolove/article/details/108500198' },
-        { icon: '', title: '一篇文章掌握Vue3组合式API', desc: 'Vue3新语法', link: 'https://blog.csdn.net/weixin_53734436/article/details/117481977' },
-        { icon: '', title: '前端朽木白大神秘籍', desc: '前端面试宝典', link: 'https://www.yuque.com/xiumubai/doc?mode=dark' }, 
-        { icon: '', title: '页面循环请求优化方案', desc: '循环请求优化方案', link: 'https://blog.csdn.net/weixin_40476233/article/details/121292970' },
-        { icon: '', title: 'Vue组件', desc: 'Vue | 带有左右点击按钮可控制滑动的列表', link: 'https://blog.csdn.net/weixin_44303404/article/details/123947427' },
-        { icon: '', title: 'Vue3分段控制器（Segmented）', desc: '（分段控制器是antdesignvue4才有的新功能）', link: 'https://blog.csdn.net/Dandrose/article/details/140664033' },
-        { icon: '', title: 'Vue3 实现一个 Message 消息组件', desc: '实战：用 Vue3 实现一个 Message 消息组件在大多数 web 产品中，全局的 Message 组件占有较大的使 - 掘金', link: 'https://juejin.cn/post/6975770170413776926' },
-        { icon: '', title: 'Nestjs入门', desc: 'Vue3响应学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警)看到群里大家对`Nest.js`热情都很高,自己也心痒痒， - 掘金', link: 'https://juejin.cn/post/7032079740982788132?searchId=20240906140454C6682E9D087820816E35#heading-6' }
+        { icon: '', title: '有趣的开源项目', desc: 'GitHub 挑战Vuejs Collection of Vue.js challenges', link: 'https://github.com/webfansplz/vuejs-challenges' },
     ],
-    
     D: [
-        { icon: '', title: '挑战Vuejs', desc: 'GitHub 挑战Vuejs Collection of Vue.js challenges', link: 'https://github.com/webfansplz/vuejs-challenges' },
-    ],
-    E: [
         { icon: '', title: 'Echarts', desc: 'Echarts官网', link: 'https://echarts.apache.org/zh/index.html' },
     ],
-    F: [
+    E: [
         { icon: '', title: 'Avuejs', desc: '基于Element的前端低代码组件库', link: '#' },
         { icon: '', title: 'Ideaz Element', desc: '基于element-plus，支持Vue3.x的中后台业务组件库.', link: '#' },
     ]
 }
+
+export const HERO_ARTICLE = [
+    { logo: '', title: '（VSCode代码片段）一个案例学会 VSCode Snippets，极大提高开发效率 - 知乎', description: 'VSCode Snippets 代码片段的使用', url: 'https://zhuanlan.zhihu.com/p/457062272' },
+    { logo: '', title: 'Easy Mock全解及使用_easymock使用方法-CSDN博客', description: 'Easy Mock的使用', url: 'https://blog.csdn.net/w1418899532/article/details/91951603' },
+    { logo: '', title: 'nginx配置反向代理 proxy_pass URL末尾加与不加/(斜杠)的区别_nginx代理后加url后半部分-CSDN博客', description: 'Nginx配置', url: 'https://blog.csdn.net/willingtolove/article/details/108500198' },
+    { logo: '', title: '', description: 'Vue3新语法', url: '' },
+    { logo: '', title: '前端朽木白大神秘籍', description: '前端面试宝典', url: 'https://www.yuque.com/xiumubai/doc?mode=dark' }, 
+    { logo: '', title: '页面循环请求优化方案', description: '循环请求优化方案', url: 'https://blog.csdn.net/weixin_40476233/article/details/121292970' },
+    { logo: '', title: 'Vue | 带有左右点击按钮可控制滑动的列表', description: '', url: 'https://blog.csdn.net/weixin_44303404/article/details/123947427' },
+    { logo: '', title: 'Vue3分段控制器（Segmented）', description: '（分段控制器是antdesignvue4才有的新功能）', url: 'https://blog.csdn.net/Dandrose/article/details/140664033' },
+    { logo: '', title: '实战：用 Vue3 实现一个 Message 消息组件在大多数 web 产品中，全局的 Message 组件占有较大的使 - 掘金', description: 'Vue3 实现一个 Message 消息组件', url: 'https://juejin.cn/post/6975770170413776926' },
+    { logo: '', title: 'Vue3响应学完这篇 Nest.js 实战，还没入门的来锤我！(长文预警)看到群里大家对`Nest.js`热情都很高,自己也心痒痒， - 掘金', description: 'Nestjs入门', url: 'https://juejin.cn/post/7032079740982788132?searchId=20240906140454C6682E9D087820816E35#heading-6' }
+]

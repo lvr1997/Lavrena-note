@@ -38,7 +38,6 @@ const sidebarFrontEnd = () => {
     ] },
     { text: "Radix Vue", link: "/posts/FrontEnd/RadixVue" },
     { text: "代码片段", items: sidebarCode() },
-    { text: "vitepress搭建", link: '/posts/FrontEnd/vitepress/vitepress_create' },
     {
       text: "经验总结&踩坑",
       collapsed: true,

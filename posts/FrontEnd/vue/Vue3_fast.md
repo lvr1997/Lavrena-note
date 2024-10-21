@@ -60,6 +60,8 @@
 - `Vue2`的`API`设计是`Options`（配置）风格的。
 - `Vue3`的`API`设计是`Composition`（组合）风格的。
 
+<Linkcard link="https://blog.csdn.net/weixin_53734436/article/details/117481977" title="一篇文章掌握Vue3组合式API" description="作者：北辰.two" logo="https://img-home.csdnimg.cn/images/20201124032511.png"/>
+
 ###  Options API 的弊端
 
 `Options`类型的 `API`，数据、方法、计算属性等，是分散在：`data`、`methods`、`computed`中的，若想新增或者修改一个需求，就需要分别修改：`data`、`methods`、`computed`，不便于维护和复用。
