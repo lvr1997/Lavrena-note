@@ -13,14 +13,14 @@ export const NAV_DATA = {
         { icon: '', title: 'Vue', desc: '工作中vue常用知识总结', link: '/vue' },
         { icon: '', title: 'React', desc: '还在学习中...', link: '/React' },
         { icon: '⚒️', title: 'Scaffold', desc: '常用的脚手架项目配置模板', link: '/scaffold' },
-        { icon: '', title: 'Nuxt', desc: 'SSR，基于Vue的全栈框架', link: '/Nuxt3' },
         { icon: '🧑‍🏫', title: '面试', desc: '背八股文的时候到了/(ㄒoㄒ)/~~', link: '/Interview' },
         { icon: '', title: 'CodeSnippet', desc: '平常用到的代码片段', link: '/CodeSnippet' },
         { icon: '', title: '无样式组件库', desc: '最近学到的无样式组件库相关知识', link: '/unheadless-ui' }
     ],
     BackEnd: [
+        { icon: '', title: 'Nuxt', desc: 'SSR，基于Vue的全栈框架', link: '/Nuxt3' },
+        { icon: '', title: 'Nestjs', desc: '一个Nodejs框架，学过Java的我，看着它有点像熟悉的陌生人', link: '/Nestjs' },
         { icon: '', title: 'Java', desc: 'Java远古笔记', link: '/Java' },
-        { icon: '', title: 'Nestjs', desc: '一个Nodejs框架，学过Java的我，看着它有点像熟悉的陌生人', link: '/Nestjs' }
     ],
     frontendEnvironment: [
         { icon: '📂', title: 'Clippings', desc: '我的网页收藏夹', link: '/Clippings' },

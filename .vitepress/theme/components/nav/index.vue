@@ -1,5 +1,5 @@
 <template>
-    <MNavLinks title="前端" :items="FrontEnd" />
+    <MNavLinks title="前端笔记" :items="FrontEnd" />
     <MNavLinks title="全栈？" :items="BackEnd" />
     <MNavLinks title="前端生态" :items="frontendEnvironment" />
     <MNavLinks title="工具相关" :items="tools" />

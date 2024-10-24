@@ -1,7 +1,7 @@
 
-import { useData, useRoute } from "vitepress";
+import { useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import { h, nextTick, onMounted, watch } from "vue";
+import { nextTick, onMounted, watch } from "vue";
 // 引入第三方库
 import mediumZoom from "medium-zoom";
 import vitepressBackToTop from 'vitepress-plugin-back-to-top';
@@ -14,18 +14,7 @@ import "./style/index.css"; //自定义样式
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    const props: Record<string, any> = {};
-    // 获取 frontmatter
-    const { frontmatter } = useData();
-
-    /* 添加自定义 class */
-    if (frontmatter.value?.layoutClass) {
-      props.class = frontmatter.value.layoutClass;
-    }
-
-    return h(Layout, props);
-  },
+  Layout,
   enhanceApp({ app }) {
     app.component("Linkcard", Linkcard);
     app.component("Nav", Nav);

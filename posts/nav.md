@@ -1,6 +1,6 @@
 ---
 layout: doc
-layoutClass: m-nav-layout
+pageClass: m-nav-layout
 sidebar: false
 outline: [2, 3, 4]
 ---
