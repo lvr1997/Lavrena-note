@@ -1,15 +1,16 @@
-// https://vitepress.dev/guide/custom-theme
-// import Theme from "vitepress/theme";
-import mediumZoom from "medium-zoom";
+
 import { useData, useRoute } from "vitepress";
-import vitepressBackToTop from 'vitepress-plugin-back-to-top';
-import 'vitepress-plugin-back-to-top/dist/style.css';
 import DefaultTheme from "vitepress/theme";
 import { h, nextTick, onMounted, watch } from "vue";
-import Home from "./components/Home.vue";
+// 引入第三方库
+import mediumZoom from "medium-zoom";
+import vitepressBackToTop from 'vitepress-plugin-back-to-top';
+import 'vitepress-plugin-back-to-top/dist/style.css';
+// 自定义组件
 import Layout from "./components/Layout.vue";
 import Linkcard from "./components/Linkcard.vue";
-import "./style/index.css";
+import Nav from "./components/nav/index.vue";
+import "./style/index.css"; //自定义样式
 
 export default {
   extends: DefaultTheme,
@@ -26,8 +27,8 @@ export default {
     return h(Layout, props);
   },
   enhanceApp({ app }) {
-    app.component("Home", Home);
     app.component("Linkcard", Linkcard);
+    app.component("Nav", Nav);
     vitepressBackToTop({
       // default
       threshold:300

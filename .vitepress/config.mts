@@ -1,30 +1,52 @@
+import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
-import { localSearchOptions, nav, sidebar } from "./configs";
 
 export default defineConfig({
   lang: "zh-CN",
   title: "Lavrena's Notes",
   description: "知识积累、记录和总结",
-  // appearance: "dark",
-  cleanUrls: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  srcDir: "./posts",
+  srcExclude: [".obsidian"],
+  cleanUrls: true,
   lastUpdated: true,
-  // markdown: {
-  //   lineNumbers: true,
-  // },
   themeConfig: {
     logo: "/logo.svg",
-    nav,
-    sidebar,
+    nav: [
+      { text: "🚩导航", link: "/nav" },
+      { text: "🙋‍♀️关于我", link: "/about" },
+    ],
     outline: [2, 3],
     outlineTitle: "ON THIS PAGE",
     socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
     editLink: {
+      text: "在 GitHub 上编辑此页",
       pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/docs/:path",
     },
     search: {
       provider: "local",
-      options: localSearchOptions
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "搜索文档",
+                buttonAriaLabel: "搜索文档",
+              },
+              modal: {
+                noResultsText: "无法找到相关结果",
+                displayDetails: "显示详情",
+                resetButtonTitle: "清除查询条件",
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                },
+              },
+            },
+          },
+        },
+      }
     },
     footer: {
       message:
@@ -37,4 +59,13 @@ export default defineConfig({
     hostname: "https://rgbyove.top",
   },
   ignoreDeadLinks: true,
+  vite: {
+    plugins: [
+      AutoSidebar({
+        path: '/posts',
+        ignoreList: ['public', 'assets', '.obsidian'],
+        titleFromFile: true
+      })
+    ]
+  }
 });

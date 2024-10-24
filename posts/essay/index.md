@@ -1,7 +1,3 @@
----
-layout: page
----
+# 随笔
 
-<ClientOnly>
-    <Home/>
-</ClientOnly>
+文笔发挥的地方......
