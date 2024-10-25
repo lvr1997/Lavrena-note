@@ -2,7 +2,7 @@
 import { useData } from "vitepress";
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, onMounted, provide, reactive } from 'vue';
-import Visitor from "./Visitor.vue";
+// import Visitor from "./Visitor.vue";
 
 const { isDark } = useData()
 const { Layout } = DefaultTheme
@@ -69,9 +69,6 @@ onMounted(() => {
       <p class="tagline pt-4 text-xl">
         <a :href="hitokoto.href">{{ hitokoto.text }}</a>
       </p>
-    </template>
-    <template #nav-bar-title-after>
-      <Visitor/>
     </template>
   </Layout>
 </template>
