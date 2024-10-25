@@ -1,10 +1,3 @@
-
-/**
- * A: 前端生态
- * B: 大神文章
- * C: 工具相关
- * D: 技术提升
- */
 export const NAV_DATA = {
     FrontEnd: [
         { icon: '', title: 'HTML+CSS+JS', desc: '前端三剑客', link: '/web' },
@@ -13,12 +6,12 @@ export const NAV_DATA = {
         { icon: '', title: 'Vue', desc: '工作中vue常用知识总结', link: '/vue' },
         { icon: '', title: 'React', desc: '还在学习中...', link: '/React' },
         { icon: '⚒️', title: 'Scaffold', desc: '常用的脚手架项目配置模板', link: '/scaffold' },
-        { icon: '🧑‍🏫', title: '面试', desc: '背八股文的时候到了/(ㄒoㄒ)/~~', link: '/Interview' },
         { icon: '', title: 'CodeSnippet', desc: '平常用到的代码片段', link: '/CodeSnippet' },
-        { icon: '', title: '无样式组件库', desc: '最近学到的无样式组件库相关知识', link: '/unheadless-ui' }
+        { icon: '', title: '无样式组件库', desc: '最近学到的无样式组件库相关知识', link: '/unheadless-ui' },
+        { icon: '🧑‍🏫', title: '面试', desc: '背八股文的时候到了/(ㄒoㄒ)/~~', link: '/Interview' },
     ],
     BackEnd: [
-        { icon: '', title: 'Nuxt', desc: 'SSR，基于Vue的全栈框架', link: '/Nuxt3' },
+        { icon: '', title: 'Nuxt', desc: '基于Vue的全栈框架', link: '/Nuxt3' },
         { icon: '', title: 'Nestjs', desc: '一个Nodejs框架，学过Java的我，看着它有点像熟悉的陌生人', link: '/Nestjs' },
         { icon: '', title: 'Java', desc: 'Java远古笔记', link: '/Java' },
     ],
@@ -50,11 +43,15 @@ export const NAV_DATA = {
     bigData: [
         { icon: '🖊', title: 'Echarts使用总结', desc: '工作中遇到的echarts方面的问题', link: '/echarts' },
         { icon: '', title: 'Echarts', desc: 'Echarts官网', link: 'https://echarts.apache.org/zh/index.html' },
+        { icon: '', title: 'Chartjs', desc: '轻量级，适用于现代 Web 的简单而灵活的 JavaScript 图表库', link: 'https://www.chartjs.org/' }
     ],
     web3D: [ { icon: '', title: 'Threejs学习记录', desc: '刚入门...', link: '/Threejs' } ],
     lowerCode: [
         { icon: '', title: 'Avuejs', desc: '基于Element的前端低代码组件库', link: '#' },
         { icon: '', title: 'Ideaz Element', desc: '基于element-plus，支持Vue3.x的中后台业务组件库.', link: '#' },
+    ],
+    slackingOff: [
+        { icon: '', title: '', desc: '', link: '' },
     ]
 }
 

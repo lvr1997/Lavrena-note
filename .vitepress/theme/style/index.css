@@ -8,17 +8,6 @@
 
 /* 参考 node_modules\vitepress\dist\client\theme-default\styles\var.css 一一修改 */
 
-:root {
-  --vp-c-brand-1: #915930;
-  --vp-c-brand-2: #946300;
-  --vp-c-brand-3: #9f6a00;
-}
-
-.dark {
-  --vp-c-brand-1: #f9b44e;
-  --vp-c-brand-2: #da8b17;
-  --vp-c-brand-3: #a46a0a;
-}
 
 /* 标题渐变色 */
 h1 {
