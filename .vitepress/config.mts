@@ -29,7 +29,7 @@ export default defineConfig({
       options: {
         appId: 'XWQKI7G1L6',
         apiKey: 'aa7d56aadc650956deefe01118fcb73e',
-        indexName: 'notes',
+        indexName: 'lavrena_blog_pages',
       }
     },
     footer: {
