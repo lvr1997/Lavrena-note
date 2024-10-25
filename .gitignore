@@ -4,3 +4,4 @@ node_modules
 .vitepress/dist/
 posts/.obsidian/
 pnpm-lock.yaml
+push.sh
