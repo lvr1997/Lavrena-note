@@ -29,7 +29,7 @@ export default defineConfig({
       provider: 'algolia',
       options: {
         appId: 'XWQKI7G1L6',
-        apiKey: 'aa7d56aadc650956deefe01118fcb73e',
+        apiKey: '129a781482f940a429524a957995e0c2',
         indexName: 'lavrena_blog_pages',
       }
     },
