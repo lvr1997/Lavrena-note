@@ -1,0 +1,13 @@
+/* pageClass */
+.m-nav-layout {
+  /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
+  --vp-layout-max-width: 1660px;
+}
+.m-nav-layout .container {
+  /* 修改 layout 最大宽度 */
+  max-width: var(--vp-layout-max-width) !important;
+}
+.m-nav-layout .content-container,
+.m-nav-layout .content {
+  max-width: 100% !important;
+}

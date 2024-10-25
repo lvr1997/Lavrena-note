@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lang: "zh-CN",
   title: "Lavrena's Notes",
-  description: "知识积累、记录和总结",  //<meta name="algolia-site-verification"  content="5E2071B9EF43BA49" />
+  description: "知识积累、记录和总结",
   head: [["link", { rel: "icon", href: "/favicon.ico" }], ["meta", { name: 'algolia-site-verification', content: "5E2071B9EF43BA49" }]],
   srcDir: "./posts",
   srcExclude: [".obsidian", 'templates'],

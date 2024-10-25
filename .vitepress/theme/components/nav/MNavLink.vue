@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from 'vue';
 
-import { NavLink } from './type'
+import { NavLink } from './type';
 
 const props = defineProps<{
   icon?: NavLink['icon']
@@ -24,7 +24,7 @@ const svg = computed(() => {
         <div v-else-if="icon && typeof icon === 'string'" class="icon">
           <img :src="icon" :alt="title" onerror="this.parentElement.style.display='none'" />
         </div>
-        <h6 v-if="title" class="title">{{ title }}</h6>
+        <h5 v-if="title" class="title">{{ title }}</h5>
       </div>
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>

@@ -5,16 +5,107 @@
 @import './custom-block.css';
 @import './link.css';
 @import './marker.css';
+@import './m-nav-layout.css';
 
 /* 参考 node_modules\vitepress\dist\client\theme-default\styles\var.css 一一修改 */
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+ :root {
+  --vp-c-gutter: var(--vp-c-divider);
+  --vp-code-block-bg: rgba(125, 125, 125, 0.04);
+  --vp-code-tab-divider: var(--vp-c-divider);
+  --vp-code-copy-code-bg: rgba(125, 125, 125, 0.1);
+  --vp-code-copy-code-hover-bg: rgba(125, 125, 125, 0.2);
+  --vp-c-disabled-bg: rgba(125, 125, 125, 0.2);
+  --vp-code-tab-text-color: var(--vp-c-text-2);
+  --vp-code-tab-active-text-color: var(--vp-c-text-1);
+  --vp-code-tab-hover-text-color: var(--vp-c-text-1);
+  --vp-code-copy-code-active-text: var(--vp-c-text-2);
+  --vp-c-text-dark-3: rgba(56, 56, 56, 0.8);
+  --vp-c-brand-lightest: var(--vp-c-brand-1);
+
+  --vp-c-highlight-bg: var(--vp-c-brand-light);
+  --vp-c-highlight-text: var(--vp-c-bg);
+
+  --vp-c-tip-1: var(--vp-c-indigo-1);
+}
+
+.dark {
+  --vp-code-block-bg: rgba(0, 0, 0, 0.2);
+  --vp-c-text-code: #c0cec0;
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+:root {
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--vp-c-brand-1) 30%,
+    var(--vp-c-brand-next)
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    var(--vp-c-brand-1) 30%,
+    var(--vp-c-brand-next)
+  );
+  --vp-home-hero-image-filter: blur(80px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(120px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(120px);
+  }
+}
+
+/* Safari has a very bad performance on gradient and filter */
+.browser-safari,
+.browser-firefox {
+  --vp-home-hero-image-background-image: transparent;
+  --vp-home-hero-image-filter: '';
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand-1);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand-1);
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
 
 
 /* 标题渐变色 */
 h1 {
-  background: -webkit-linear-gradient(20deg, #bd34fe 5%, #41d1ff 15%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--vp-c-brand-1);
 }
 
 /* 链接下划线 */
@@ -22,25 +113,9 @@ h1 {
   text-decoration: none;
 }
 
-/* medium-zoom */
-.medium-zoom-overlay {
-  z-index: 15;
-}
-
-.medium-zoom-image {
-  z-index: 16;
-}
-
-/* pageClass */
-.m-nav-layout {
-   /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
-   --vp-layout-max-width: 1660px;
-}
-.m-nav-layout .container {
-  /* 修改 layout 最大宽度 */
-  max-width: var(--vp-layout-max-width) !important;
-}
-.m-nav-layout .content-container,
-.m-nav-layout .content {
-  max-width: 100% !important;
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+ .DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }

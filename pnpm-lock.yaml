@@ -29,9 +29,6 @@ importers:
       vitepress:
         specifier: ^1.4.1
         version: 1.4.1(@algolia/client-search@5.10.2)(postcss@8.4.41)(sass@1.80.4)(search-insights@2.16.3)(typescript@5.6.3)
-      vitepress-plugin-back-to-top:
-        specifier: ^1.0.1
-        version: 1.0.1(typescript@5.6.3)
       vue:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.6.3)
@@ -1704,9 +1701,6 @@ packages:
         optional: true
       terser:
         optional: true
-
-  vitepress-plugin-back-to-top@1.0.1:
-    resolution: {integrity: sha512-fQUzhkV6SGEmYcO56fv6Jbz5ifseAZuoi+lPDGg0c8gpMVHgqs/D1GbfX4tbvUAtuFNv4kz88wuQRK024iZ2sQ==}
 
   vitepress@1.4.1:
     resolution: {integrity: sha512-C2rQ7PMlDVqgsaHOa0uJtgGGWaGv74QMaGL62lxKbtFkYtosJB5HAfZ8+pEbfzzvLemYaYwaiQdFLBlexK2sFw==}
@@ -3443,12 +3437,6 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       sass: 1.80.4
-
-  vitepress-plugin-back-to-top@1.0.1(typescript@5.6.3):
-    dependencies:
-      vue: 3.5.12(typescript@5.6.3)
-    transitivePeerDependencies:
-      - typescript
 
   vitepress@1.4.1(@algolia/client-search@5.10.2)(postcss@8.4.41)(sass@1.80.4)(search-insights@2.16.3)(typescript@5.6.3):
     dependencies:
