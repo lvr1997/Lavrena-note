@@ -1,6 +1,7 @@
 # React 基础
 
-[B站学习视频](https://www.bilibili.com/video/BV1wy4y1D7JT?p=17&spm_id_from=333.880.my_history.page.click&vd_source=0ac7746e9ece1179baaedba6f1b41114)
+> [B站学习视频](https://www.bilibili.com/video/BV1wy4y1D7JT?p=17&spm_id_from=333.880.my_history.page.click&vd_source=0ac7746e9ece1179baaedba6f1b41114)
+
 ## jsx语法规则
 
 1. 创建虚以D0M时，不要写引号：
@@ -17,16 +18,17 @@
 - 若首字母大写，那么React.就会去寻找与之同名的组件；若找见，那么就是用组件；若未找见，报错
 ## 组件
 
-### 函数式组件 （最新）[[../../Diary/2024-08-30|2024-08-30]]
+### 函数式组件 （最新）
 
 `React18`通过定义函数的方式创建组件
 - 基础语法
 - 入门案例 [[井字棋游戏]]
 - [[如何使用 React 构建用户界面]]
 
-_执行了ReactDOM.render(…,后发生了什么？_
-1. React解析组件标签，寻找Demo组件的定义位置
-2. React发现Demo组件是用函数定义的，随后React去直接调用Demo函数，将返回的虚拟DON渲染到页面
+> [!note] 执行ReactDOM.render(…,后发生了什么？_
+> 1. React解析组件标签，寻找Demo组件的定义位置
+> 2. React发现Demo组件是用函数定义的，随后React去直接调用Demo函数，将返回的虚拟DON渲染到页面
+
 ### 类式组件 (旧写法)
 
 `React17` 通过创建类的方式，定义组件
@@ -44,11 +46,11 @@ class MyComponent extends React.Component {
 ReactDOM.render('组件名标签形式',document.getElementById('test')
 ```
 
-_执行ReactDOM.render(……)后发生了什么？_
 
-1. React解析组件标签，找到MyComponent组件
-2. 发现组件是使用类定义的，随后new出来该类的实例，并通过该实例调用到原型上的render方法。
-3. 将render返回的虚拟DOM转为真实DOM，随后呈现在页面上。
+> [!note] 执行ReactDOM.render(……)后发生了什么？_
+> 1. React解析组件标签，找到MyComponent组件
+> 2. 发现组件是使用类定义的，随后new出来该类的实例，并通过该实例调用到原型上的render方法。
+> 3. 将render返回的虚拟DOM转为真实DOM，随后呈现在页面上。
 
 ## State
 
@@ -83,7 +85,7 @@ class Weather extends React.Component {
 ReactDOM.render(`<Weather/>`, document.getElementById("root"))
 ```
 
-> [!NOTE] 案例总结
+> [!important] 案例总结
 > changeWeather方法放在了哪里？—— Weather的原型对象上，供实例使用 
 > 由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用 
 > 类中的方法默认开启了局部的严格模式，所以changeWeather中的this是undefind
