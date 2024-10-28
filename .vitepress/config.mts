@@ -6,7 +6,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "Lavrena's Notes",
   description: "知识积累、记录和总结",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }], ["meta", { name: 'algolia-site-verification', content: "5E2071B9EF43BA49" }]],
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   srcDir: "./posts",
   srcExclude: [".obsidian", 'templates'],
   cleanUrls: true,
@@ -26,11 +26,28 @@ export default defineConfig({
       pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/docs/:path",
     },
     search: {
-      provider: 'algolia',
+      provider: "local",
       options: {
-        appId: 'XWQKI7G1L6',
-        apiKey: '129a781482f940a429524a957995e0c2',
-        indexName: 'lavrena_blog_pages',
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "搜索文档",
+                buttonAriaLabel: "搜索文档",
+              },
+              modal: {
+                noResultsText: "无法找到相关结果",
+                displayDetails: "显示详情",
+                resetButtonTitle: "清除查询条件",
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                },
+              },
+            },
+          },
+        },
       }
     },
     footer: {
