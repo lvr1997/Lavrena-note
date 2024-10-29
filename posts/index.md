@@ -10,8 +10,8 @@ hero:
       text: 👉 导航
       link: /nav
     - theme: alt
-      text: Leave me a message on GitHub
-      link: https://github.com/lvr1997/Lavrena-blog/discussions/1
+      text: View on GitHub
+      link: https://github.com/lvr1997/Lavrena-blog
 features:
   - icon: ✍
     title: 前端
