@@ -190,6 +190,18 @@ let someValue: unknown = "this is a string";
 let strLength: number = (<string>someValue).length;
 ```
 
+## type
+
+给类型起一个新名字，支持基本类型、联合类型、元祖及其它任何你需要的手写类型,常用于联合类型。
+
+```ts
+type test = number; //基本类型
+let num: test = 10;
+type userOjb = {name:string} // 对象
+type getName = ()=>string  // 函数
+type data = [number,string] // 元组
+type numOrFun = Second | getName  // 联合类型
+```
 ## 引用类型
 
 [类Class](./1.Class.md)
