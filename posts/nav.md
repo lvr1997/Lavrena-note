@@ -11,6 +11,10 @@ outline: [2, 3, 4]
 
 <Nav />
 
+## 有趣的开源项目
+
+[Collection of Vue.js challenges](https://github.com/webfansplz/vuejs-challenges)
+
 ## 其他资源
 
 | 名称                                                     | 标签        | 备注              |

@@ -5,9 +5,6 @@
     <MNavLinks title="工具相关" :items="tools">
         <Badge type="warning">实用工具</Badge>
     </MNavLinks>
-    <MNavLinks title="有趣的开源项目" :items="openSourceProjects">
-        <Badge type="info">GitHub</Badge>
-    </MNavLinks>
     <MNavLinks title="大数据" :items="bigData">
         <Badge type="info">柱状图、条形图、各种图</Badge>
     </MNavLinks>
@@ -26,5 +23,5 @@
 import MNavLinks from './MNavLinks.vue';
 import { NAV_DATA } from './data';
 
-const { frontendEnvironment, tools, openSourceProjects, bigData, web3D,lowerCode, HERO_ARTICLE } = NAV_DATA
+const { frontendEnvironment, tools, bigData, web3D,lowerCode, HERO_ARTICLE } = NAV_DATA
 </script>

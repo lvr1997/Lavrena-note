@@ -39,6 +39,7 @@ const svg = computed(() => {
   height: 100%;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
   &:hover {
     box-shadow: var(--vp-shadow-2); 
     border-color: var(--vp-c-brand); //悬停边框色

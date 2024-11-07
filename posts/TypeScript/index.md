@@ -189,8 +189,15 @@ let strLength: number = (someValue as string).length;
 let someValue: unknown = "this is a string";
 let strLength: number = (<string>someValue).length;
 ```
+## 引用类型
 
-## type
+[类Class](./1.Class.md)
+
+[接口interface](./2.interface.md)
+
+[泛型（Generic）](./3.Generic.md)
+
+## type自定义类型
 
 给类型起一个新名字，支持基本类型、联合类型、元祖及其它任何你需要的手写类型,常用于联合类型。
 
@@ -202,13 +209,6 @@ type getName = ()=>string  // 函数
 type data = [number,string] // 元组
 type numOrFun = Second | getName  // 联合类型
 ```
-## 引用类型
-
-[类Class](./1.Class.md)
-
-[接口interface](./2.interface.md)
-
-[泛型（Generic）](./3.Generic.md)
 ## 编译选项
 
 - 自动编译文件

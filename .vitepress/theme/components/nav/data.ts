@@ -20,9 +20,6 @@ export const NAV_DATA = {
         { icon: 'https://svg.wtf/favicon.svg', title: 'SVG在线', desc: '学习如何编写 SVG 代码的游乐场 - 包括一些有用的代码相关功能，如悬停查看属性的文档等。', link: 'https://svg.wtf/' },
         { icon: 'https://tool.lu/favicon.ico', title: '在线工具', desc: '在线工具箱', link: 'https://tool.lu/' }
     ],
-    openSourceProjects: [
-        { icon: '', title: 'GitHub 挑战Vuejs', desc: 'Collection of Vue.js challenges', link: 'https://github.com/webfansplz/vuejs-challenges' },
-    ],
     bigData: [
         { icon: '', title: 'Echarts', desc: 'Echarts官网', link: 'https://echarts.apache.org/zh/index.html' },
         { icon: '', title: 'Chartjs', desc: '轻量级，适用于现代 Web 的简单而灵活的 JavaScript 图表库', link: 'https://www.chartjs.org/' }
