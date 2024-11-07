@@ -17,8 +17,9 @@ export const NAV_DATA = {
         { icon: 'https://apifox.com/favicon.ico', title: 'APIfox接口调试工具', desc: '比Postman好用', link: 'https://app.apifox.com/main' },
         { icon: 'https://vuejsexamples.com/favicon.ico', title: 'vue实用案例收集', desc: 'vue实用案例收集：', link: 'https://vuejsexamples.com/' }, 
         { icon: 'https://logofa.st/favicon.ico', title: 'LogoFast | Make Beautiful Logos Fast and Free', desc: '在线生成logo', link: 'https://logofa.st' },
-        { icon: 'https://svg.wtf/favicon.svg', title: 'SVG在线', desc: '学习如何编写 SVG 代码的游乐场 - 包括一些有用的代码相关功能，如悬停查看属性的文档等。', link: 'https://svg.wtf/' },
-        { icon: 'https://tool.lu/favicon.ico', title: '在线工具', desc: '在线工具箱', link: 'https://tool.lu/' }
+        { icon: 'https://svg.wtf/favicon.svg', title: '在线制作SVG图标', desc: '学习如何编写 SVG 代码的游乐场 - 包括一些有用的代码相关功能，如悬停查看属性的文档等。', link: 'https://svg.wtf/' },
+        { icon: 'https://tool.lu/favicon.ico', title: '在线工具', desc: '在线工具箱', link: 'https://tool.lu/' },
+        { icon: '', title: 'Pixabay', desc: '找素材图片的网站', link: 'https://pixabay.com' }
     ],
     bigData: [
         { icon: '', title: 'Echarts', desc: 'Echarts官网', link: 'https://echarts.apache.org/zh/index.html' },
