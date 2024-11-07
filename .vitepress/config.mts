@@ -8,13 +8,37 @@ export default defineConfig({
   description: "知识积累、记录和总结",
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   srcDir: "./posts",
-  srcExclude: [".obsidian", 'templates'],
+  srcExclude: [".obsidian", 'templates', 'Clippings'],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
     logo: "/logo.svg",
     nav: [
       { text: "🚩导航", link: "/nav" },
+      { text: '📚前端', items: [
+        { text: 'HTML+CSS+JS', link: '/web' },
+        { text: 'TypeScript', link: '/TypeScript' },
+        { text: 'Vue', link: '/vue' },
+        { text: 'React', link: '/React' },
+        { text: '脚手架开发模板', link: '/scaffold' },
+        { text: '代码片段', link: '/CodeSnippet' },
+        { text: 'UI组件库', link: '/ui-modules' },
+        { text: '无样式组件库', link: '/unheadless-ui' },
+        { text: 'Echarts', link: '/echarts' },
+        { text: 'Threejs', link: '/Threejs' },
+        { text: '面试', link: '/Interview' }
+      ]},
+      { text: '📚后端', items: [
+        { text: 'Node', link: '/node' },
+        { text: 'Java', link: '/Java' },
+        { text: 'Nest', link: '/Nestjs' },
+      ] },
+      { text: '📚全栈', items: [
+        { text: 'Nuxt', link: '/Nuxt3' }
+      ]},
+      { text: '🗃️项目', items: [
+        { text: '科大二手工坊', link: '/kd-shop' },
+      ] },
       { text: "✍随笔", link: "/essay" },
       { text: "🙋‍♀️关于我", link: "/about" },
     ],
@@ -70,7 +94,7 @@ export default defineConfig({
     plugins: [
       AutoSidebar({
         path: '/posts',
-        ignoreList: ['public', 'assets', '.obsidian', 'templates'],
+        ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
         ignoreIndexItem: true,
         titleFromFile: true
       })

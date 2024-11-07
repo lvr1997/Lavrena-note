@@ -107,9 +107,9 @@ h1 {
 }
 
 /* 链接下划线 */
-.vp-doc a {
+/* .vp-doc a {
   text-decoration: none;
-}
+} */
 
 /**
  * Component: Algolia

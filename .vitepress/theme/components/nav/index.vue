@@ -1,10 +1,4 @@
 <template>
-    <MNavLinks title="前端" :items="FrontEnd">
-        <Badge type="tip">笔记</Badge>
-    </MNavLinks>
-    <MNavLinks title="全栈？" :items="BackEnd">
-        <Badge type="tip">笔记</Badge>
-    </MNavLinks>
     <MNavLinks title="前端生态" :items="frontendEnvironment">
         <Badge type="warning">常用网站</Badge>
     </MNavLinks>
@@ -23,11 +17,14 @@
     <MNavLinks title="低代码" :items="lowerCode">
         <Badge type="danger">效率神器</Badge>
     </MNavLinks>
+    <MNavLinks title="大神文章" :items="HERO_ARTICLE">
+        <Badge type="info">文章推荐</Badge>
+    </MNavLinks>
 </template>
 
 <script setup lang="ts">
 import MNavLinks from './MNavLinks.vue';
 import { NAV_DATA } from './data';
 
-const { frontendEnvironment, tools, openSourceProjects, bigData, web3D,lowerCode, FrontEnd, BackEnd } = NAV_DATA
+const { frontendEnvironment, tools, openSourceProjects, bigData, web3D,lowerCode, HERO_ARTICLE } = NAV_DATA
 </script>
