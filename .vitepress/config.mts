@@ -47,7 +47,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
     editLink: {
       text: "在 GitHub 上编辑此页",
-      pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/docs/:path",
+      pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/posts/:path",
     },
     search: {
       provider: "local",
