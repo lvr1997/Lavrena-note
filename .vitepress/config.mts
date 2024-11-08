@@ -40,7 +40,7 @@ export default defineConfig({
         { text: '科大二手工坊', link: '/kd-shop' },
       ] },
       { text: "✍随笔", link: "/essay" },
-      { text: "🙋‍♀️Blog", link: "https://blog.rgbyove.top" },
+      { text: "🙋‍♀️关于我", link: "/about" },
     ],
     outline: [2, 3],
     outlineTitle: "ON THIS PAGE",
