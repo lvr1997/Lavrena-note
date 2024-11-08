@@ -4,7 +4,7 @@ hero:
   name: Lavrena's Notes
   text: 知识积累、记录和总结
   image:
-    src: /icon.png
+    src: /shapes.svg
   actions:
     - theme: brand
       text: 👉 导航

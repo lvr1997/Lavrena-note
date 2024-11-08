@@ -12,7 +12,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
-    logo: "/logo.svg",
+    logo: "/icon.svg",
     nav: [
       { text: "🚩导航", link: "/nav" },
       { text: '📚前端', items: [
