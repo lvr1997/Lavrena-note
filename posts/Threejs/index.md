@@ -2,13 +2,13 @@
 
 > Threejs是一个基于JavaScript的3D渲染引擎，用于快速创建三维场景。  --- [threejs官网](https://threejs.org/)
 
-> 2027.07 工作上涉及到一些3D场景方面的知识，花了两三天的时间**入门**一下
+2024年07月：工作上涉及到一些3D场景方面的知识，花了两三天的时间**入门**一下
 
-先来了解一下基本概念
+## 基本概念
 
-## 光源对物体的影响
+### 光源对物体的影响
 
-### 点光源
+#### 点光源
 
 ```js
 //创建点光源
@@ -21,7 +21,10 @@ const pointLightHelper = new THREE.PointLightHelper(light, 10);
 scene.add(pointLightHelper);
 ```
 
-## 引入性能监视器stats.js监控电脑性能变化
+## 性能监视
+
+引入性能监视器stats.js监控电脑性能变化
+
 ```js
 // 测试电脑渲染性能
 const geometry = new THREE.BoxGeometry(5, 5, 5);
@@ -49,9 +52,6 @@ const stats = new Stats();
 document.body.appendChild(stats.domElement);
 ```
 
-## threejs语法总结
- 类：构造函数
-
 ## 几何体模型顶点Point
 > 用于创建自定义模型
 
@@ -69,7 +69,7 @@ uv坐标作用：将一个图片剪裁后 贴在几何体上
 
 ## 大型3D场景搭建
 
-### 存在的问题，
+### 存在的问题
 
 1. 性能问题：传统threejs的渲染性能问题，需要将几何体拆分成多个小模型，再组合成一个大的模型。
 2. 场景贴图渲染：需要地理信息数据

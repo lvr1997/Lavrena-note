@@ -1,12 +1,4 @@
----
-title: 柱状图数据太多时，如何动态给echarts容器指定高度
-titleTemplate: Vue
-isOriginal: false
-date: 2022-10-23
-tags:
-  - vue
-  - echarts
----
+# 柱状图数据太多时，如何动态给echarts容器指定高度
 
 原文链接：[echarts容器动态设置高度 - 且行且思 - 博客园](https://www.cnblogs.com/Fooo/p/16050886.html)
 

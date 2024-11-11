@@ -20,6 +20,7 @@ export default defineConfig({
         { text: 'TypeScript', link: '/TypeScript' },
         { text: 'Vue', link: '/vue' },
         { text: 'React', link: '/React' },
+        { text: '小程序', link: '/miniprogram' },
         { text: '脚手架开发模板', link: '/scaffold' },
         { text: '代码片段', link: '/CodeSnippet' },
         { text: 'UI组件库', link: '/ui-modules' },
@@ -38,6 +39,9 @@ export default defineConfig({
       ]},
       { text: '🗃️项目', items: [
         { text: '科大二手工坊', link: '/kd-shop' },
+      ] },
+      { text: "✏️其他", items: [
+        { text: "obsidian", link: "/obsidian" }
       ] },
       { text: "✍随笔", link: "/essay" },
       { text: "🙋‍♀️关于我", link: "/about" },

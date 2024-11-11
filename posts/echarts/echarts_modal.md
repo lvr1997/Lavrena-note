@@ -1,36 +1,11 @@
----
-title: 动态改变echarts柱状图颜色
-titleTemplate: Vue
-isOriginal: true
-date: 2022-10-21
-tags:
-  - vue
-  - echarts
----
+# antd渲染echarts图表，打开Modal框时无法获取里面的dom节点
 
-## 动态改变echarts柱状图颜色
+## 场景
 
-需求：上面复选框选择的内容，下方柱图对应显示彩色，未选择的则置灰
+封装通用弹窗组件，放大echarts图表
+## 问题
 
-```jsx
-let selectedSupplier = [] //选中的名字数组
-let gongyingshangData = [] //全部名字
-let colors = [] //柱子颜色数组
-// echarts color函数回调
-color: function (params) {
-	if (selectedSupplier.indexOf(params.seriesName) != -1) {
-	     return colors[params.componentIndex];  
-	} else if (selectedSupplier.length == gongyingshangData.length) {     
-	     return colors[params.componentIndex];   
-	} else {
-	    return "#CCCCCC";  
-	}
- },
-```
-
-## 解决Vue3.0使用antd时，打开Modal框时无法获取里面的dom节点
-
-场景：封装通用弹窗组件，放大echarts图表
+解决Vue3.0使用antd时，打开Modal框时无法获取里面的dom节点
 
 在打开模态框的方法里面，获取dom节点然后innerHTML，比如
 
