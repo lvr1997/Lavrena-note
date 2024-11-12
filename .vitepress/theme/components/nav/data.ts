@@ -1,5 +1,6 @@
 export const NAV_DATA = {
     frontendEnvironment: [
+        { icon: '', title: '阮一峰大佬的博客', desc: '科技爱好者周刊，每周五发布', link: 'https://www.ruanyifeng.com/blog/' },
         { icon: 'https://vueuse.org/favicon.svg', title: 'VueUse', desc: 'VueUse 是一个 Vue 3 的工具库，它提供了一些常用的工具函数，如：useMousePosition、useDebounceFn、useThrottleFn 等。', link: 'https://vueuse.org/' },
         { icon: 'https://3x.antdv.com/assets/logo.1ef800a8.svg', title: 'Ant Deaign Vue', desc: '公司两个项目组都用它', link: 'https://www.antdv.com/' },
         { icon: 'https://element-plus.org/images/element-plus-logo.svg', title: 'Element Plus', desc: '饿了么出品', link: 'https://element-plus.org/zh-CN/' },
@@ -11,6 +12,10 @@ export const NAV_DATA = {
         { icon: 'https://uilibhub.com/favicon.png', title: 'UILibHub', desc: '精选最优质的 React、Vue UI、小程序组件库', link: 'https://uilibhub.com/zh' },
         { icon: 'https://loading.io/favicon.ico', title: 'loading.io', desc: 'Your SVG + GIF + PNG Ajax Loading Icons and Animation Generator', link: 'https://loading.io/' },
         { icon: 'https://primevue.org/favicon.ico', title: 'PrimeVue', desc: 'PrimeVue 是一个与设计无关的库，与其他UI库不同，它不强制使用某种样式', link: 'https://primevue.org' }
+    ],
+    ai: [
+        { icon: '', title: 'ChatGPT', desc: 'AI 聊天机器人', link: 'https://chat.openai.com/' },
+        { icon: '', title: '豆包MarsCode', desc: '豆包旗下的编程助手，提供智能补全、智能预测、智能问答等能力，节省开发时间，释放脑海中的创造力', link: 'https://www.marscode.cn/home' }
     ],
     tools: [
         { icon: 'https://www.json.cn/favicon.ico', title: 'Json.cn', desc: '在线json解析工具', link: 'https://www.json.cn/' },

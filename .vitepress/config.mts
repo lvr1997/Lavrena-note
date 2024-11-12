@@ -1,6 +1,7 @@
 import markdownMark from 'markdown-it-mark';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
+import { tokenize } from './theme/utils/search';
 
 export default defineConfig({
   lang: "zh-CN",
@@ -50,12 +51,24 @@ export default defineConfig({
     outlineTitle: "ON THIS PAGE",
     socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
     editLink: {
-      text: "在 GitHub 上编辑此页",
       pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/posts/:path",
     },
     search: {
       provider: "local",
       options: {
+        detailedView: true,
+        miniSearch: {
+          options: { tokenize },
+          searchOptions: {
+            combineWith: "AND",
+            fuzzy: 0.1,
+            prefix: true,
+            boost: {
+              title: 4,
+              text: 2,
+            },
+          }
+        },
         locales: {
           root: {
             translations: {

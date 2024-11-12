@@ -2,6 +2,9 @@
     <MNavLinks title="前端生态" :items="frontendEnvironment">
         <Badge type="warning">常用网站</Badge>
     </MNavLinks>
+    <MNavLinks title="AI" :items="ai">
+        <Badge type="info">AI大模型</Badge>
+    </MNavLinks>
     <MNavLinks title="工具相关" :items="tools">
         <Badge type="warning">实用工具</Badge>
     </MNavLinks>
@@ -23,5 +26,5 @@
 import MNavLinks from './MNavLinks.vue';
 import { NAV_DATA } from './data';
 
-const { frontendEnvironment, tools, bigData, web3D,lowerCode, HERO_ARTICLE } = NAV_DATA
+const { frontendEnvironment,ai, tools, bigData, web3D,lowerCode, HERO_ARTICLE } = NAV_DATA
 </script>

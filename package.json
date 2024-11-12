@@ -23,5 +23,8 @@
     "vite-plugin-vitepress-auto-sidebar": "^1.7.0",
     "vitepress": "^1.4.1",
     "vue": "^3.4.38"
+  },
+  "dependencies": {
+    "@giscus/vue": "^3.0.0"
   }
 }
