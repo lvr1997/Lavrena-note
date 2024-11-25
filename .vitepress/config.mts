@@ -42,7 +42,7 @@ export default defineConfig({
         { text: '科大二手工坊', link: '/kd-shop' },
       ] },
       { text: "✏️其他", items: [
-        { text: "obsidian", link: "/obsidian" }
+        { text: "VitePress", link: "/vitepress" }
       ] },
       { text: "✍随笔", link: "/essay" },
       { text: "🙋‍♀️关于我", link: "/about" },
