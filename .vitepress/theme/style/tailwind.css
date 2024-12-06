@@ -123,10 +123,6 @@ h3 .header-anchor:before {
   color: #67cdcc;
 }
 
-button.copy {
-  display: none;
-}
-
 span.lang {
   position: absolute;
   right: 0.5em;

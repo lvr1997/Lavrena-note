@@ -5,3 +5,4 @@ node_modules
 posts/.obsidian/
 pnpm-lock.yaml
 push.sh
+posts/assets/*.bkp

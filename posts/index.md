@@ -14,14 +14,12 @@ hero:
       link: https://github.com/lvr1997/Lavrena-blog
 features:
   - icon: ✍
-    title: 前端
-    details: 记录自己开发过程中遇到的问题
-  - icon:
-      src: /vitepress-logo-large.webp
-    title: 由VitePress驱动
-    details: 本站基于VitePress构建
-  - icon:
-      src: /obsidian-icon.svg
-    title: 由Obsidian驱动
-    details: 一个笔记管理工具
+    title: 日常笔记
+    details: 快速记录
+  - icon: 📖
+    title: 读书笔记
+    details: 果然，读书才是让人有价值的东西
+  - icon: 📝
+    title: 文档库说明
+    details: 本文档库使用VitePress单独构建，使用Markdown格式编写。记录自己开发过程中的学习笔记、经验总结等。
 ---
