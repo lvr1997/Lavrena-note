@@ -28,11 +28,12 @@ export default defineConfig({
         { text: '无样式组件库', link: '/unheadless-ui' },
         { text: 'Echarts', link: '/echarts' },
         { text: 'Threejs', link: '/Threejs' },
-        { text: '面试', link: '/Interview' }
+        { text: '面试', link: '/Interview' },
+        { text: "VitePress使用小记", link: "/vitepress" }
       ]},
       { text: '📚后端', items: [
-        { text: 'Node', link: '/node' },
         { text: 'Java', link: '/Java' },
+        { text: 'Node', link: '/node' },
         { text: 'Nest', link: '/Nestjs' },
       ] },
       { text: '📚全栈', items: [
@@ -40,9 +41,6 @@ export default defineConfig({
       ]},
       { text: '🗃️项目', items: [
         { text: '科大二手工坊', link: '/kd-shop' },
-      ] },
-      { text: "✏️其他", items: [
-        { text: "VitePress", link: "/vitepress" }
       ] },
       { text: "✍随笔", link: "/essay" },
       { text: "🙋‍♀️关于我", link: "/about" },
@@ -120,7 +118,25 @@ export default defineConfig({
         path: '/posts',
         ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
         ignoreIndexItem: true,
-        titleFromFile: true
+        titleFromFile: true,
+        // 侧边栏排序
+        beforeCreateSideBarItems: (data) => {
+          console.log(data);
+
+          function getOrder(item: string): number {
+            let res = item.match(/(?<order>\d+)/);
+            if (res) {
+              return parseInt(res.groups.order);
+            }
+            return 0;
+          }
+
+          data.sort((a, b) => {
+            return getOrder(a) - getOrder(b);
+          });
+
+          return data;
+        },
       })
     ]
   }
