@@ -23,7 +23,6 @@ export default defineConfig({
         { text: 'React', link: '/React' },
         { text: '小程序', link: '/miniprogram' },
         { text: '脚手架开发模板', link: '/scaffold' },
-        { text: '代码片段', link: '/CodeSnippet' },
         { text: 'UI组件库', link: '/ui-modules' },
         { text: '无样式组件库', link: '/unheadless-ui' },
         { text: 'Echarts', link: '/echarts' },
