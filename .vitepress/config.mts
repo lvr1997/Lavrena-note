@@ -28,7 +28,8 @@ export default defineConfig({
         { text: 'Echarts', link: '/echarts' },
         { text: 'Threejs', link: '/Threejs' },
         { text: '面试', link: '/Interview' },
-        { text: "VitePress使用小记", link: "/vitepress" }
+        { text: "VitePress使用小记", link: "/vitepress" },
+        { text: "VitePress官网", link: "https://vitepress.dev/zh/" }
       ]},
       { text: '📚后端', items: [
         { text: 'Java', link: '/Java' },
