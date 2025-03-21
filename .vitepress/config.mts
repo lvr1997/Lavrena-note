@@ -1,7 +1,7 @@
 import markdownMark from 'markdown-it-mark';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
-import { tokenize } from './theme/utils/search';
+import { algoliaSearchOption } from "./configs/search";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -51,44 +51,7 @@ export default defineConfig({
     editLink: {
       pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/posts/:path",
     },
-    search: {
-      provider: "local",
-      options: {
-        detailedView: true,
-        miniSearch: {
-          options: { tokenize },
-          searchOptions: {
-            combineWith: "AND",
-            fuzzy: 0.1,
-            prefix: true,
-            boost: {
-              title: 4,
-              text: 2,
-            },
-          }
-        },
-        locales: {
-          root: {
-            translations: {
-              button: {
-                buttonText: "搜索文档",
-                buttonAriaLabel: "搜索文档",
-              },
-              modal: {
-                noResultsText: "无法找到相关结果",
-                displayDetails: "显示详情",
-                resetButtonTitle: "清除查询条件",
-                footer: {
-                  selectText: "选择",
-                  navigateText: "切换",
-                  closeText: "关闭",
-                },
-              },
-            },
-          },
-        },
-      }
-    },
+    search: algoliaSearchOption,
     footer: {
       message:
         '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn" target="_blank">冀ICP备2024067902号</a>',
