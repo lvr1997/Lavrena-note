@@ -7,6 +7,7 @@ import type { NavLink } from './type';
 
 const props = defineProps<{
   title: string
+  noIcon?: boolean
   items: NavLink[]
 }>()
 
@@ -16,39 +17,66 @@ const formatTitle = computed(() => {
 </script>
 
 <template>
-  <h2 v-if="title" :id="formatTitle" tabindex="-1">
+   <h2 v-if="title" :id="formatTitle" tabindex="-1">
     {{ title }}
-    <a class="header-anchor" :href="`#${formatTitle}`" aria-hidden="true">#</a>
-    <slot />
+    <a class="header-anchor" :href="`#${formatTitle}`" aria-hidden="true"></a>
   </h2>
   <div class="m-nav-links">
-    <MNavLink v-for="{ icon, title, desc, link } in items" :key="link" :icon="icon" :title="title" :desc="desc" :link="link" />
+    <MNavLink v-for="item in items" :noIcon="noIcon" v-bind="item" />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .m-nav-links {
-  --gap: 10px;
+  --m-nav-gap: 18px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  grid-row-gap: var(--gap);
-  grid-column-gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-row-gap: var(--m-nav-gap);
+  grid-column-gap: var(--m-nav-gap);
   grid-auto-flow: row dense;
   justify-content: center;
-  margin-top: var(--gap);
+  margin-top: var(--m-nav-gap);
 }
 
-@each $media, $size in (500px: 140px, 640px: 155px, 768px: 175px, 960px: 200px, 1440px: 240px) {
-  @media (min-width: $media) {
-    .m-nav-links {
-      grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
-    }
+@media (min-width: 500px) {
+  .m-nav-links {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+@media (min-width: 640px) {
+  .m-nav-links {
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .m-nav-links {
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   }
 }
 
 @media (min-width: 960px) {
   .m-nav-links {
-    --gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .m-nav-links {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .m-nav-links {
+    --m-nav-gap: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .m-nav-links {
+    --m-nav-gap: 20px;
   }
 }
 </style>
