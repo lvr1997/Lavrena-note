@@ -4,6 +4,7 @@
 @import './vp-code-group.css';
 @import './link.css';
 @import './m-nav-layout.css';
+@import './sidebarIcon.css';
 
 /* 参考 node_modules\vitepress\dist\client\theme-default\styles\var.css 一一修改 */
 /**

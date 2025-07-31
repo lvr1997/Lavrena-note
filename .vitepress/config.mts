@@ -1,7 +1,8 @@
 import markdownMark from 'markdown-it-mark';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
-import { algoliaSearchOption } from "./configs/search";
+import { nav } from "./configs/nav";
+import { tokenize } from "./configs/search";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -14,48 +15,52 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     logo: "/icon.svg",
-    nav: [
-      { text: "🚩导航", link: "/nav" },
-      { text: '📚前端', items: [
-        { text: 'HTML+CSS+JS', link: '/web' },
-        { text: 'TypeScript', link: '/TypeScript' },
-        { text: 'Vue', link: '/vue' },
-        { text: 'React', link: '/React' },
-        { text: '小程序', link: '/miniprogram' },
-        { text: '脚手架开发模板', link: '/scaffold' },
-        { text: 'UI组件库', link: '/ui-modules' },
-        { text: '无样式组件库', link: '/unheadless-ui' },
-        { text: 'Echarts', link: '/echarts' },
-        { text: 'Threejs', link: '/Threejs' },
-        { text: '面试', link: '/Interview' },
-        { text: "VitePress使用小记", link: "/vitepress" },
-        { text: "VitePress官网", link: "https://vitepress.dev/zh/" }
-      ]},
-      { text: '📚后端', items: [
-        { text: 'Java', link: '/Java' },
-        { text: 'Node', link: '/node' },
-        { text: 'Nest', link: '/Nestjs' },
-      ] },
-      { text: '📚全栈', items: [
-        { text: 'Nuxt', link: '/Nuxt3' }
-      ]},
-      { text: '🗃️项目', items: [
-        { text: '科大二手工坊', link: '/kd-shop' },
-      ] },
-      { text: "🙋‍♀️关于我", link: "/about" },
-    ],
+    nav,
     outline: [2, 3],
     outlineTitle: "ON THIS PAGE",
     socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
-    editLink: {
-      pattern: "https://github.com/lvr1997/Lavrena-blog/edit/main/posts/:path",
+    search: {
+      provider: "local" as const,
+      options: {
+        detailedView: true,
+        miniSearch: {
+          options: { tokenize },
+          searchOptions: {
+            combineWith: 'AND',
+            fuzzy: 0.1,
+            prefix: true,
+            boost: {
+              title: 4,
+              text: 2,
+            },
+          }
+        },
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "搜索文档",
+                buttonAriaLabel: "搜索文档",
+              },
+              modal: {
+                noResultsText: "无法找到相关结果",
+                displayDetails: "显示详情",
+                resetButtonTitle: "清除查询条件",
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                },
+              },
+            },
+          },
+        },
+      }
     },
-    search: algoliaSearchOption,
     footer: {
-      message:
-        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a>❤<a href="http://beian.miit.gov.cn" target="_blank">冀ICP备2024067902号</a>',
+      message: '',
       copyright:
-        'Copyright © 2023-2024 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
+        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> Copyright © 2023-2025 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
     },
   },
   markdown: {
@@ -83,11 +88,11 @@ export default defineConfig({
         titleFromFile: true,
         // 侧边栏排序
         beforeCreateSideBarItems: (data) => {
-          console.log(data);
+          // console.log(data);
 
           function getOrder(item: string): number {
             let res = item.match(/(?<order>\d+)/);
-            if (res) {
+            if (res && res.groups) {
               return parseInt(res.groups.order);
             }
             return 0;

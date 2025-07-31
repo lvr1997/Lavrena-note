@@ -1,4 +1,5 @@
-function tokenize(text: string): Array<string> {
+//miniSearch中文分词
+export function tokenize(text: string): Array<string> {
     // Firefox doesn't support Intl.Segmenter currently
     if (!("Segmenter" in Intl)) {
         // https://github.com/lucaong/minisearch/blob/c3101a31e57d609ef8c55352655235ba25376011/src/MiniSearch.ts#L2018
@@ -14,95 +15,4 @@ function tokenize(text: string): Array<string> {
     const uniqueSegs = Array.from(new Set(segs));
     const result = uniqueSegs.filter((w) => !/^\s+$/.test(w));
     return result;
-}
-
-export const localSearchOption = {
-    provider: "local",
-    options: {
-        detailedView: true,
-        miniSearch: {
-            options: { tokenize },
-            searchOptions: {
-                combineWith: "AND",
-                fuzzy: 0.1,
-                prefix: true,
-                boost: {
-                    title: 4,
-                    text: 2,
-                },
-            }
-        },
-        locales: {
-            root: {
-                translations: {
-                    button: {
-                        buttonText: "搜索文档",
-                        buttonAriaLabel: "搜索文档",
-                    },
-                    modal: {
-                        noResultsText: "无法找到相关结果",
-                        displayDetails: "显示详情",
-                        resetButtonTitle: "清除查询条件",
-                        footer: {
-                            selectText: "选择",
-                            navigateText: "切换",
-                            closeText: "关闭",
-                        },
-                    },
-                },
-            },
-        },
-    }
-}
-
-export const algoliaSearchOption = {
-    provider: 'algolia' as const,
-    options: {
-      appId: 'EK926X3LIT',
-      apiKey: 'b3a271a2dc007bcf2c61d72c011a6071',
-      indexName: 'rgbyove',
-      locales: {
-        root: {
-          placeholder: '搜索文档',
-          translations: {
-            button: {
-              buttonText: '搜索文档',
-              buttonAriaLabel: '搜索文档'
-            },
-            modal: {
-              searchBox: {
-                resetButtonTitle: '清除查询条件',
-                resetButtonAriaLabel: '清除查询条件',
-                cancelButtonText: '取消',
-                cancelButtonAriaLabel: '取消'
-              },
-              startScreen: {
-                recentSearchesTitle: '搜索历史',
-                noRecentSearchesText: '没有搜索历史',
-                saveRecentSearchButtonTitle: '保存至搜索历史',
-                removeRecentSearchButtonTitle: '从搜索历史中移除',
-                favoriteSearchesTitle: '收藏',
-                removeFavoriteSearchButtonTitle: '从收藏中移除'
-              },
-              errorScreen: {
-                titleText: '无法获取结果',
-                helpText: '你可能需要检查你的网络连接'
-              },
-              footer: {
-                selectText: '选择',
-                navigateText: '切换',
-                closeText: '关闭',
-                searchByText: '搜索提供者'
-              },
-              noResultsScreen: {
-                noResultsText: '无法找到相关结果',
-                suggestedQueryText: '你可以尝试查询',
-                reportMissingResultsText: '你认为该查询应该有结果？',
-                reportMissingResultsLinkText: '点击反馈'
-              },
-            },
-          },
-        },
-      },
-    },
 }
