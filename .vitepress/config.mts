@@ -86,6 +86,7 @@ export default defineConfig({
         ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
         ignoreIndexItem: true,
         titleFromFile: true,
+        collapsed: true,
         // 侧边栏排序
         beforeCreateSideBarItems: (data) => {
           // console.log(data);
