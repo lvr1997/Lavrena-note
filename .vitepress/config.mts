@@ -6,15 +6,15 @@ import { tokenize } from "./configs/search";
 
 export default defineConfig({
   lang: "zh-CN",
-  title: "Lavrena's Notes",
-  description: "知识积累、记录和总结",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  title: "Riny's Notes",
+  description: "前端搬砖日记",
+  head: [["link", { rel: "icon", href: "/favicon.png" }]],
   srcDir: "./posts",
   srcExclude: [".obsidian", 'templates', 'Clippings'],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
-    logo: "/icon.svg",
+    logo: "/avatar.jpg",
     nav,
     outline: [2, 3],
     outlineTitle: "ON THIS PAGE",
@@ -60,7 +60,7 @@ export default defineConfig({
     footer: {
       message: '',
       copyright:
-        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> Copyright © 2023-2025 Lavrena powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
+        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> Copyright © 2023-2025 LR powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
     },
   },
   markdown: {

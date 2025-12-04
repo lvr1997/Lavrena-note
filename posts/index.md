@@ -1,8 +1,8 @@
 ---
 layout: home
 hero:
-  name: Lavrena's Notes
-  text: 知识积累、记录和总结
+  name: Riny's Notes
+  text: 前端搬砖日记
   image:
     src: /shapes.svg
   actions:
