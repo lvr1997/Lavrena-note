@@ -1,9 +1,9 @@
 @import './tailwind.css';
 @import './rainbow.css';
 @import './blur.css';
-@import './vp-code-group.css';
 @import './link.css';
-@import './sidebarIcon.css';
+/* @import './vp-code-group.css'; */
+/* @import './sidebarIcon.css'; */
 
 /* 参考 node_modules\vitepress\dist\client\theme-default\styles\var.css 一一修改 */
 /**

@@ -7,7 +7,7 @@ import { tokenize } from "./configs/search";
 export default defineConfig({
   lang: "zh-CN",
   title: "Riny's Notes",
-  description: "前端搬砖日记",
+  description: "前端搬砖日记，前端知识积累，技术总结。Java程序媛",
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
   srcDir: "./posts",
   srcExclude: [".obsidian", 'templates', 'Clippings'],
