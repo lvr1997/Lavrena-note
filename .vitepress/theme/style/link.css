@@ -5,7 +5,7 @@
 /* YouTube */
 .vp-doc a[href^="https://www.youtube.com/"]:before {
     content: '';
-    background-image: url(/youtube.svg);
+    background-image: url(/svg/youtube.svg);
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -18,7 +18,7 @@
 /* 哔哩哔哩 */
 .vp-doc a[href^="https://www.bilibili.com/"]:before {
     content: '';
-    background-image: url(/bilibili.svg);
+    background-image: url(/svg/bilibili.svg);
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -32,7 +32,7 @@
 /* GitHub */
 .vp-doc a[href^="https://github.com/"]:before {
     content: '';
-    background-image: url(/github-mark.svg);
+    background-image: url(/svg/github-mark.svg);
     width: 20px;
     height: 20px;
     display: inline-block;

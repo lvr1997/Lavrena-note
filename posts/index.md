@@ -2,24 +2,30 @@
 layout: home
 hero:
   name: Riny's Notes
-  text: 前端搬砖日记
+  text: 
   image:
     src: /shapes.svg
   actions:
     - theme: brand
-      text: 👉 导航
-      link: /nav
+      text: 📕 前端搬砖日记
+      link: /FrontEnd
+    - theme: alt
+      text: 📘 后端探索
+      link: /BackEnd
+    - theme: alt
+      text: 📙 Projects
+      link: /Projects
     - theme: alt
       text: View on GitHub
       link: https://github.com/lvr1997/Lavrena-blog
 features:
   - icon: 📝
-    title: 文档库说明
+    title: 本站说明
     details: 本文档库使用VitePress单独构建，使用Markdown格式编写。记录自己开发过程中的学习笔记、经验总结等。
-  - icon: ✍
-    title: 日常笔记
-    details: 快速记录
-  - icon: 📖
-    title: 读书笔记
-    details: 果然，读书才是让人有价值的东西
+  - icon: /svg/vitepress-logo-mini.svg
+    title: VitePress
+    details: 简介轻便的文档站，可以使用Markdown格式编写内容，并且可以自定义主题。
+  - icon: /svg/obsidian-icon.svg
+    title: Obsidian
+    details: MD编辑器，使用Obsidian编辑文档库。不用插件也可以很快乐(*^▽^*)
 ---
