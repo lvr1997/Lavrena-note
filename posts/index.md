@@ -17,15 +17,15 @@ hero:
       link: /Projects
     - theme: alt
       text: View on GitHub
-      link: https://github.com/lvr1997/Lavrena-blog
+      link: https://github.com/lvr1997/Lavrena-note
 features:
   - icon: 📝
     title: 本站说明
     details: 本文档库使用VitePress单独构建，使用Markdown格式编写。记录自己开发过程中的学习笔记、经验总结等。
-  - icon: /svg/vitepress-logo-mini.svg
+  - icon: /vitepress-logo-mini.svg
     title: VitePress
     details: 简介轻便的文档站，可以使用Markdown格式编写内容，并且可以自定义主题。
-  - icon: /svg/obsidian-icon.svg
+  - icon: /obsidian-icon.svg
     title: Obsidian
     details: MD编辑器，使用Obsidian编辑文档库。不用插件也可以很快乐(*^▽^*)
 ---
