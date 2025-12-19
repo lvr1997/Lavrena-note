@@ -7,14 +7,8 @@ hero:
     src: /svg/shapes.svg
   actions:
     - theme: brand
-      text: 📕 前端搬砖日记
+      text: 前端搬砖日记
       link: /FrontEnd
-    - theme: alt
-      text: 📘 后端探索
-      link: /BackEnd
-    - theme: alt
-      text: 📙 Projects
-      link: /Projects
     - theme: alt
       text: View on GitHub
       link: https://github.com/lvr1997/Lavrena-note

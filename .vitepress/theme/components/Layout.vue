@@ -2,6 +2,7 @@
 import { useData } from "vitepress";
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, onMounted, provide, reactive } from 'vue';
+import ArticleMetadata from './ArticleMetadata.vue'
 
 const { Layout } = DefaultTheme
 const { page, frontmatter } = useData()
@@ -30,6 +31,9 @@ onMounted(() => {
       <p class="tagline pt-4 text-xl">
         <a :href="hitokoto.href">{{ hitokoto.text }}</a>
       </p>
+    </template>
+    <template #doc-before>
+      <ArticleMetadata />
     </template>
   </Layout>
 </template>

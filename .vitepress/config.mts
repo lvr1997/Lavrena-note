@@ -1,5 +1,5 @@
 import markdownMark from 'markdown-it-mark';
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
+// import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
 import { nav } from "./configs/nav";
 import { tokenize } from "./configs/search";
@@ -81,31 +81,31 @@ export default defineConfig({
       }
     },
     plugins: [
-      AutoSidebar({
-        path: '/posts',
-        ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
-        ignoreIndexItem: true,
-        titleFromFile: true,
-        collapsed: true,
-        // 侧边栏排序
-        beforeCreateSideBarItems: (data) => {
-          // console.log(data);
+      // AutoSidebar({
+      //   path: '/posts',
+      //   ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
+      //   ignoreIndexItem: true,
+      //   titleFromFile: true,
+      //   collapsed: true,
+      //   // 侧边栏排序
+      //   beforeCreateSideBarItems: (data) => {
+      //     // console.log(data);
 
-          function getOrder(item: string): number {
-            let res = item.match(/(?<order>\d+)/);
-            if (res && res.groups) {
-              return parseInt(res.groups.order);
-            }
-            return 0;
-          }
+      //     function getOrder(item: string): number {
+      //       let res = item.match(/(?<order>\d+)/);
+      //       if (res && res.groups) {
+      //         return parseInt(res.groups.order);
+      //       }
+      //       return 0;
+      //     }
 
-          data.sort((a, b) => {
-            return getOrder(a) - getOrder(b);
-          });
+      //     data.sort((a, b) => {
+      //       return getOrder(a) - getOrder(b);
+      //     });
 
-          return data;
-        },
-      })
+      //     return data;
+      //   },
+      // })
     ]
   }
 });
