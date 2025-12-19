@@ -12,7 +12,7 @@ export default defineConfig({
   srcDir: "./posts",
   srcExclude: [".obsidian", 'templates', 'Clippings'],
   cleanUrls: true,
-  lastUpdated: false,
+  lastUpdated: true,
   themeConfig: {
     logo: "/avatar.jpg",
     nav,
@@ -98,6 +98,10 @@ export default defineConfig({
             }
             return 0;
           }
+
+          data.forEach((item) => {
+            item = item.replace(/^\d+\./, '');
+          })
 
           data.sort((a, b) => {
             return getOrder(a) - getOrder(b);
