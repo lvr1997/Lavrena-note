@@ -7,3 +7,4 @@ declare module "*.vue" {
 }
 
 declare module 'markdown-it-mark'
+declare module 'markdown-it-task-checkbox';

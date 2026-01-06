@@ -1,18 +1,22 @@
 <script setup lang="ts">
+import tag from './tag.vue'
+import DocFooter from './DocFooter.vue';
+import Visitor from './Visitor.vue';
 import { useData } from "vitepress";
+import { usePageId } from '../composables'
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, onMounted, provide, reactive } from 'vue';
-import ArticleMetadata from './ArticleMetadata.vue'
 
 const { Layout } = DefaultTheme
-const { page, frontmatter } = useData()
+const { isDark, page, frontmatter } = useData()
+const pageId = usePageId()
 
 const hitokoto = reactive({
   text: '',
   href: ''
 })
 const getOne = () => {
-  if(page.value.relativePath.indexOf('index') !== -1) {
+  if (page.value.relativePath.indexOf('index') !== -1) {
     fetch('https://v1.hitokoto.cn').then(response => response.json()).then(data => {
       hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
       hitokoto.text = data.hitokoto
@@ -32,8 +36,20 @@ onMounted(() => {
         <a :href="hitokoto.href">{{ hitokoto.text }}</a>
       </p>
     </template>
+    <template #nav-bar-title-after>
+      <Visitor />
+    </template>
     <template #doc-before>
-      <ArticleMetadata />
+      <tag />
+    </template>
+    <template #doc-after>
+      <DocFooter />
     </template>
   </Layout>
 </template>
+
+<style>
+.prev-next.prev-next {
+  border-top: none;
+}
+</style>

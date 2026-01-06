@@ -1,5 +1,43 @@
+import type { DefaultTheme } from "vitepress";
+
+export const options: DefaultTheme.LocalSearchOptions = {
+    detailedView: true,
+    miniSearch: {
+        options: { tokenize },
+        searchOptions: {
+            combineWith: 'AND',
+            fuzzy: 0.1,
+            prefix: true,
+            boost: {
+                title: 4,
+                text: 2,
+            },
+        }
+    },
+    locales: {
+        root: {
+            translations: {
+                button: {
+                    buttonText: "搜索文档",
+                    buttonAriaLabel: "搜索文档",
+                },
+                modal: {
+                    noResultsText: "无法找到相关结果",
+                    displayDetails: "显示详情",
+                    resetButtonTitle: "清除查询条件",
+                    footer: {
+                        selectText: "选择",
+                        navigateText: "切换",
+                        closeText: "关闭",
+                    },
+                },
+            },
+        },
+    },
+}
+
 //miniSearch中文分词
-export function tokenize(text: string): Array<string> {
+function tokenize(text: string): Array<string> {
     // Firefox doesn't support Intl.Segmenter currently
     if (!("Segmenter" in Intl)) {
         // https://github.com/lucaong/minisearch/blob/c3101a31e57d609ef8c55352655235ba25376011/src/MiniSearch.ts#L2018
