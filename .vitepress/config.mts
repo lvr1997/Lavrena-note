@@ -3,7 +3,7 @@ import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
-import { options, nav } from "./configs";
+import { searchOptions, nav } from "./configs";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -36,7 +36,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/lvr1997" }],
     search: {
       provider: 'local',
-      options,
+      options: searchOptions,
     },
     lastUpdated: {
       text: '最后更新于',

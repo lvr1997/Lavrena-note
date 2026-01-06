@@ -1,6 +1,6 @@
 import type { DefaultTheme } from "vitepress";
 
-export const options: DefaultTheme.LocalSearchOptions = {
+export const searchOptions: DefaultTheme.LocalSearchOptions = {
     detailedView: true,
     miniSearch: {
         options: { tokenize },
