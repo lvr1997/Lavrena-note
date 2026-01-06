@@ -81,7 +81,7 @@ export default defineConfig({
         path: '/posts',
         ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
         ignoreIndexItem: true,
-        titleFromFile: true,
+        titleFromFileByYaml: true,
         collapsed: false,
         // 侧边栏排序
         beforeCreateSideBarItems: (data) => {
