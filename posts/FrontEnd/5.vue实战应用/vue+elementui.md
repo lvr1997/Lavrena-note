@@ -1,7 +1,7 @@
 ---
 title: vue+elementui
 date: 2023-12-20 16:09
-lastUpdate: false
+lastUpdated: false
 ---
 
 # vue+elementui实战应用

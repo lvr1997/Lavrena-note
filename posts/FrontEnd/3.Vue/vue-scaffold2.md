@@ -1,7 +1,7 @@
 ---
 title: Vue2开发模板
 date: 2022-12-22 16:09
-lastUpdate: false
+lastUpdated: false
 ---
 
 # Vue2开发模板

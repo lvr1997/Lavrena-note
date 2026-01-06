@@ -1,7 +1,7 @@
 ---
 title: vue+echarts
 date: 2022-11-20 16:09
-lastUpdate: false
+lastUpdated: false
 ---
 
 # vue+echarts实战应用

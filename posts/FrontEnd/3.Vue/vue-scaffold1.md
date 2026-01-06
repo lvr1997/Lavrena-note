@@ -1,7 +1,7 @@
 ---
 title: Vue3 项目配置
 date: 2023-09-22 16:09
-lastUpdate: false
+lastUpdated: false
 ---
 
 # Vue3 项目配置

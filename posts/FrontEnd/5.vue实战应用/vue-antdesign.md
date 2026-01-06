@@ -1,7 +1,7 @@
 ---
 title: antd-vue
 date: 2024-09-22 16:09
-lastUpdate: false
+lastUpdated: false
 ---
 # antd-vue 组件库应用
 
