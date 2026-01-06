@@ -3,8 +3,6 @@ layout: home
 hero:
   name: Riny's Notes
   text: 知识积累、记录和总结
-  image:
-    src: /svg/icon.svg
   actions:
     - theme: brand
       text: i-have项目技术文档
