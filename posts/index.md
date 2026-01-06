@@ -4,14 +4,14 @@ hero:
   name: Riny's Notes
   text: 知识积累、记录和总结
   image:
-    src: /svg/shapes.svg
+    src: /svg/icon.svg
   actions:
     - theme: brand
+      text: i-have项目技术文档
+      link: /i-have
+    - theme: alt
       text: 前端搬砖日记
       link: /FrontEnd
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/lvr1997/Lavrena-note
 features:
   - icon: 📝
     title: 本站说明
