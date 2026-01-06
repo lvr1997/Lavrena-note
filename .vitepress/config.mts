@@ -46,7 +46,7 @@ export default defineConfig({
       },
     },
     editLink: {
-      pattern: 'https://github.com/lvr1997/my-notes/edit/main/:path',
+      pattern: 'https://github.com/lvr1997/my-notes/edit/main/posts/:path',
       text: '在GitHub上编辑此页'
     },
     docFooter: {
