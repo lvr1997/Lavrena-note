@@ -1,3 +1,9 @@
+---
+title: Vue2开发模板
+date: 2022-12-22 16:09
+lastUpdate: false
+---
+
 # Vue2开发模板
 
 ## 技术选型

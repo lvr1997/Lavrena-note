@@ -1,13 +1,23 @@
-# 在antd-vue的table组件中封装tooltip组件
+---
+title: antd-vue
+date: 2024-09-22 16:09
+lastUpdate: false
+---
+# antd-vue 组件库应用
 
-## 使用场景
+> 2024年8月，我司项目使用antd-vue组件库，以下是组件库的一些应用场景。
+
+## 在antd-vue的table组件中封装tooltip组件
+
+### 使用场景
 
 > 当表格中某些字段的数据文本过长时
 
-## 具体实现
+### 具体实现
 
-```vue
-<!-- ShowTooltip.vue -->
+::: code-group
+
+```vue [ShowTooltip.vue]
 <template>
     <a-tooltip placement="top" trigger="hover" overlayClassName="table-class" v-model:visible="isShow">
         <template #title>
@@ -56,9 +66,9 @@ const mouseenter = () => {
 </style>
 ```
 
-## 使用
-
-```html
+```vue [TableTooltip.vue]
 <!-- 如果配置了ellipsis，则自动显示tooltip -->
 <ShowTooltip v-if="column.ellipsis" :content="text">{{ text }}</ShowTooltip>
 ```
+
+:::
