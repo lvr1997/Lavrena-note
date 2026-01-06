@@ -45,6 +45,10 @@ export default defineConfig({
         timeStyle: 'medium'
       },
     },
+    editLink: {
+      pattern: 'https://github.com/lvr1997/my-notes/edit/main/:path',
+      text: '在GitHub上编辑此页'
+    },
     docFooter: {
       prev: '上一篇',
       next: '下一篇',
