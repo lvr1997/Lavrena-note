@@ -15,6 +15,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: 'localhostLinks',
+  appearance: 'dark',
   markdown: {
     lineNumbers: true,
     image: {
