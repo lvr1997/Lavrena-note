@@ -22,7 +22,7 @@ features:
       src: /svg/obsidian-icon.svg
     title: Obsidian
     details: MD编辑器，使用Obsidian编辑文档库。不用插件也可以很快乐(*^▽^*)
-    link: /FrontEnd/11.obsidian/about
+    link: /FrontEnd/11.Obsidian/about
     linkText: 使用VitePress将Obsidian仓库发布为静态网站
 ---
 
