@@ -1,9 +1,9 @@
 import markdownMark from 'markdown-it-mark';
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
+// import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { defineConfig } from "vitepress";
-import { searchOptions, nav } from "./configs";
+import { searchOptions, nav, sidebar } from "./configs";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -30,6 +30,7 @@ export default defineConfig({
   themeConfig: {
     logo: "/svg/icon.svg",
     nav,
+    sidebar,
     outline: {
       label: '目录',
       level: [2, 3],
@@ -82,35 +83,35 @@ export default defineConfig({
     },
     plugins: [
       groupIconVitePlugin(), //代码组图标
-      AutoSidebar({
-        path: '/posts',
-        ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
-        ignoreIndexItem: true,
-        titleFromFileByYaml: true,
-        collapsed: false,
-        // 侧边栏排序
-        beforeCreateSideBarItems: (data) => {
-          // console.log(data);
+      // AutoSidebar({
+      //   path: '/posts',
+      //   ignoreList: ['public', 'assets', '.obsidian', 'templates', 'Clippings'],
+      //   ignoreIndexItem: true,
+      //   titleFromFileByYaml: true,
+      //   collapsed: false,
+      //   // 侧边栏排序
+      //   beforeCreateSideBarItems: (data) => {
+      //     // console.log(data);
 
-          function getOrder(item: string): number {
-            let res = item.match(/(?<order>\d+)/);
-            if (res && res.groups) {
-              return parseInt(res.groups.order);
-            }
-            return 0;
-          }
+      //     function getOrder(item: string): number {
+      //       let res = item.match(/(?<order>\d+)/);
+      //       if (res && res.groups) {
+      //         return parseInt(res.groups.order);
+      //       }
+      //       return 0;
+      //     }
 
-          data.forEach((item) => {
-            item = item.replace(/^\d+\./, '');
-          })
+      //     data.forEach((item) => {
+      //       item = item.replace(/^\d+\./, '');
+      //     })
 
-          data.sort((a, b) => {
-            return getOrder(a) - getOrder(b);
-          });
+      //     data.sort((a, b) => {
+      //       return getOrder(a) - getOrder(b);
+      //     });
 
-          return data;
-        },
-      })
+      //     return data;
+      //   },
+      // })
     ]
   }
 });
