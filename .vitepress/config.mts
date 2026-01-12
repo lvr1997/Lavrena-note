@@ -28,7 +28,10 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "/svg/icon.svg",
+    logo: {
+      light: "/svg/icon.svg",
+      dark: "/svg/icon-dark.svg",
+    },
     nav,
     sidebar,
     outline: {

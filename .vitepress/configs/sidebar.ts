@@ -246,12 +246,12 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       ]
     },
     {
-      text: "Obsidian",
+      text: "VitePress",
       collapsed: false,
       items: [
         {
-          text: "Obsidian+VitePress",
-          link: "/FrontEnd/11.Obsidian/about"
+          text: "VitePress+Obsidian",
+          link: "/FrontEnd/11.VitePress/about"
         }
       ]
     }

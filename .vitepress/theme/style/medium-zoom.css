@@ -1,8 +1,8 @@
 /* medium-zoom */
 .medium-zoom-overlay {
-  z-index: 15;
+  z-index: 30;
 }
 
 .medium-zoom-image {
-  z-index: 16;
+  z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
 }
