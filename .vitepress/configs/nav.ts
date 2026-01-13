@@ -6,5 +6,5 @@ export const nav: DefaultTheme.NavItem[] = [
         { text: "前端", link: "/FrontEnd" },
         { text: "后端", link: "/BackEnd" },
     ] },
-    { text: "VitePress", link: "https://vitepress.dev/zh/" }
+    { text: "Blog", link: "https://2025-blog-public-two.vercel.app/" }
   ]
