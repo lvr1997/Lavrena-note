@@ -10,6 +10,9 @@ hero:
     - theme: alt
       text: 前端搬砖日记
       link: /FrontEnd
+    - theme: sponsor
+      text: Star On GitHub
+      link: https://github.com/lvr1997/my-notes
 features:
   - icon: 📝
     title: 本站说明

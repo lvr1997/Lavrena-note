@@ -71,10 +71,16 @@ export default defineConfig({
     // 自定义配置
     visitor: {
       badgeId: 'riny-notes'
-    }
+    },
+    comment: {
+      repo: 'lvr1997/my-notes',
+      repoId: 'R_kgDOMnMr4A',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOMnMr4M4Ch3mj',
+    },
   },
   sitemap: {
-    hostname: "https://rgbyove.top",
+    hostname: "https://rzoco.top/",
   },
   vite: {
     css: {

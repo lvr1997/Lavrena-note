@@ -6,10 +6,12 @@ import { useData } from "vitepress";
 import { usePageId } from '../composables'
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, onMounted, provide, reactive } from 'vue';
+import Giscus from '@giscus/vue'
 
 const { Layout } = DefaultTheme
-const { isDark, page, frontmatter } = useData()
+const { isDark, page, frontmatter,theme } = useData()
 const pageId = usePageId()
+const { comment } = theme.value
 
 const hitokoto = reactive({
   text: '',
@@ -54,6 +56,25 @@ onMounted(() => {
     <template #doc-after>
       <DocFooter />
     </template>
+
+    <template v-if="comment && frontmatter.comment !== false" #doc-footer-before>
+      <div class="doc-comments">
+        <Giscus
+          id="comments"
+          mapping="specific"
+          :term="pageId"
+          strict="1"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          :theme="isDark ? 'dark' : 'light'"
+          lang="zh-CN"
+          loading="lazy"
+          v-bind="{ ...comment }"
+        />
+      </div>
+    </template>
+
   </Layout>
 </template>
 
@@ -62,6 +83,14 @@ onMounted(() => {
   border-top: none;
 }
 
+.doc-comments {
+  margin-top: 24px;
+  margin-bottom: 48px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+}
+
+/* 调整SVG容器大小 */
 .svg-container {
   position: relative;
   display: flex;
