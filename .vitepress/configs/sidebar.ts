@@ -156,7 +156,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       collapsed: false,
       items: [
         {
-          text: "TypeScript介绍",
+          text: "介绍",
           link: "/FrontEnd/2.TypeScript/0.intro"
         },
         {
@@ -172,7 +172,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
           link: "/FrontEnd/2.TypeScript/3.Generic"
         },
         {
-          text: "TypeScript编译器",
+          text: "编译选项",
           link: "/FrontEnd/2.TypeScript/4.tsc"
         },
         {
