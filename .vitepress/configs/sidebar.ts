@@ -7,20 +7,96 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       collapsed: false,
       items: [
         {
-          text: "Java基础",
-          link: "/BackEnd/Java/01-JAVA基础/"
+          text: "介绍",
+          link: "/BackEnd/Java/1.intro"
         },
         {
-          text: "Java高级",
-          link: "/BackEnd/Java/02-JAVA高级/"
+          text: "Eclipse",
+          link: "/BackEnd/Java/2.Eclipse"
         },
         {
-          text: "JavaEE",
-          link: "/BackEnd/Java/03-JAVAEE/"
+          text: "变量",
+          link: "/BackEnd/Java/3.variable"
         },
         {
-          text: "SSH&SSM",
-          link: "/BackEnd/Java/04-SSH&SSM/"
+          text: "运算符",
+          link: "/BackEnd/Java/4.operator"
+        },
+        {
+          text: "循环控制",
+          link: "/BackEnd/Java/5.loop_control"
+        },
+        {
+          text: "猜数字游戏",
+          link: "/BackEnd/Java/6.guess_number"
+        },
+        {
+          text: "函数",
+          link: "/BackEnd/Java/7.functions"
+        },
+        {
+          text: "数组",
+          link: "/BackEnd/Java/8.array"
+        },
+        {
+          text: "数组排序",
+          link: "/BackEnd/Java/9.sort_2arrays"
+        },
+        {
+          text: "String与StringBuffer",
+          link: "/BackEnd/Java/10.string_stringbuffer"
+        },
+        {
+          text: "面向对象",
+          link: "/BackEnd/Java/11.oop"
+        },
+        {
+          text: "常用类",
+          link: "/BackEnd/Java/12.java-common-class"
+        },
+        {
+          text: "集合",
+          link: "/BackEnd/Java/13.collection"
+        },
+        {
+          text: "IO操作",
+          link: "/BackEnd/Java/14.IO"
+        },
+        {
+          text: "多线程",
+          link: "/BackEnd/Java/15.mulit-thread"
+        },
+        {
+          text: "反射与XML",
+          link: "/BackEnd/Java/16.Reflection-xml"
+        },
+        {
+          text: "JDBC",
+          link: "/BackEnd/Java/17.JDBC"
+        },
+        {
+          text: "DBUtils",
+          link: "/BackEnd/Java/18.DBUtiils"
+        },
+        {
+          text: "Spring",
+          link: "/BackEnd/Java/19.Spring"
+        },
+        {
+          text: "SpringMVC",
+          link: "/BackEnd/Java/20.SpringMVC"
+        },
+        {
+          text: "MyBatis",
+          link: "/BackEnd/Java/21.MyBatis"
+        },
+        {
+          text: "Struts2",
+          link: "/BackEnd/Java/22.struts2"
+        },
+        {
+          text: "Hibernate",
+          link: "/BackEnd/Java/23.Hibernate"
         }
       ]
     },
@@ -171,15 +247,15 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       items: [
         {
           text: "Vue+ElementUI",
-          link: "/FrontEnd/5.vue实战应用/vue+elementui"
+          link: "/FrontEnd/5.vue-application/vue+elementui"
         },
         {
           text: "Vue+AntDesign",
-          link: "/FrontEnd/5.vue实战应用/vue-antdesign"
+          link: "/FrontEnd/5.vue-application/vue-antdesign"
         },
         {
           text: "Vue+ECharts",
-          link: "/FrontEnd/5.vue实战应用/vue-echarts"
+          link: "/FrontEnd/5.vue-application/vue-echarts"
         }
       ]
     },
@@ -189,7 +265,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       items: [
         {
           text: "RadixVue",
-          link: "/FrontEnd/6.无样式组件库/1.RadixVue"
+          link: "/FrontEnd/6.unheadlessui/1.RadixVue"
         }
       ]
     },
@@ -199,11 +275,11 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       items: [
         {
           text: "微信小程序",
-          link: "/FrontEnd/7.小程序/1.wx-miniprogram"
+          link: "/FrontEnd/7.miniprogram/1.wx-miniprogram"
         },
         {
           text: "UniApp",
-          link: "/FrontEnd/7.小程序/2.uniapp"
+          link: "/FrontEnd/7.miniprogram/2.uniapp"
         }
       ]
     },
@@ -237,11 +313,11 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       items: [
         {
           text: "面试常见问答",
-          link: "/FrontEnd/10.面试宝典/1.面试常见问答"
+          link: "/FrontEnd/10.interview/1.asked_questions"
         },
         {
           text: "面试问题",
-          link: "/FrontEnd/10.面试宝典/2.question"
+          link: "/FrontEnd/10.interview/2.question"
         }
       ]
     },
