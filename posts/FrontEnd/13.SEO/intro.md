@@ -47,5 +47,6 @@ Open Graph 协议是由 Facebook 创建的元数据标准，用于让网页内�
 
 ## Google Tag Manager
 
-> ![note] 什么是Google Tag Manager？
+> [!NOTE] 什么是Google Tag Manager？
+>
 > Google Tag Manager（GTM）是一个用于管理和部署网站标签的工具。它允许你在不修改网站代码的情况下，添加、删除或更新网站上的标签。
