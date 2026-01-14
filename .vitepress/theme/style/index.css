@@ -103,8 +103,8 @@
 }
 
 
-/* 标题渐变色 */
-h1 {
+/* DOC标题渐变色 */
+.vp-doc h1 {
   color: var(--vp-c-brand-1);
 }
 

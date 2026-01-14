@@ -665,7 +665,7 @@
   --vp-c-brand-2: var(--vp-c-brand-darker);
 
   /* 一共 82 种颜色，颜色过度时间为 3s */
-  animation: rainbow 246s linear infinite;
+  animation: rainbow 200s linear infinite;
 }
 
 :root.dark {

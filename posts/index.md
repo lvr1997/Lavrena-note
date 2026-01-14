@@ -1,15 +1,15 @@
 ---
 layout: home
 hero:
-  name: Riny's Notes
+  name: "Riny's Notes"
   text: 知识积累、记录和总结
   actions:
     - theme: brand
+      text: 前端搬砖日记 ->
+      link: /FrontEnd
+    - theme: alt
       text: i-have项目技术文档
       link: /i-have
-    - theme: alt
-      text: 前端搬砖日记
-      link: /FrontEnd
     - theme: sponsor
       text: Star On GitHub
       link: https://github.com/lvr1997/my-notes
