@@ -7,16 +7,30 @@ hero:
     - theme: brand
       text: 前端搬砖日记 ->
       link: /FrontEnd
-    - theme: alt
-      text: i-have项目技术文档
-      link: /i-have
     - theme: sponsor
       text: Star On GitHub
       link: https://github.com/lvr1997/my-notes
 features:
   - icon: 📝
-    title: 本站说明
-    details: 本文档库使用VitePress1.6.4单独构建，使用Markdown格式编写。记录自己开发过程中的学习笔记、经验总结等。
+    title: 个人笔记
+    details: 记录自己学习和工作过程中的学习笔记、经验总结等。
+    link: /FrontEnd
+    linkText: 前端搬砖日记
+  - icon: 📘
+    title: 远古笔记
+    details: 2019年前记录的学习笔记、经验总结等。
+    link: /BackEnd
+    linkText: JAVA学习日记
+  - icon: 📁
+    title: 技术文档
+    details: i-have项目的技术文档，包括项目介绍、技术栈、项目架构、项目部署等。
+    link: /i-have
+    linkText: i-have项目技术文档
+  - icon: 🧰
+    title: 软件工具
+    details: 记录自己日常用到的一些软件工具，包括但不限于：Markdown编辑器、代码编辑器等等。
+    link: /software
+    linkText: 常用软件工具
   - icon: 
       src: /svg/vitepress-logo-mini.svg 
     title: VitePress

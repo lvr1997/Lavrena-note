@@ -2,6 +2,7 @@
 import tag from './tag.vue'
 import DocFooter from './DocFooter.vue';
 import Visitor from './Visitor.vue';
+import HomeUnderline from './HomeUnderline.vue'
 import { useData } from "vitepress";
 import { usePageId } from '../composables'
 import DefaultTheme from 'vitepress/theme';
@@ -37,6 +38,9 @@ onMounted(() => {
       <p class="tagline pt-4 text-xl">
         <a :href="hitokoto.href">{{ hitokoto.text }}</a>
       </p>
+    </template>
+    <template #home-hero-info-before>
+      <HomeUnderline />
     </template>
     <template #home-hero-image>
       <div class="svg-container">

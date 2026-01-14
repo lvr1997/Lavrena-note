@@ -100,20 +100,6 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         }
       ]
     },
-    {
-      text: "Nestjs",
-      collapsed: false,
-      items: [
-        {
-          text: "Nestjs记录",
-          link: "/BackEnd/Nestjs/1.nest_record"
-        },
-        {
-          text: "Nestjs接口",
-          link: "/BackEnd/Nestjs/2.nest_interface"
-        }
-      ]
-    }
   ],
 
   "/FrontEnd/": [
@@ -330,7 +316,28 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
           link: "/FrontEnd/11.VitePress/about"
         }
       ]
+    }, 
+     {
+      text: "SEO",
+      collapsed: false,
+      items: [
+        {
+          text: "关于SEO的探究",
+          link: "/FrontEnd/13.SEO/intro.md"
+        }
+      ]
+    },
+    {
+      text: "Node生态",
+      collapsed: true,
+      items: [
+        {
+          text: "Nestjs",
+          link: "/FrontEnd/12.Node-environment/Nestjs.md"
+        }
+      ]
     }
+   
   ],
 
   "/i-have/": [
@@ -353,6 +360,40 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         {
           text: "接口文档",
           link: "/i-have/01-Documents/4.interaface"
+        }
+      ]
+    }
+  ],
+  "/software/": [
+    {
+      text: "VS Code",
+      collapsed: false,
+      items: [
+        {
+          text: "使用技巧",
+          link: "/software/VSCode/use_skill.md"
+        },
+        {
+          text: "常用插件",
+          link: "/software/VSCode/use_plugin.md"
+        },
+        {
+          text: "常用主题",
+          link: "/software/VSCode/theme.md"
+        }
+      ]
+    },
+    {
+      text: "Others",
+      collapsed: false,
+      items: [
+        {
+          text: "在线工具",
+          link: "/software/OtherTools/online_tools.md"
+        },
+        {
+          text: "桌面软件",
+          link: "/software/OtherTools/desktop_software.md"
         }
       ]
     }
