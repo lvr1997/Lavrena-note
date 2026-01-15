@@ -61,7 +61,7 @@ export default defineConfig({
     footer: {
       message: 'Powered By <a href="https://vitepress.dev/" target="_blank">VitePress</a>',
       copyright:
-        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> Copyright © 2023-2025 Riny',
+        '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank">CC BY-SA 4.0</a> Copyright © 2023-2026 Riny',
     },
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
