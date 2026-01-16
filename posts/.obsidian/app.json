@@ -1,0 +1,9 @@
+{
+  "readableLineLength": true,
+  "propertiesInDocument": "source",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "assets",
+  "newFileLocation": "current",
+  "strictLineBreaks": true,
+  "livePreview": false
+}

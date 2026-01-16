@@ -340,30 +340,6 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
    
   ],
 
-  "/i-have/": [
-    {
-      text: "文档",
-      collapsed: false,
-      items: [
-        {
-          text: "需求文档",
-          link: "/i-have/01-Documents/1.requirement"
-        },
-        {
-          text: "后端框架",
-          link: "/i-have/01-Documents/2.backend-framework"
-        },
-        {
-          text: "前端框架",
-          link: "/i-have/01-Documents/3.frontend-framework"
-        },
-        {
-          text: "接口文档",
-          link: "/i-have/01-Documents/4.interaface"
-        }
-      ]
-    }
-  ],
   "/software/": [
     {
       text: "VS Code",
@@ -397,5 +373,39 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         }
       ]
     }
-  ]
+  ],
+  "/i-have/": [
+    {
+      text: "文档",
+      collapsed: false,
+      items: [
+        {
+          text: "需求文档",
+          link: "/i-have/01-Documents/1.requirement"
+        },
+        {
+          text: "后端框架",
+          link: "/i-have/01-Documents/2.backend-framework"
+        },
+        {
+          text: "前端框架",
+          link: "/i-have/01-Documents/3.frontend-framework"
+        },
+        {
+          text: "接口文档",
+          link: "/i-have/01-Documents/4.interface"
+        }
+      ]
+    },
+    {
+      text: '代码实现',
+      collapsed: false,
+      items: [
+        {
+          text: '后端：图片上传实现',
+          link: '/i-have/02-Code/1.backend-imageUpload.md'
+        }
+      ]
+    }
+  ],
 };
