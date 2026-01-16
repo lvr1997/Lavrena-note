@@ -112,7 +112,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
           link: "/FrontEnd/1.HTML+CSS+JS/1.HTML"
         },
         {
-          text: "HTML5新特性",
+          text: "HTML5新玩具",
           link: "/FrontEnd/1.HTML+CSS+JS/2.HTML5_new_toys"
         },
         {
