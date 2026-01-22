@@ -45,6 +45,17 @@ Open Graph 协议是由 Facebook 创建的元数据标准，用于让网页内�
 - [Twitter卡片验证器](https://cards-dev.twitter.com/validator)
 - [LinkedIn帖子检查器](https://www.linkedin.com/post-inspector/)
 
+
+
+
+## 站长工具
+
+> 站长工具是一个用于优化网站搜索排名的网站工具。
+
+### Google Search Console
+
+> Google Search Console 是 Google 的一个网站工具，用于优化网站搜索排名。
+
 ## Google Tag Manager
 
 > [!NOTE] 什么是Google Tag Manager？

@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cda01c78d9c9c6db",
+        "id": "028e51ec5baba1fa",
         "type": "tabs",
         "children": [
           {
-            "id": "e39fd1b8c1c0bbf8",
+            "id": "1610d2c1039b259c",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "未命名 1.base",
-                "viewName": "表格"
-              },
-              "icon": "lucide-table",
-              "title": "未命名 1"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -155,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名 1.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 1 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -182,8 +178,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "e39fd1b8c1c0bbf8",
+  "active": "1610d2c1039b259c",
   "lastOpenFiles": [
+    "i-have/02-Code/1.backend-imageUpload.md",
+    "i-have/index.md",
+    "i-have/01-Documents/4.interface.md",
+    "i-have/01-Documents/2.backend-framework.md",
     "未命名.base",
     "未命名 1.base",
     "i-have/01-Documents/4.interaface.md"

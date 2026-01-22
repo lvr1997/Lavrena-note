@@ -324,6 +324,10 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         {
           text: "关于SEO的探究",
           link: "/FrontEnd/13.SEO/intro.md"
+        },
+        {
+          text: "Google Ads",
+          link: "/FrontEnd/13.SEO/google-ads.md"
         }
       ]
     },
