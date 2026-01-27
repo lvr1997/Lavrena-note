@@ -36,7 +36,7 @@ onMounted(() => {
   <Layout>
     <template #home-hero-info-after>
       <p class="tagline pt-4 text-xl">
-        <a :href="hitokoto.href">{{ hitokoto.text }}</a>
+        ✨ <a :href="hitokoto.href">{{ hitokoto.text }}</a>
       </p>
     </template>
     <template #home-hero-info-before>

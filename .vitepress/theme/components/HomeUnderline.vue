@@ -59,6 +59,8 @@ const { frontmatter: fm } = useData()
   z-index: -1;
   width: calc(100% - 0.7em);
   height: auto;
-  color: var(--vp-c-brand);
+  /*color: var(--vp-c-brand);*/
+  /*color: #18794e;*/
+  color: #3dd68c;
 }
 </style>

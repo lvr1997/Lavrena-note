@@ -2,7 +2,8 @@
 layout: home
 hero:
   name: "Riny's Notes"
-  text: 知识积累、记录和总结
+  text: Knowledge
+  textsuffix: Base
   actions:
     - theme: brand
       text: 前端搬砖日记 ->
