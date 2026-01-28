@@ -359,7 +359,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         },
         {
           text: "常用主题",
-          link: "/software/VSCode/theme.md"
+          link: "/software/VSCode/use_theme.md"
         }
       ]
     },
@@ -374,6 +374,10 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         {
           text: "桌面软件",
           link: "/software/OtherTools/desktop_software.md"
+        },
+        {
+          text: "摸鱼",
+          link: "/software/OtherTools/touch_fish.md"
         }
       ]
     }
