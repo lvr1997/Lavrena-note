@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: "Riny's Notes"
+  name: "Riny's"
   text: Knowledge
   textsuffix: Base
   actions:
